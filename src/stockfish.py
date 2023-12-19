@@ -8,16 +8,18 @@ import os
 import threading
 import signal
 import sys
+import json
+import glob
+import shutil
+import matplotlib.pyplot as plt
 
 from tensorflow.keras import layers, models, Model, Input
 from multiprocessing import Process, Manager, freeze_support
 from pygame.locals import *
 from gui.gui import draw_arrow, draw_text, draw_board
 
-
 last_model_number = 0
 num_training_cycles = 200
-
 
 class ReplayBuffer:
     def __init__(self, capacity):
@@ -93,16 +95,14 @@ def train_neural_net(model, replay_buffer, batch_size):
     replay_buffer_for_training = ReplayBuffer(10000)
     replay_buffer_for_training.buffer = list(replay_buffer)
 
-    states, actions, rewards, next_states, dones = replay_buffer_for_training.sample(
-        batch_size
-    )
+    states, actions, rewards, next_states, dones = replay_buffer_for_training.sample(batch_size)
 
     target_values = rewards + (1 - dones) * model.predict([next_states, actions])[:, 0]
     target = model.predict([states, actions])
     target[:, 0] = target_values
 
     model.train_on_batch([states, actions], target)
-    print("Модель успешно прошла тренировку")
+    print("Model was trained successfully")
     return model
 
 
@@ -143,18 +143,14 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
             board.push(neural_net_move)
             eval_score_after = get_stockfish_evaluation(board, neural_net_color)
             last_move = neural_net_move
-            changes_buffer = draw_board(
-                board, last_move, i, neural_net_color, eval_score_before
-            )
+            changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
             display_queue.put(changes_buffer)
         else:
             stockfish_move = get_stockfish_move(board, first_move)
             first_move = False
             board.push(stockfish_move)
             last_move = stockfish_move
-            changes_buffer = draw_board(
-                board, last_move, i, neural_net_color, eval_score_before
-            )
+            changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
             display_queue.put(changes_buffer)
             stockfish_moves.append(stockfish_move.uci())
             continue
@@ -173,68 +169,58 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
 
         total_moves += 1
 
-    print("Игра была закончена")
+    print("Game was finished")
 
     model = train_neural_net(model, replay_buffer, 64)
 
-    with open(
-        f"models/reinforcement_learning_stockfish_model/game_results.txt",
-        "a",
-        encoding="utf-8",
-    ) as file:
-        file.write(f"Итог партии: {board.result()}, ")
-        file.write(
-            f"Игра за {'белых' if neural_net_color == chess.WHITE else 'черных'}, "
-        )
-        file.write(
-            f"Процент правильных ходов от нейросети: {correct_moves / total_moves * 100:.2f}%, "
-        )
-        file.write(f"История ходов нейросети: {', '.join(neural_net_moves)}, ")
-        file.write(f"История ходов Stockfish: {', '.join(stockfish_moves)}, ")
-        file.write(
-            f"Награды и штрафы после каждого хода: {', '.join(map(str, rewards))}\n"
-        )
+    filename = f"models/reinforcement_learning_stockfish_model/game_results.json"
+
+    if os.path.exists(filename):
+        with open(filename, "r", encoding="utf-8") as file:
+            game_results = json.load(file)
+    else:
+        game_results = []
+
+    # Добавляем новые результаты игры
+    game_result = {
+        "Game number": len(game_results) + 1,
+        "Game result": board.result(),
+        "Side": 'White' if neural_net_color == chess.WHITE else 'Black',
+        "Sum of penalties and awards": f"{sum(rewards):.2f}",
+        "Good moves": f"{correct_moves / total_moves * 100:.2f}%",
+        "Net history": ', '.join(neural_net_moves),
+        "Stockfish history": ', '.join(stockfish_moves),
+        "Penalties and awards": ', '.join(map(str, rewards))
+    }
+    game_results.append(game_result)
+
+    # Записываем обновленные результаты игр обратно в файл
+    with open(filename, "w", encoding="utf-8") as file:
+        json.dump(game_results, file, indent=4)
 
     return model
 
-
 def get_neural_net_move(model, board, exploration_factor=0.1):
-    """
-    Returns the best move predicted by a neural network model for the given chess board.
 
-    Parameters:
-        model (object): The neural network model used for move prediction.
-        board (object): The chess board object representing the current game state.
-        exploration_factor (float): The probability of making a random move instead of the predicted move.
-
-    Returns:
-        object: The best move predicted by the neural network model.
-    """
     legal_moves = list(board.legal_moves)
-
-    if (
-        np.random.rand() < exploration_factor
-        or board.empty
-        or board.fullmove_number == 1
-    ):
-        return random.choice(legal_moves)
-
     board_copy = board.copy()  # Создаем копию доски
-
     move_predictions = []
 
     for move in legal_moves:
         board_copy.push(move)
-        board_tensor = board_to_tensor(board_copy)
-        move_tensor = move_to_tensor(move)
-        input_tensor = np.concatenate([board_tensor, move_tensor], axis=-1)
-        prediction = model.predict(input_tensor)[0][0]
+        board_tensor = board_to_tensor(board_copy)[None, ...]  
+        move_tensor = move_to_tensor(move)[None, ...]  
+        prediction = model.predict([board_tensor, move_tensor])[0][0]
         move_predictions.append((move, prediction))
-        board_copy.pop()  # Отменяем ход
+        board_copy.pop() 
 
     sorted_moves = sorted(move_predictions, key=lambda x: x[1], reverse=True)
-    return sorted_moves[0][0]
+    top_3_moves = [move[0] for move in sorted_moves[:3]]
 
+    if (np.random.rand() < exploration_factor or board.fullmove_number == 1):
+        return random.choice(top_3_moves)
+    else:
+        return sorted_moves[0][0]
 
 def get_stockfish_move(board, first_move=False):
     """
@@ -407,19 +393,20 @@ def run_game_for_color(color, result_queue, display_queue, i, replay_buffer):
             if not model._is_compiled:
                 model.compile(optimizer="adam", loss="mean_squared_error")
 
-            print(f"Загружена модель: {last_model_number}")
+            print(f"Loaded model: {last_model_number}")
         else:
-            raise IOError("В директории не найдены модели.")
+            raise IOError("No models was found")
 
         result = play_game(model, color, display_queue, i, replay_buffer)
         result_queue.put(result)
         return
     except (OSError, IOError) as e:
-        print(f"Создание новой модели для цикла.")
+        print(f"Creating new model...")
         model = create_model()
+        new_model_path = f"models/reinforcement_learning_stockfish_model/model_1"
+        model.save(new_model_path)
     except KeyboardInterrupt:
         print(f"Process {os.getpid()} received KeyboardInterrupt. Terminating...")
-        result_queue.put(None)
         sys.exit(0)
 
 
@@ -599,11 +586,13 @@ if __name__ == "__main__":
             display_queue = manager.Queue()
             processes = []
 
-            display_thread = threading.Thread(
-                target=update_display, args=(display_queue,)
-            )
-            display_thread.daemon = True
-            display_thread.start()
+            # GUI 
+
+            #display_thread = threading.Thread(target=update_display, args=(display_queue,))
+            #display_thread.daemon = True
+            #display_thread.start()
+
+            # --- 
 
             for _ in range(num_training_cycles):
                 for i in range(8):
@@ -626,8 +615,7 @@ if __name__ == "__main__":
                     process.join()
 
                 if not result_queue.empty():
-                    results = [result_queue.get() for _ in processes]
-                    my_models = [result for result in results if result is not None]
+                    my_models = [result_queue.get() for _ in processes]
 
                     if len(my_models) >= 8:
                         averaged_model = average_models(my_models)
@@ -652,11 +640,34 @@ if __name__ == "__main__":
                             averaged_model.compile(
                                 optimizer="adam", loss="mean_squared_error"
                             )
+                            
+                        print("Training averaged model...")
                         averaged_model = train_neural_net(
                             averaged_model, replay_buffer, 64
                         )
+                        
+                        for old_model_path in glob.glob("models/reinforcement_learning_stockfish_model/model_*"):
+                                shutil.rmtree(old_model_path)
+
                         averaged_model.save(new_model_path)
-                        print(f"Сохранена модель: {new_model_number}")
+                        print(f"Saved model: {new_model_number}")
+
+                        filename = f"models/reinforcement_learning_stockfish_model/game_results.json"
+
+                        with open(filename, "r", encoding="utf-8") as file:
+                            game_results = json.load(file)
+
+                        game_numbers = [result["Game number"] for result in game_results]
+                        sum_penalties_awards = [float(result["Sum of penalties and awards"]) for result in game_results]
+
+                        # Создаем график
+                        plt.figure(figsize=(10, 6))
+                        plt.plot(game_numbers, sum_penalties_awards, marker='o')
+                        plt.title('Sum of Penalties and Awards per Game')
+                        plt.xlabel('Game Number')
+                        plt.ylabel('Sum of Penalties and Awards')
+                        plt.grid(True)
+                        plt.savefig('models/reinforcement_learning_stockfish_model/plot.png')
 
                 processes = []
                 my_models = []

@@ -1,0 +1,1242 @@
+[
+    {
+        "Game number": 1,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.18",
+        "Good moves": "16.67%",
+        "Net history": "f2f3, b2b3, f3f4, c1a3, g2g3, c2c3",
+        "Stockfish history": "d7d5, e7e5, e5f4, d8h4, f4g3, g3g2",
+        "Penalties and awards": "-1.13, -0.48, -1.7, -4.35, 0.28, -92.8"
+    },
+    {
+        "Game number": 2,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.57",
+        "Good moves": "0.00%",
+        "Net history": "f2f3, b2b3, f3f4, h2h4, h4h5, c1a3",
+        "Stockfish history": "b7b6, e7e5, e5f4, d7d5, d8g5, g5g3",
+        "Penalties and awards": "-1.13, -0.97, -1.0, -1.41, -0.46, -96.6"
+    },
+    {
+        "Game number": 3,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.91",
+        "Good moves": "0.00%",
+        "Net history": "h7h5, d7d5, c8e6, d8d4, e8d8, b8d7, c7c6, c6c5",
+        "Stockfish history": "d2d4, e2e4, e4d5, d5e6, e6f7, d1d4, f7g8q, g8e6, d4d7",
+        "Penalties and awards": "-0.95, -0.09, -5.56, -5.15, -2.47, -0.34, -85.34, -0.01"
+    },
+    {
+        "Game number": 4,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.92",
+        "Good moves": "0.00%",
+        "Net history": "d7d5, c8h3, b7b6, c7c5, c5c4, d8c7, b8c6, c7c6, a8b8, f7f6, e8f7, f7g6, g6h5, g7g6",
+        "Stockfish history": "e2e3, g1f3, g2h3, c2c4, c4d5, f1c4, c4b5, b5c6, d5c6, c6c7, c7b8q, d1b3, b8g3, b3f7, g3h4",
+        "Penalties and awards": "0.0, -4.84, -0.6, -0.59, -0.79, -0.15, -4.04, 0.0, -88.89, 0.0, 0.0, -0.01, -0.01, 0.0"
+    },
+    {
+        "Game number": 5,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.27",
+        "Good moves": "0.00%",
+        "Net history": "c2c3, d1b3, f2f4, g2g3, b3b4, b4c5, c5d5, b2b3, f4f5, f1g2, g2f1, d2d4, e1d2",
+        "Stockfish history": "a7a6, g8f6, d7d5, h7h5, h5h4, h4g3, f6d5, h8h2, h2h1, h1g1, g3g2, g2f1q, f1d1",
+        "Penalties and awards": "-0.26, -0.55, -0.52, -0.17, -1.72, -1.22, -6.29, -3.88, -2.24, -83.42, 0.0, 0.0, 0.0"
+    },
+    {
+        "Game number": 6,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.56",
+        "Good moves": "16.67%",
+        "Net history": "f2f4, b2b3, c1b2, b2d4, g2g4, f1g2, h2h3, c2c4, c4b5, g1f3, b1c3, e1f1",
+        "Stockfish history": "b7b5, g8f6, c8b7, c7c5, c5d4, b7g2, g2h1, e7e6, f6g4, h1f3, d8h4, h4f2",
+        "Penalties and awards": "-0.6, -0.07, 0.04, -0.54, -6.16, -2.93, -0.96, -0.9, 0.04, -2.56, -85.92, 0.0"
+    },
+    {
+        "Game number": 7,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.64",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, d7d5, d8d6, c8h3, d6c5, c5e3, a6c5, c5b3, a8c8, c7c6, c8a8",
+        "Stockfish history": "e2e3, e3e4, e4d5, g1f3, g2h3, b1c3, d2e3, d1d4, a2b3, f1b5, d5c6, c6b7",
+        "Penalties and awards": "-0.4, -0.33, -0.83, -3.86, -1.2, -5.31, -0.84, -2.08, -84.74, 0.0, -0.05"
+    },
+    {
+        "Game number": 8,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.92",
+        "Good moves": "0.00%",
+        "Net history": "e7e6, d8h4, c7c5, f8d6, d6g3, g7g6, h7h5, e8e7, g8h6, h8h6, g6g5, e7d8, d8c7, c7b6",
+        "Stockfish history": "h2h4, e2e4, h1h4, b1c3, c3b5, f2g3, d2d4, b5d6, e4e5, c1h6, d1f3, f3f7, f7e8, e8c8, c8c5",
+        "Penalties and awards": "-0.22, -7.46, -0.13, -1.73, -2.48, -0.71, -0.82, -0.11, -3.58, -82.64, -0.04, 0.0, 0.0, 0.0"
+    },
+    {
+        "Game number": 9,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.30",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8",
+        "Stockfish history": "h2h3, e2e4, d2d4, b1c3, g1f3, d4d5, c1e3, d1d2, e1c1, e4e5, e5e6, f3e5, e6f7",
+        "Penalties and awards": "-0.87, -0.49, -0.39, -0.27, -0.19, -0.82, -0.7, -0.2, -0.66, -0.8, -1.33, -92.58"
+    },
+    {
+        "Game number": 10,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.24",
+        "Good moves": "0.00%",
+        "Net history": "a7a6, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, f7f6, g7g6, a8a7",
+        "Stockfish history": "f2f3, d2d4, c2c4, b1c3, e2e4, f3f4, g1f3, c1e3, f1d3, f4f5, e4e5, f3g5, d1h5, f5g6, g6h7",
+        "Penalties and awards": "-0.81, -0.81, -0.15, -0.58, -0.02, -0.88, -0.13, -0.8, -0.06, -1.69, -0.65, -15.67, -0.46, -78.53"
+    },
+    {
+        "Game number": 11,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.05",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a6b8, a7a6, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, h7h5, a8a7, a7a8, a8a7, a7a8",
+        "Stockfish history": "g1h3, d2d4, c2c4, b1c3, f2f4, e2e4, c1e3, d1f3, e1c1, f4f5, e4e5, d4d5, e5e6, h3g5, e6f7",
+        "Penalties and awards": "-0.72, -0.34, -0.27, -0.83, -0.2, -0.85, -0.36, -0.93, -0.33, -0.8, -1.78, -0.73, -2.03, -89.88"
+    },
+    {
+        "Game number": 12,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-99.51",
+        "Good moves": "5.88%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, h2h3, a2a1, e1f2, f2e1, g2g3",
+        "Stockfish history": "c7c5, b8c6, d7d5, e7e5, f7f5, c8e6, g8f6, f8d6, e8g8, e5e4, f5f4, d5d4, e4e3, e3f2, f6e4, d8h4, h4g3",
+        "Penalties and awards": "-0.36, -0.79, -0.13, -0.44, -0.11, -0.69, 0.03, -1.03, -0.07, -1.56, -0.42, -1.04, -2.29, -90.59, 0.0, -0.02, 0.0"
+    },
+    {
+        "Game number": 13,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.22",
+        "Good moves": "0.00%",
+        "Net history": "h2h3, a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, h1h2, e1f2, f2e1, g2g3, h2f2",
+        "Stockfish history": "e7e5, d7d5, c7c5, b8c6, f7f5, g8f6, f8d6, e8g8, f5f4, g8h8, e5e4, d5d4, e4e3, e3f2, f6e4, d8h4, h4g3, g3f2",
+        "Penalties and awards": "-0.48, -0.26, -0.8, -0.19, -0.79, -0.31, -0.78, -0.43, -0.99, -0.13, -0.98, -0.36, -2.95, -91.76, 0.0, -0.01, 0.0, 0.0"
+    },
+    {
+        "Game number": 14,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.13",
+        "Good moves": "5.88%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a7a6, a8b8, b8a8, a8a7, a7a8, a8a7, a7a8, a6a5, a8b8, b8a8, a8b8, b8a8",
+        "Stockfish history": "b2b3, e2e4, b1c3, c1b2, f1a6, a6e2, d2d4, d1d2, e1c1, c1b1, d4d5, e4e5, f2f4, f4f5, g1f3, f3g5, e5e6, e6f7",
+        "Penalties and awards": "-0.92, -0.41, -0.61, -0.39, -3.84, -0.05, -0.27, -0.41, -0.72, -0.18, -0.53, -0.18, 0.05, -0.88, -0.04, -3.7, -87.05"
+    },
+    {
+        "Game number": 15,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.92",
+        "Good moves": "0.00%",
+        "Net history": "h2h3, a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, h1h2, h2h1, h1h2, h2h1, d1c2, h1h2, h2h1, h1h2, h2h1, d2e3",
+        "Stockfish history": "a7a6, e7e5, d7d5, b8c6, c8e6, f7f5, g8f6, d5d4, e6a2, e5e4, a2b1, d4d3, d3c2, b1c2, c6d4, c2b3, e4e3, f6e4, d4c2",
+        "Penalties and awards": "-0.48, -0.26, -0.89, -0.19, -0.97, -0.1, -0.93, -0.21, -4.23, -0.75, -0.14, -1.96, -2.78, -0.09, -1.19, -85.67, -0.04, -0.03, -0.01"
+    },
+    {
+        "Game number": 16,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-102.13",
+        "Good moves": "6.90%",
+        "Net history": "a2a4, h2h4, a1a2, a2a3, b1a3, h1h2, h2h1, a4a5, a5a6, h1h2, h2h1, a3b1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, e1d1, h2h1, h1h2, h2h1, d1e1, e1d1",
+        "Stockfish history": "g8h6, d7d5, e7e5, f8a3, h6f5, e8g8, c7c5, f5d6, b8a6, a6c7, b7b5, a7a5, a5a4, b5b4, e5e4, d5d4, f8e8, c8e6, e6a2, a2b1, d4d3, d3c2, c2d1r, e4e3, e3f2, f2g1q, g1h1, d8h4, h1f1",
+        "Penalties and awards": "-0.45, -0.87, -1.27, -1.35, -0.03, -0.47, -0.12, -1.01, -0.33, -0.83, -0.05, -0.22, -0.59, -0.07, -0.58, 0.16, -0.94, -0.12, -1.0, -0.28, -1.92, -3.08, -3.92, 1.29, -4.36, -79.71, 0.0, 0.0, -0.01"
+    },
+    {
+        "Game number": 17,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.60",
+        "Good moves": "14.29%",
+        "Net history": "b1a3, d2d4, e1d2, d2e1, e1d2, b2b4, c2c3",
+        "Stockfish history": "e7e6, g8f6, c7c5, c5d4, d8a5, a5b4, b4c3",
+        "Penalties and awards": "-1.04, -0.05, -1.79, 0.14, -5.15, -92.71, 0.0"
+    },
+    {
+        "Game number": 18,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.54",
+        "Good moves": "0.00%",
+        "Net history": "g8h6, h6g4, c7c6, h8g8, a7a6, d8b6, a8a7, e8f8",
+        "Stockfish history": "g2g4, h2h3, h3g4, d2d4, d1d3, d3h7, h7g8, g8f8, h1h8",
+        "Penalties and awards": "-1.69, -2.53, -0.73, -0.94, -3.38, -1.51, -90.76, 0.0"
+    },
+    {
+        "Game number": 19,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.19",
+        "Good moves": "0.00%",
+        "Net history": "d2d4, b1a3, e1d2, d2e1, e1d2, a1b1, e2e4, d2e2, g1f3, e2d2, d2d3, d3c4, c4b5, a2a4",
+        "Stockfish history": "e7e5, e5d4, f8a3, a3c5, b8c6, g8f6, f6e4, d8e7, e4c3, c3b1, c6b4, e7e6, c5e7, e6d5",
+        "Penalties and awards": "-0.08, -1.96, -2.52, -2.82, -1.14, -0.28, -1.59, -1.07, -89.71, 0.0, 0.0, 0.0, -0.01, -0.01"
+    },
+    {
+        "Game number": 20,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.26",
+        "Good moves": "0.00%",
+        "Net history": "c7c5, d7d6, g8h6, h8g8, d6d5, a7a6, c8g4, b7b5, b8c6, e8d7",
+        "Stockfish history": "c2c4, g1f3, e2e3, d2d4, b1c3, c4d5, d4c5, d1a4, c5b6, b6b7, a4c6",
+        "Penalties and awards": "-0.03, -0.28, -0.14, -0.73, -2.47, -0.82, -0.87, -0.88, -4.98, -89.06"
+    },
+    {
+        "Game number": 21,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.35",
+        "Good moves": "17.65%",
+        "Net history": "g8h6, h8g8, g8h8, h8g8, g8h8, a7a6, c7c6, d7d5, h7h6, d8b6, a8a7, f7f5, e8d8, d8e8, e8d7, d7d6, e7e5",
+        "Stockfish history": "b1c3, e2e4, d2d4, c1h6, h6e3, g1f3, f1e2, e1g1, h2h3, f3e5, e4d5, e2c4, d1h5, e5f7, f7d6, h5e8, e3f4, f4e5",
+        "Penalties and awards": "-1.27, -0.89, -0.32, -4.38, -0.11, 0.21, -0.16, 0.15, 0.09, -1.12, -0.93, -91.55, -0.01, -0.04, 0.0, -0.02, 0.0"
+    },
+    {
+        "Game number": 22,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.38",
+        "Good moves": "13.33%",
+        "Net history": "d2d4, g1f3, d1d3, d3h7, a2a4, b2b3, c1b2, b1a3, e1d1, a4a5, h2h4, d1c1, f3d2, c1d1, a1b1",
+        "Stockfish history": "d7d5, e7e6, c7c5, h8h7, c5d4, b8c6, e6e5, f8b4, g8f6, f6g4, g4f2, f2h1, d8h4, b4d2, h4e1",
+        "Penalties and awards": "-0.08, -0.11, -0.5, -6.66, -0.42, -0.54, -0.64, -1.09, 0.07, -0.78, -1.81, 0.12, -3.47, -84.41, -0.06"
+    },
+    {
+        "Game number": 23,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.63",
+        "Good moves": "0.00%",
+        "Net history": "g8f6, b7b6, c7c6, a7a6, h8g8, e8d8, f8a3, g8h8, d8e8, h8g8, e8e7, h7h6, e7e8, a6a5, e8e7, e7e8, e8e7, e7e8",
+        "Stockfish history": "b1c3, e2e4, e4e5, e5f6, f6e7, e7d8r, d1h5, b2a3, h5g5, g5g7, g7g8, g8c8, c8b7, b7a8, a8b8, b8b6, b6c6, c3d5, c6a8",
+        "Penalties and awards": "-0.39, -1.07, -3.29, -0.87, -5.25, -0.02, -1.96, -0.44, -1.2, -4.89, -0.05, -0.5, -0.28, -0.27, -0.24, -0.33, -78.57, -0.01"
+    },
+    {
+        "Game number": 24,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.11",
+        "Good moves": "18.18%",
+        "Net history": "g1f3, b1a3, d2d3, f3d4, d4f5, e1d2, a1b1, d2e1, e2e3, b1a1, g2g3, c1d2, d2c3, c3d2, d2c3, h1g1, a1b1, g1h1, d3e4, d1d2, f1c4, e1f1",
+        "Stockfish history": "g7g6, g8f6, d7d5, e7e5, c8f5, f8g7, e8g8, f5e6, a7a5, a5a4, b8c6, f8e8, d5d4, e5e4, d4c3, c3b2, d8e7, e7a3, a3c3, f6e4, c3d2, d2f2",
+        "Penalties and awards": "-0.02, -0.57, -0.19, -0.63, -4.88, -0.95, -0.04, 0.0, -0.42, 0.02, 0.01, -0.09, -0.6, -0.14, -1.54, -1.83, 0.08, -2.78, -85.5, 0.03, -0.07, 0.0"
+    },
+    {
+        "Game number": 25,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.82",
+        "Good moves": "10.00%",
+        "Net history": "a2a4, a4a5, a1a2, a2a4, a4a1, a1a2, a2a1, a1a2, a2a1, a1a2",
+        "Stockfish history": "a7a6, e7e5, d7d5, c8d7, b8c6, h7h5, d8f6, e8c8, f8c5, c5f2",
+        "Penalties and awards": "-0.45, -0.72, -0.82, -0.48, -0.01, -0.71, 0.04, -0.92, -0.67, -96.08"
+    },
+    {
+        "Game number": 26,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.03",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, g1h3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1",
+        "Stockfish history": "a7a6, e7e5, b8c6, h7h5, d7d5, g7g5, g5g4, g4h3, g8f6, h3g2, g2h1q, c8h3, h1f1",
+        "Penalties and awards": "-1.01, -0.47, -0.71, -0.22, -0.27, -0.67, -0.4, -3.25, -0.64, -0.67, -14.52, -78.14, -0.06"
+    },
+    {
+        "Game number": 27,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.81",
+        "Good moves": "0.00%",
+        "Net history": "g8h6, b8a6, a8b8, b8a8, a8b8, b8a8, h8g8, a8b8, b8a8, a8b8, g8h8, b8a8, a8b8, e8f8, f8e8",
+        "Stockfish history": "g2g4, h2h3, d2d4, e2e4, b1c3, g1f3, d4d5, g4g5, h1g1, g5h6, e4e5, h6g7, g7h8q, h8f8, c1h6, g1g8",
+        "Penalties and awards": "-1.69, -0.61, -0.7, -0.41, -0.31, -0.46, -2.81, -0.56, -0.47, -0.54, -2.85, -90.36, -0.04, 0.0, 0.0"
+    },
+    {
+        "Game number": 28,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.65",
+        "Good moves": "17.65%",
+        "Net history": "a7a5, b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, d8c8, b8a8, e8d8, d8e8, e8d8, d8e8, a8a7, e8d8",
+        "Stockfish history": "b2b4, b4b5, b5a6, g1f3, e2e3, d2d4, f1d3, e1g1, a6b7, b7c8r, b1d2, f3e5, e5f7, f7h8, h8f7, d1h5, f7d6, h5e8",
+        "Penalties and awards": "-0.57, -4.02, -0.35, -0.64, -0.3, -0.72, -0.17, -0.48, -2.22, 0.09, -0.35, -3.33, 0.17, -2.13, 0.11, -85.74, 0.0"
+    },
+    {
+        "Game number": 29,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.53",
+        "Good moves": "9.09%",
+        "Net history": "a2a4, a4a5, a1a2, a2a3, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, h2h3, b1a3, b2a3, a3a4, e1d1, d1e1, e1d1, d1e1",
+        "Stockfish history": "b7b5, a7a6, e7e5, f8a3, c7c5, d7d5, d8a5, g8f6, e8g8, b8c6, c5c4, f8e8, b5b4, c8f5, c6d4, b4a3, f5c2, c2d1, a5a4, d4c2, c2e3, a4d1",
+        "Penalties and awards": "-0.42, -1.87, -0.95, -2.19, 0.11, -0.46, -0.54, -0.52, -0.03, -0.15, -0.52, -0.28, -0.46, 0.39, -1.67, -2.13, -0.41, -1.59, -86.84, 0.0, 0.0, 0.0"
+    },
+    {
+        "Game number": 30,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.27",
+        "Good moves": "13.64%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a3a4, a4a5, a1a4, e1f2, g2g3, a4a1, f2g2",
+        "Stockfish history": "c7c6, e7e5, d7d5, f8d6, d6c7, c8g4, b8d7, f7f5, d8f6, f5f4, g8h6, e5e4, e8c8, h8e8, h6f5, d5d4, e4e3, e3f2, f6h4, f5g3, g3e4, h4f2",
+        "Penalties and awards": "-0.36, -0.96, 0.04, -0.81, 0.0, -0.92, 0.11, -0.86, -0.15, -0.92, -0.49, -0.95, -0.35, -0.59, -0.67, -0.21, -0.76, -91.39, 0.0, 0.02, -0.05, 0.0"
+    },
+    {
+        "Game number": 31,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-102.78",
+        "Good moves": "14.81%",
+        "Net history": "g8h6, b8a6, a6b8, b8a6, a8b8, b8a8, b7a6, a8b8, b8a8, a8b8, b8b2, h8g8, g8h8, a6a5, a7a6, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, a5a4, a4b3, e8d8, d8e8, e8d8, d8e8",
+        "Stockfish history": "f2f3, d2d4, e2e4, c1g5, d1d2, b1c3, f1a6, e1c1, d4d5, g1e2, e2d4, c1b2, d4b3, b2a1, h1e1, c3a4, a4c3, g2g3, e4e5, d2f2, d5d6, c3d5, d6c7, c7d8q, f2b6, d5c7, c7e6, b6d8",
+        "Penalties and awards": "-0.99, -0.97, -0.74, -0.41, 0.12, -0.86, 0.13, -0.28, -0.98, 0.04, -2.74, -0.4, -0.18, 0.18, -0.22, -0.37, -0.29, -0.27, -0.09, -0.21, -2.91, -90.29, -0.05, 0.0, 0.0, 0.0, 0.0"
+    },
+    {
+        "Game number": 32,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-120.80",
+        "Good moves": "13.64%",
+        "Net history": "g8h6, b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, a7a6, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8",
+        "Stockfish history": "b1a3, d2d4, e2e4, a3b5, b5c3, g1f3, d4d5, a2a3, f1a6, a6c4, h2h3, e1g1, a3a4, d1d4, c1h6, h6f4, f1e1, f4g3, a1d1, e4e5, d4f4, f3g5, f4f7",
+        "Penalties and awards": "-1.18, -0.71, -0.36, -0.4, -0.2, -0.53, -0.11, 0.02, -3.74, -0.01, -0.35, -0.16, -0.51, -0.53, -1.04, 0.02, 0.2, -0.23, -0.65, -0.93, -26.68, -82.72"
+    },
+    {
+        "Game number": 33,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.06",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8",
+        "Stockfish history": "g1h3, d2d4, e2e4, b1c3, c1e3, d1f3, e1c1, e4e5, h3g5, f3f7",
+        "Penalties and awards": "-0.72, -0.63, -0.88, -0.36, -0.78, -0.61, -1.24, -1.05, -94.79"
+    },
+    {
+        "Game number": 34,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.53",
+        "Good moves": "11.11%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1",
+        "Stockfish history": "g8f6, e7e5, d7d5, f8d6, b8c6, f6g4, e5e4, d8f6, f6f2",
+        "Penalties and awards": "-0.42, -0.95, -0.28, -0.69, -0.16, -0.95, 0.01, -1.95, -95.14"
+    },
+    {
+        "Game number": 35,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.48",
+        "Good moves": "15.38%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, e8f7, f7e8, g7g6, a8b8",
+        "Stockfish history": "f2f4, e2e4, g1f3, c2c4, d2d4, b1c3, c4c5, f4f5, f1c4, c4f7, f3g5, d1h5, f5g6, g6h7",
+        "Penalties and awards": "-0.97, -0.6, -0.61, -0.43, -0.44, -0.72, -0.72, -1.01, -3.91, -0.28, 0.23, 0.05, -92.07"
+    },
+    {
+        "Game number": 36,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-147.96",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a6b8, a7a6, a8a7, a6a5, a5a4, h7h6, d8c7, h8h7",
+        "Stockfish history": "a2a3, e2e4, b1c3, g1f3, d2d4, d4d5, c1e3, d1d4, e4e5, f3g5, d4a7, a7b8, c3b5, b5c7, b8c7, c7c8",
+        "Penalties and awards": "-0.81, -0.47, -0.52, -0.15, -0.61, -0.53, -0.4, -0.18, -0.6, -3.38, -3.17, -88.97, -48.16, 0.0, -0.01"
+    },
+    {
+        "Game number": 37,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.47",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a3b1, g1h3, h1g1, d1c2, g1h1",
+        "Stockfish history": "d7d5, e7e5, b8c6, g8f6, c8e6, d5d4, d8d5, d5a2, a2a1, a1b1, c6b4, b4c2, b1c2, c2c1",
+        "Penalties and awards": "-1.04, -0.61, -0.71, -0.2, -0.46, -0.53, -0.41, -2.31, -1.2, -2.65, -0.68, -6.38, -0.04, -83.25"
+    },
+    {
+        "Game number": 38,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-99.48",
+        "Good moves": "0.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, e1f2, g2g3, f2e1",
+        "Stockfish history": "e7e6, e6e5, d7d5, b8c6, f8d6, d8e7, f7f5, f5f4, g8f6, e8g8, e5e4, f6g4, g4f2, e7h4, f4g3, g3g2",
+        "Penalties and awards": "-0.42, -0.72, -0.09, -0.9, 0.0, -0.57, -0.23, -1.07, -0.04, -1.0, -0.1, -1.69, -4.04, -88.61, 0.0, 0.0"
+    },
+    {
+        "Game number": 39,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.59",
+        "Good moves": "0.00%",
+        "Net history": "a2a4, a1a2, a2a1, a4a5, a5a6, a1a6, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, e1f2, f2e1, g2g3, b1a3",
+        "Stockfish history": "f7f5, e7e5, d7d5, c7c5, b8a6, b7a6, g8f6, f8d6, a8b8, e8g8, f5f4, g8h8, c5c4, c8g4, d6c5, c5f2, f6e4, d8h4, f4g3, g3g2",
+        "Penalties and awards": "-0.45, -0.86, -0.14, -0.25, -0.55, -1.66, -0.81, -0.27, -0.33, -0.32, -0.35, -0.16, -0.91, -0.07, -0.72, -92.72, 0.0, 0.0, 0.0, -0.02"
+    },
+    {
+        "Game number": 40,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.23",
+        "Good moves": "10.53%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a6b8, a7a6, a8a7, a7a8, a8a7, e8f7, f7e8, a6a5, g7g6, a7a8, b8a6, a6b8",
+        "Stockfish history": "d2d4, e2e4, b1c3, g1f3, c1f4, d4d5, f1b5, e1g1, f1e1, b5a4, e4e5, e5e6, e6f7, f3g5, g5e6, d1h5, h5e5, e5h8, h8g8, g8f8",
+        "Penalties and awards": "-0.66, -0.48, -0.49, -0.32, -0.41, -0.93, -0.35, -0.12, -0.35, -0.96, -1.2, -1.9, 0.11, -0.01, -4.12, 0.05, -87.02, -0.07, 0.0"
+    },
+    {
+        "Game number": 41,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.00",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8",
+        "Stockfish history": "g1h3, d2d4, e2e4, b1c3, c1e3, d1f3, e1c1, e4e5, h3g5, f3f7",
+        "Penalties and awards": "-0.72, -0.63, -0.88, -0.36, -0.78, -0.55, -1.24, -1.05, -94.79"
+    },
+    {
+        "Game number": 42,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-98.64",
+        "Good moves": "0.00%",
+        "Net history": "h7h5, b8a6, a8b8, b8a8, a8b8, b8a8, a6b8, b8a6, a8b8, b8a8, e8f7, f7e8, a8b8",
+        "Stockfish history": "g1f3, e2e4, b1c3, d2d4, d4d5, c1f4, d1d2, e4e5, e1c1, e5e6, e6f7, f3e5, f1d3, d3g6",
+        "Penalties and awards": "-0.87, -0.53, -0.21, -0.25, -0.59, -0.34, -0.54, -0.36, -1.11, -93.8, 0.0, 0.0, -0.04"
+    },
+    {
+        "Game number": 43,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.00",
+        "Good moves": "0.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, b1a3, a2a1, e1f2, g2g3, f2e1",
+        "Stockfish history": "c7c6, e7e5, d7d5, f8d6, g8f6, e8g8, f6g4, f7f5, f5f4, g4f2, d8h4, f4g3, g3g2",
+        "Penalties and awards": "-0.42, -0.84, -0.23, -0.6, -0.15, -0.69, -0.27, -0.99, -0.51, -3.76, -91.54, 0.0, 0.0"
+    },
+    {
+        "Game number": 44,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-99.86",
+        "Good moves": "21.43%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a3a4, a1a3, a3a1, e1f2, f2e1, g2g3, h2g3",
+        "Stockfish history": "a7a5, e7e5, d7d5, g8f6, f8d6, e8g8, f8e8, e5e4, f6g4, g4f2, d8f6, f6h4, d6g3, h4g3",
+        "Penalties and awards": "-0.36, -1.03, -0.21, -0.94, 0.03, -0.7, 0.05, -0.48, -1.01, -3.29, 0.18, -92.1, 0.0, 0.0"
+    },
+    {
+        "Game number": 45,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.49",
+        "Good moves": "15.38%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, e8f7, f7e8, g7g6, a8b8",
+        "Stockfish history": "f2f4, e2e4, g1f3, c2c4, d2d4, b1c3, c4c5, f4f5, f1c4, c4f7, f3g5, d1h5, f5g6, g6h7",
+        "Penalties and awards": "-0.97, -0.6, -0.61, -0.43, -0.44, -0.77, -0.68, -1.01, -3.91, -0.28, 0.23, 0.05, -92.07"
+    },
+    {
+        "Game number": 46,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.73",
+        "Good moves": "6.67%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a4a5, a5a6, d1a4, g1h3, e1d2, d2d3",
+        "Stockfish history": "b7b5, b5b4, g8f6, e7e5, d7d5, b4b3, b3c2, c2b1q, b1a1, f8b4, d8e7, a1a4, b4d2, e7b4, a4b3",
+        "Penalties and awards": "-0.42, -1.77, -0.1, -0.86, 0.09, -1.0, -0.1, -10.0, -1.77, -1.04, -1.45, -83.27, -0.04, 0.0, 0.0"
+    },
+    {
+        "Game number": 47,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.80",
+        "Good moves": "0.00%",
+        "Net history": "a7a5, b8a6, a5a4, a8b8, b8a8, a8b8, b8a8, a8a7, a7a8, a8a7, a7a8, a8a6, b7a6, a6a5, c8a6, d8a8, a6b5",
+        "Stockfish history": "d2d3, g1f3, e2e4, c2c4, d1a4, f1e2, b1c3, d3d4, b2b4, b4b5, c4c5, b5a6, e2a6, e1g1, f1e1, a4a5, c3b5, a5a8",
+        "Penalties and awards": "-0.33, -0.38, -0.61, -0.83, -0.3, -0.74, -0.31, -1.44, -1.09, -0.93, -0.14, -0.19, -0.11, -0.44, -0.99, -4.66, -87.31"
+    },
+    {
+        "Game number": 48,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-99.64",
+        "Good moves": "15.79%",
+        "Net history": "a2a3, a1a2, a3a4, a2a1, a1a2, a2a1, a1a2, a2a1, a4a5, a1a2, a2a1, a1a2, a2a1, a1a2, b1a3, e1f2, f2e1, a3b1, h2g3",
+        "Stockfish history": "g7g5, d7d5, c7c5, b8c6, e7e5, g8f6, d8c7, c8e6, a7a6, e8c8, e5e4, d5d4, e4e3, e6a2, e3f2, f6e4, f8d6, d6g3, c7g3",
+        "Penalties and awards": "-0.36, -1.3, -1.04, -0.02, -1.09, 0.13, -0.84, 0.09, -0.44, -0.78, -0.02, -1.29, -0.52, -3.18, -2.52, -0.22, 1.04, -87.28, 0.0"
+    },
+    {
+        "Game number": 49,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.93",
+        "Good moves": "14.29%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1",
+        "Stockfish history": "b8c6, e7e5, d7d5, c8e6, d8f6, f8c5, c5f2",
+        "Penalties and awards": "-0.45, -1.3, -0.18, -0.82, 0.02, -1.3, -96.9"
+    },
+    {
+        "Game number": 50,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.65",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, e8f7, f7e8, g7g6, b8a8",
+        "Stockfish history": "a2a4, e2e4, d2d4, g1f3, f1c4, e1g1, c4f7, f3e5, d1h5, e5g6, g6h8",
+        "Penalties and awards": "-0.85, -0.5, -0.34, -0.29, -0.21, -1.08, -0.01, -0.08, -0.37, -96.92"
+    },
+    {
+        "Game number": 51,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.44",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, e8f7, f7e8, g7g6, b8a8",
+        "Stockfish history": "a2a4, e2e4, d2d4, g1f3, f1c4, e1g1, c4f7, f3e5, d1h5, e5g6, g6h8",
+        "Penalties and awards": "-0.85, -0.5, -0.33, -0.29, -0.21, -0.88, -0.01, -0.08, -0.37, -96.92"
+    },
+    {
+        "Game number": 52,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-37.26",
+        "Good moves": "6.25%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a3b1, h2h3, h1h2, d1c2, h2h1",
+        "Stockfish history": "d7d6, e7e5, d6d5, g8f6, b8c6, d5d4, c8g4, d8d5, e8c8, d5a2, a2a1, a1b1, c6b4, b4c2, b1c2, c2c1",
+        "Penalties and awards": "-1.01, -0.51, -0.4, -0.38, -0.62, -0.26, -0.58, -0.83, -0.49, -2.44, -1.49, -2.37, -2.38, -17.39, 74.92, -81.03"
+    },
+    {
+        "Game number": 53,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-99.83",
+        "Good moves": "5.88%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, e1f2, g2g3, f2e1",
+        "Stockfish history": "c7c5, b8c6, d7d5, e7e5, f7f5, c8e6, g8f6, f8d6, e8g8, e5e4, f5f4, d5d4, f6g4, g4f2, d8h4, f4g3, g3g2",
+        "Penalties and awards": "-0.36, -0.78, -0.13, -0.44, -0.07, -0.69, 0.03, -1.03, -0.07, -1.54, -0.42, -1.04, -0.47, -6.48, -86.34, 0.0, 0.0"
+    },
+    {
+        "Game number": 54,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.19",
+        "Good moves": "6.67%",
+        "Net history": "a7a5, b8a6, a8b8, b8a8, a5a4, a4a3, a8b8, b8a8, a8a7, a7a8, a8a7, a7a8, a8a7, e8f7, f7e6",
+        "Stockfish history": "b1a3, e2e4, d2d4, g1f3, a3c4, c2c3, c4a3, f1d3, e4e5, e1g1, f1e1, a3b5, f3g5, g5f7, d1f3, d4d5",
+        "Penalties and awards": "-0.69, -0.77, -0.65, -0.22, -0.1, -0.49, -1.07, 0.2, -0.49, -0.1, -1.22, -0.03, -4.14, -1.08, -88.34"
+    },
+    {
+        "Game number": 55,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.17",
+        "Good moves": "5.88%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8a7, a6b8, a7a8, a8a4, b8a6, a6b8, h7h5, b8a6, a6b8, h8h7, h7h8, d8c7, h8h7",
+        "Stockfish history": "h2h4, e2e4, d2d4, b1c3, c3a4, f1e2, c2c4, g1f3, d1a4, a2a3, b2b4, a4a8, b4b5, a8b8, b5b6, b6c7, b8c7, c7c8",
+        "Penalties and awards": "-0.44, -1.15, -0.27, -0.16, -0.94, -0.31, -0.15, -2.09, -0.56, -0.25, -0.58, 0.14, -0.46, -0.94, -6.1, -1.12, -84.79"
+    },
+    {
+        "Game number": 56,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.93",
+        "Good moves": "0.00%",
+        "Net history": "h7h5, b8a6, a8b8, b8a8, a8b8, b8a8, a8b8",
+        "Stockfish history": "e2e4, d2d4, b1c3, g1f3, c1g5, f1c4, f3e5, c4f7",
+        "Penalties and awards": "-0.83, -0.51, -0.19, -0.48, -0.63, -3.95, -93.34"
+    },
+    {
+        "Game number": 57,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.98",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, h2h3, h3h4, h1h2, b1a1, a1b1, h2h1",
+        "Stockfish history": "a7a6, e7e5, g8f6, d7d5, b8c6, f8c5, f6g4, c5f2",
+        "Penalties and awards": "-1.04, -0.5, -0.72, -0.43, -0.89, -0.69, -2.85, -93.86"
+    },
+    {
+        "Game number": 58,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.57",
+        "Good moves": "0.00%",
+        "Net history": "a7a6, a8a7, a7a8, a6a5, a8a7, a7a8, b8a6, a5a4, e8f7, f7e8, g7g6, a8b8",
+        "Stockfish history": "b1c3, d2d4, e2e4, c1g5, f2f4, g1f3, f4f5, f1c4, c4f7, f3e5, d1h5, f5g6, g6h7",
+        "Penalties and awards": "-0.62, -0.67, -0.23, -0.5, -0.77, -0.72, -1.0, -96.03, 0.0, 0.0, 0.0, -0.03"
+    },
+    {
+        "Game number": 59,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.01",
+        "Good moves": "10.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2",
+        "Stockfish history": "g8h6, c7c5, d7d5, e7e5, b8c6, c8e6, d8f6, e5e4, h6g4, f6f2",
+        "Penalties and awards": "-0.42, -1.0, -0.09, -1.15, 0.03, -0.98, -0.15, -0.95, -0.45, -95.85"
+    },
+    {
+        "Game number": 60,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.25",
+        "Good moves": "0.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, e1f2, f2e1, g2g3, a2a1",
+        "Stockfish history": "a7a5, e7e5, d7d5, f8d6, d8e7, b8c6, f7f5, f5f4, c8g4, g8f6, d6c5, c5f2, f6e4, e7h4, f4g3, g3g2",
+        "Penalties and awards": "-0.45, -1.56, -0.04, -0.58, -0.02, -0.7, -0.06, -1.15, -0.09, -1.22, -0.5, -94.85, 0.0, 0.0, 0.0, -0.03"
+    },
+    {
+        "Game number": 61,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.60",
+        "Good moves": "6.67%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, e8f7, f7e8, a8b8, h8h7",
+        "Stockfish history": "a2a3, e2e4, b1c3, g1f3, d2d4, d4d5, c1e3, d1d2, e1c1, e4e5, e5e6, e6f7, f3g5, f1d3, g5h7, d3g6",
+        "Penalties and awards": "-0.78, -0.44, -0.4, -0.15, -0.61, -0.53, -0.35, -0.81, -0.68, -0.53, -1.78, -0.29, 0.41, -1.45, -92.21"
+    },
+    {
+        "Game number": 62,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "33.59",
+        "Good moves": "16.67%",
+        "Net history": "a7a5, b8a6, b7a6, a8b8, b8b1, a5a4, a6a5, h7h5, h8h7, h7h8, h8h7, h7h8, h8h7, c8a6, d8a8, e8d8, d8c8, a8g2",
+        "Stockfish history": "b2b4, b4b5, b5a6, g1f3, e2e3, a1b1, c1a3, h2h4, c2c4, f1e2, d1a4, f3g5, e2d3, d3h7, h7g8, g8f7, g5e6, e6c5, a4d7",
+        "Penalties and awards": "-0.54, -4.02, -0.5, 0.13, -2.3, -0.09, -0.39, -0.22, -0.52, -0.09, -0.08, -0.22, -4.25, -7.93, 67.49, -12.84, 0.01, -0.05"
+    },
+    {
+        "Game number": 63,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.23",
+        "Good moves": "5.56%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, b2a3, a3a4, a1b1, a2a3, c1b2, e1d1, b2a1",
+        "Stockfish history": "a7a5, e7e5, d7d5, g8f6, f8e7, e8g8, f8e8, c7c6, b7b5, b5b4, b4a3, b8d7, a8b8, b8b1, e7d6, b1d1, d8b6, b6b1",
+        "Penalties and awards": "-1.04, -0.57, -0.42, -0.51, -0.35, -0.32, -0.24, -0.31, -0.11, -3.46, -0.46, 0.23, -0.37, -2.35, 0.0, -3.99, -0.37, -86.59"
+    },
+    {
+        "Game number": 64,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.70",
+        "Good moves": "10.00%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8",
+        "Stockfish history": "d2d4, e2e4, b1c3, g1f3, c3a4, a4c3, f1c4, e1g1, c1g5, f3e5, c4f7",
+        "Penalties and awards": "-0.4, -0.54, -0.13, -0.7, -0.51, 0.01, -0.72, -0.27, -3.37, -93.07"
+    },
+    {
+        "Game number": 65,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.90",
+        "Good moves": "0.00%",
+        "Net history": "a7a6, a6a5, a8a7, a7a8, b8a6, a5a4, a8b8, b8a8, a8b8, b8a8",
+        "Stockfish history": "e2e4, d2d4, b1c3, c1e3, d1f3, e1c1, a2a3, g1h3, e4e5, h3g5, f3f7",
+        "Penalties and awards": "-0.37, -0.54, -0.78, -0.1, -0.32, -0.3, -0.73, -0.76, -1.29, -94.71"
+    },
+    {
+        "Game number": 66,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.02",
+        "Good moves": "9.09%",
+        "Net history": "a7a6, a8a7, a7a8, a6a5, b8a6, a5a4, a8b8, b8a8, a8a7, a7a8, a8b8",
+        "Stockfish history": "h2h4, e2e4, d2d4, b1c3, d1f3, h4h5, a2a3, f1b5, b5a4, c1g5, a4b3, b3f7",
+        "Penalties and awards": "-0.44, -1.24, -0.07, -0.79, -0.03, -0.39, -0.21, 0.04, -0.49, -0.31, -96.09"
+    },
+    {
+        "Game number": 67,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.63",
+        "Good moves": "0.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, e1f2, g2g3, f2e1",
+        "Stockfish history": "c7c6, e7e5, d7d5, f8d6, g8f6, e8g8, f6g4, f7f5, f5f4, g4f2, d8h4, f4g3, g3g2",
+        "Penalties and awards": "-0.48, -0.84, -0.23, -0.7, -0.15, -0.69, -0.3, -0.99, -0.95, -4.05, -91.25, 0.0, 0.0"
+    },
+    {
+        "Game number": 68,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-102.97",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, b1a1, b2a3, a1b1, b1b8, c1b2, d1a1, a1b2, e1d1, d1e1, e1d1, a2a3",
+        "Stockfish history": "b7b5, b5b4, b4a3, g8f6, e7e5, a8b8, b8b2, f8a3, a3b2, c7c6, d8a5, f6e4, a5d2",
+        "Penalties and awards": "-1.04, -1.7, -4.22, -0.01, -0.2, -2.16, -1.31, -0.43, -1.04, -1.45, -0.23, -89.14, -0.04"
+    },
+    {
+        "Game number": 69,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.18",
+        "Good moves": "7.69%",
+        "Net history": "a7a6, a6a5, b8a6, a8b8, b8a8, a5a4, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8a7",
+        "Stockfish history": "h2h4, e2e4, d2d4, b1c3, c1f4, d1d2, a2a3, g1f3, d4d5, e1c1, e4e5, e5e6, f3e5, e6f7",
+        "Penalties and awards": "-0.44, -1.15, -0.21, -0.43, -0.28, 0.01, -0.64, -0.41, -0.7, -0.08, -1.06, -1.83, -92.96"
+    },
+    {
+        "Game number": 70,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-99.87",
+        "Good moves": "6.67%",
+        "Net history": "a2a4, a4a5, a1a2, a2a1, b1a3, a1b1, b1a1, a3b1, b1a3, a3b1, g1h3, h1g1, g1h1, d1c2, h1g1",
+        "Stockfish history": "d7d5, e7e5, f8d6, g8f6, c7c6, d8a5, e8g8, a5a1, a1a2, a2b1, b8a6, a6b4, b4c2, b1c2, c2c1",
+        "Penalties and awards": "-0.48, -0.36, -0.64, -0.07, -0.91, -1.08, -0.19, -3.96, 0.04, -0.99, -0.86, -1.78, -88.48, -0.01, -0.1"
+    },
+    {
+        "Game number": 71,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-104.87",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, h2h4, b1a1, h1h2, h4h5, h2h1, e1f2, f2e1, a3b1",
+        "Stockfish history": "e7e6, e6e5, g8f6, b8c6, d7d5, d5d4, c8g4, d8d5, d5a2, a2a1, e5e4, e4e3, e3f2, f6e4, f8d6, d6g3",
+        "Penalties and awards": "-1.01, -0.16, -0.68, -0.25, -0.42, -0.26, -0.58, -0.83, -1.91, -2.16, -0.72, -0.6, -7.45, -2.18, -1.67, -83.99"
+    },
+    {
+        "Game number": 72,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.13",
+        "Good moves": "15.38%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a3a4, h2h4, a4a5",
+        "Stockfish history": "g8f6, e7e5, d7d5, f8d6, b8c6, c8e6, f6g4, d5d4, e5e4, e6a2, a2b1, d8f6, f6f2",
+        "Penalties and awards": "-0.39, -0.81, -0.16, -0.58, -0.15, -0.78, 0.06, -2.25, 0.19, -2.81, -1.42, -3.8, -87.23"
+    },
+    {
+        "Game number": 73,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-235.67",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a6b8, b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, g7g6, b8a8",
+        "Stockfish history": "e2e3, e3e4, d2d4, b1c3, f1d3, g1f3, e1g1, f3g5, f2f4, f4f5, g5f7, f7h8, d1h5, f5g6, g6h7",
+        "Penalties and awards": "-0.4, -0.32, -0.59, -0.24, -0.24, -0.36, -0.2, -0.66, -0.57, -4.7, -1.06, -89.83, -67.12, -69.38"
+    },
+    {
+        "Game number": 74,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.23",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, h2h3, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a3b1, b1a3, a3b1, b1a3, a3b1",
+        "Stockfish history": "c7c5, d7d5, e7e5, g8f6, b8c6, f8d6, a7a6, e8g8, b7b5, e5e4, f6h5, h5g3, g3h1, d8h4, h4f2",
+        "Penalties and awards": "-1.04, -0.8, -0.41, -0.25, -0.35, -0.4, -0.37, -0.47, -1.24, -0.4, -1.15, -1.34, -3.2, -89.77, -0.04"
+    },
+    {
+        "Game number": 75,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.36",
+        "Good moves": "0.00%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8b8, b8a8, a6b4, a8a2, h7h5, h8h7, h7h8, h8h7, h5h4, h4h3, h3g2",
+        "Stockfish history": "c2c3, e2e4, d2d4, g1f3, d1a4, a4c2, b2b4, c3b4, a1a2, f1d3, e4e5, c1g5, d3h7, h7g8, c2f5, g8f7",
+        "Penalties and awards": "-0.37, -0.41, -0.18, -0.91, -0.84, -0.09, -2.01, -2.86, -0.65, -0.73, -0.08, -3.28, -2.37, -84.58, 0.0"
+    },
+    {
+        "Game number": 76,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.39",
+        "Good moves": "11.76%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, g1h3, a1b1, b1a1, a1b1, b1a1, a1b1, h1g1, g1h1, d1c2, h1g1",
+        "Stockfish history": "f7f6, d7d5, e7e5, b8c6, d5d4, c8e6, f8a3, a3d6, g8e7, e8g8, d4d3, d3c2, c2b1q, c6b4, b4c2, b1c2, c2c1",
+        "Penalties and awards": "-1.04, -0.78, -0.39, -0.12, -0.46, -0.42, -0.53, -3.77, -0.55, 0.15, -0.84, -0.44, -8.28, -5.02, -78.87, 0.01, -0.04"
+    },
+    {
+        "Game number": 77,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.92",
+        "Good moves": "5.26%",
+        "Net history": "a7a5, b8a6, a5a4, a6b8, b8a6, a6b8, a8a4, b8a6, a6b8, b8a6, a6b8, b8a6, a6b8, b8a6, b7a6, a6a5, c8a6, d8a8, a8a7",
+        "Stockfish history": "h2h3, e2e4, d2d4, f1b5, c2c3, b5a4, g1f3, d1a4, e1g1, c3c4, b2b4, b1c3, b4b5, c4c5, b5a6, c1g5, a1b1, f1e1, f3e5, a4d7",
+        "Penalties and awards": "-0.47, -0.65, -0.45, -0.6, -0.64, -0.02, -1.64, -0.72, -0.19, -0.75, -0.08, -0.61, -0.05, -1.83, 0.15, -0.59, -0.23, -2.68, -87.87"
+    },
+    {
+        "Game number": 78,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-99.43",
+        "Good moves": "5.00%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, f1h3, h3f1, a1a2",
+        "Stockfish history": "b7b6, e7e5, c8b7, d7d5, b8d7, h7h5, d8e7, d5d4, g7g5, e8c8, g5g4, f7f5, c8b8, h5h4, h4h3, h3g2, g2h1q, h1g1, h8h2, g1f2",
+        "Penalties and awards": "-0.39, -0.95, -0.26, -0.6, -0.29, -0.72, 0.05, -1.14, -0.12, -0.93, -0.12, -0.96, -0.11, -0.55, -1.11, -2.78, -10.04, -78.4, 0.0, -0.01"
+    },
+    {
+        "Game number": 79,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.13",
+        "Good moves": "14.29%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8a7, a7a8, a8b8, b8a8, a8b8, b8a8, a6b8, a8a2, b8a6, a6b8, b8a6, b7a6, d8c7, a6a5, a5a4, a4a3, a3b2",
+        "Stockfish history": "d2d3, e2e4, d3d4, b1c3, c3a4, a4c3, g1f3, f1c4, e1g1, d4d5, f1e1, c1f4, a1a2, a2a1, c3b5, a1a6, b5c7, f4c7, d1d4, d4a7, a7b8, b8c8",
+        "Penalties and awards": "-0.48, -0.76, -0.08, -0.58, -0.47, -0.17, -0.66, -0.08, -0.88, 0.07, -0.4, -3.87, 0.07, -0.85, 0.23, -0.09, -0.05, -0.9, -2.34, -86.75, -0.09"
+    },
+    {
+        "Game number": 80,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.14",
+        "Good moves": "0.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, e1f2, g2g3, f2e1",
+        "Stockfish history": "c7c6, e7e5, d7d5, f8d6, g8f6, e8g8, f6g4, f7f5, f5f4, g4f2, d8h4, f4g3, g3g2",
+        "Penalties and awards": "-0.42, -0.84, -0.19, -0.6, -0.19, -0.69, -0.3, -0.99, -0.62, -4.05, -91.25, 0.0, 0.0"
+    },
+    {
+        "Game number": 81,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-23.51",
+        "Good moves": "6.25%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, c2d3, g2g3, a1a2",
+        "Stockfish history": "h7h6, e7e5, d7d5, b8c6, f8d6, c8e6, f7f5, g8f6, f5f4, e8g8, f6g4, g4f2, f2d3, d8h4, f4g3, g3g2",
+        "Penalties and awards": "-0.39, -0.91, -0.31, -0.6, -0.26, -0.73, -0.11, -1.04, -0.42, -1.34, -0.94, -3.78, -12.62, -0.05, 0.06, -0.07"
+    },
+    {
+        "Game number": 82,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.30",
+        "Good moves": "13.33%",
+        "Net history": "a7a5, b8a6, a5a4, a8a7, a7a8, a8a7, a7a8, a8a7, b7a6, a7a8, a8b8, b8b1, a6a5, c8a6, d8a8",
+        "Stockfish history": "d2d3, g1f3, e2e4, c2c4, d1a4, f1e2, b2b4, b4b5, b5a6, e1g1, c4c5, c1e3, a1b1, a4a5, a5a6, a6a8",
+        "Penalties and awards": "-0.38, -0.38, -0.61, -0.94, 0.06, -1.97, -0.79, -0.39, -1.36, -0.27, 0.1, -0.99, -0.59, -2.01, -89.78"
+    },
+    {
+        "Game number": 83,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.85",
+        "Good moves": "0.00%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8b8, b8a8, a8a7, a7a8, a8a7, a7a8, a8a6, b7a6, a6a5, c8a6, d8a8, a6b5",
+        "Stockfish history": "c2c4, g1f3, d2d4, b1c3, d1a4, e2e4, f1e2, b2b4, b4b5, c4c5, b5a6, e2a6, e1g1, f1e1, a4a5, c3b5, a5a8",
+        "Penalties and awards": "-0.32, -0.65, -0.2, -1.11, -0.61, -0.17, -1.03, -0.96, -0.93, -0.14, -0.28, -0.11, -0.44, -1.01, -4.34, -87.55"
+    },
+    {
+        "Game number": 84,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.31",
+        "Good moves": "22.22%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, b1a3, a2a1, a1b1, b1a1, e1f2, f2e1, g2g3, a1b1",
+        "Stockfish history": "a7a5, e7e5, d7d5, f8d6, d8e7, b8c6, f7f5, f5f4, g8f6, c8f5, e8c8, c8b8, d6c5, c5f2, f6e4, e7h4, f4g3, g3g2",
+        "Penalties and awards": "-0.45, -1.56, -0.05, -0.58, -0.07, -0.76, 0.12, -1.15, -0.09, -1.13, 0.14, 0.37, -0.74, -7.71, 0.12, -0.13, -0.3, -86.34"
+    },
+    {
+        "Game number": 85,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.10",
+        "Good moves": "23.53%",
+        "Net history": "a7a6, a6a5, a5a4, b8a6, a8b8, b8a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7",
+        "Stockfish history": "e2e3, g1f3, e3e4, b1c3, c3a4, a4c3, d2d4, f1c4, a2a3, d4d5, e4e5, e1g1, f1e1, c1g5, d5d6, d1d4, d4f4, c4f7",
+        "Penalties and awards": "-0.05, -0.61, -0.21, -0.87, -0.83, 0.03, -0.7, 0.05, -0.93, 0.04, -1.2, 0.02, -1.93, -0.23, -1.3, -1.14, -90.24"
+    },
+    {
+        "Game number": 86,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-115.07",
+        "Good moves": "10.53%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, b1a3, a3b1, a4a5, a5a6, d1c2, e1d1, a6b7, h2h3, d1e1",
+        "Stockfish history": "h7h5, e7e5, d7d5, d8f6, b8c6, c8e6, e8c8, d5d4, e5e4, e6a2, g8h6, a2b1, c6b4, b1c2, b4c2, f6c6, c8b7, c2a1, c6c1",
+        "Penalties and awards": "-0.45, -1.48, -0.15, -0.89, -0.02, -0.98, 0.06, -1.44, -0.05, -3.14, -0.49, -3.05, -2.15, -1.56, -11.38, 14.54, -76.25, -26.14, -0.05"
+    },
+    {
+        "Game number": 87,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.20",
+        "Good moves": "14.29%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b7a6, b8a8, a8b8, b8a8, a6a5, a7a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8b3, a5a4, e8f7, f7e8, g7g6, a4b3",
+        "Stockfish history": "b2b3, e2e4, b1c3, c1b2, f1a6, d1e2, e1c1, f2f4, d2d4, d4d5, c1b1, g1f3, h1e1, f4f5, e4e5, e5e6, a2b3, e6f7, f3g5, e2h5, f5g6, g6h7",
+        "Penalties and awards": "-0.89, -0.41, -0.61, -0.39, 0.0, -0.34, -0.64, -0.56, -0.54, -0.16, -0.56, -0.85, 0.07, -1.09, -0.5, -1.65, -7.39, 0.95, 1.0, -0.05, -84.59"
+    },
+    {
+        "Game number": 88,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.37",
+        "Good moves": "10.00%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, h1h2",
+        "Stockfish history": "e7e5, d7d5, b8c6, f8d6, g8f6, f6g4, e5e4, d6h2, d8h4, h4f2",
+        "Penalties and awards": "-0.39, -0.91, -0.26, -0.73, 0.04, -0.87, -0.38, -1.56, -3.44, -91.87"
+    },
+    {
+        "Game number": 89,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.32",
+        "Good moves": "10.00%",
+        "Net history": "b1a3, a3b1, a2a4, a1a2, b1a3, a2a1, a1b1, b1a1, a1b1, b1a1",
+        "Stockfish history": "a7a5, e7e5, d7d5, f8d6, c7c6, g8f6, e8g8, f6g4, d8b6, b6f2",
+        "Penalties and awards": "-1.04, -0.49, -0.5, -0.58, -0.24, 0.01, -0.37, -0.07, -2.6, -94.44"
+    },
+    {
+        "Game number": 90,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.94",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a6b8, b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8",
+        "Stockfish history": "a2a4, e2e4, d2d4, g1f3, f1d3, e1g1, f1e1, a4a5, c2c3, f3g5, d1b3, b3f7",
+        "Penalties and awards": "-0.85, -0.41, -0.31, -0.21, -0.5, -0.6, -0.24, -0.46, -0.42, -2.14, -93.8"
+    },
+    {
+        "Game number": 91,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.24",
+        "Good moves": "0.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a3, a4a5, b1a3, a3b1, b1a3",
+        "Stockfish history": "c7c6, e7e5, d7d5, f8d6, g8f6, e8g8, f6g4, d6a3, a3b4, e5e4, e4e3, e3f2",
+        "Penalties and awards": "-0.45, -0.84, -0.23, -0.6, -0.15, -0.69, -0.27, -0.69, -4.23, -0.23, -0.93, -90.93"
+    },
+    {
+        "Game number": 92,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.56",
+        "Good moves": "0.00%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8",
+        "Stockfish history": "e2e3, e3e4, d2d4, b1c3, g1f3, h2h3, f1d3, e1g1, d4d5, e4e5, f3g5, d1f3, f3f7",
+        "Penalties and awards": "-0.43, -0.33, -0.59, -0.25, -0.39, -0.25, -0.15, -0.68, -0.53, -1.65, -1.76, -92.55"
+    },
+    {
+        "Game number": 93,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.82",
+        "Good moves": "5.88%",
+        "Net history": "a2a3, a1a2, g1h3, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2",
+        "Stockfish history": "g8h6, d7d5, c8h3, h3c8, h6f5, e7e5, f8e7, e8g8, e5e4, f8e8, b8d7, d7f6, d5d4, h7h5, f6g4, e7h4, h4f2",
+        "Penalties and awards": "-0.39, -0.83, -1.37, -3.54, -1.27, -0.37, -0.37, -0.02, -0.36, -0.02, -0.65, -0.01, -0.57, 0.01, -0.14, -1.78, -90.14"
+    },
+    {
+        "Game number": 94,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-96.40",
+        "Good moves": "4.76%",
+        "Net history": "a7a5, b8a6, a5a4, a6b8, b8a6, a8b8, b8a8, a8a7, a6b8, a7a8, a8a4, b8a6, a6b8, b8a6, a6b8, b8a6, a6b8, h7h5, h8h7, d8c7, h7h8",
+        "Stockfish history": "a2a3, e2e4, d2d4, f1b5, c2c4, b1c3, g1f3, b5a4, d4d5, e1g1, f1e1, d1a4, c1e3, a1d1, b2b4, a4a7, e4e5, a7b8, c3b5, b5c7, b8c7, c7c8",
+        "Penalties and awards": "-0.57, -0.01, -0.91, -0.43, -0.17, -0.84, -0.01, -0.83, -1.13, 0.22, -0.47, -0.14, -0.63, -0.19, -0.34, -0.06, -2.37, -3.27, -84.22, 0.0, -0.03"
+    },
+    {
+        "Game number": 95,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-98.98",
+        "Good moves": "18.18%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a6b8, a8a4, b8a6, b7a6, a6a5, e8f7, f7e8, h8h7",
+        "Stockfish history": "g1f3, e2e4, d2d4, b1c3, c3a4, a2a3, f1d3, e1g1, f1e1, b2b4, c2c4, d4d5, c1b2, c4c5, b4b5, e4e5, d1a4, b5a6, e5e6, e6f7, f3g5, g5h7, d3g6",
+        "Penalties and awards": "-0.1, -0.73, -0.03, -0.75, -0.68, -0.13, -0.59, -0.06, -0.85, -0.03, -1.03, 0.03, -0.72, -0.3, 0.01, -0.8, -2.4, -0.16, -89.72, 0.06, 0.03, -0.03"
+    },
+    {
+        "Game number": 96,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.17",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1",
+        "Stockfish history": "g8h6, d7d5, b8c6, e7e5, c8e6, d8f6, e8c8, f8c5, c5f2",
+        "Penalties and awards": "-1.01, -0.57, -0.86, -0.6, -0.59, -0.2, -0.69, -0.3, -96.35"
+    },
+    {
+        "Game number": 97,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.23",
+        "Good moves": "9.09%",
+        "Net history": "a7a5, b8a6, a5a4, a6b8, b8a6, b7a6, a6a5, a5a4, a4a3, c8a6, d8a8",
+        "Stockfish history": "c2c3, e2e4, d2d4, d1a4, a4a8, f1a6, a8b8, b8b5, g1f3, b1a3, b5a6, a6a8",
+        "Penalties and awards": "-0.52, -0.48, -0.93, -4.82, -0.23, 0.26, -0.09, -0.27, -0.14, -1.11, -91.9"
+    },
+    {
+        "Game number": 98,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.33",
+        "Good moves": "7.14%",
+        "Net history": "a7a6, a6a5, a8a7, a7a8, a8a7, a7a8, b8a6, b7a6, a8b8, a5a4, a6a5, c8a6, d8b8, e8d8",
+        "Stockfish history": "b2b4, a2a3, b4b5, e2e4, d2d4, b1c3, f1d3, b5a6, a1b1, b1b8, e4e5, e5e6, d1h5, h5f7, f7f8",
+        "Penalties and awards": "-0.6, 0.05, -0.78, -0.03, -0.66, -0.04, -3.96, -0.2, -2.46, -0.45, -1.55, -89.64, -0.01, 0.0"
+    },
+    {
+        "Game number": 99,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-102.01",
+        "Good moves": "6.67%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a4a5, a5a6, d1a4, g1h3, e1d2, d2d3",
+        "Stockfish history": "b7b5, b5b4, g8f6, e7e5, d7d5, b4b3, b3c2, c2b1q, b1a1, f8b4, d8e7, a1a4, b4d2, e7b4, a4b3",
+        "Penalties and awards": "-0.45, -1.77, -0.1, -0.83, 0.09, -1.0, -0.1, -10.04, -1.97, -1.04, -1.49, -83.27, -0.04, 0.0, 0.0"
+    },
+    {
+        "Game number": 100,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.70",
+        "Good moves": "6.67%",
+        "Net history": "b8a6, a8b8, h7h5, b8a8, a8b8, b8a8, a8b8, b8a8, a6b8, b8a6, a8b8, b8a8, e8f7, f7e8, a8b8",
+        "Stockfish history": "g1f3, e2e4, b1c3, d2d4, d4d5, c1f4, d1d2, f1b5, e1c1, h1e1, e4e5, e5e6, e6f7, f3e5, b5d3, d3g6",
+        "Penalties and awards": "-0.69, -0.39, -0.35, -0.25, -0.59, -0.34, -0.66, 0.12, -0.75, -0.69, -2.96, -92.11, 0.0, 0.0, -0.04"
+    },
+    {
+        "Game number": 101,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.25",
+        "Good moves": "0.00%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1",
+        "Stockfish history": "e7e6, e6e5, d7d5, c8e6, b8c6, d8f6, e8c8, f8c5, c5f2",
+        "Penalties and awards": "-0.36, -0.34, -0.22, -0.58, -0.23, -0.94, -0.18, -1.21, -96.19"
+    },
+    {
+        "Game number": 102,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.18",
+        "Good moves": "0.00%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8b8, b8a8, a8a7, a7a8, a6b8",
+        "Stockfish history": "g1h3, d2d4, e2e4, b1c3, a2a3, h3g5, e4e5, d4d5, d1f3, f3f7",
+        "Penalties and awards": "-0.44, -0.91, -0.35, -0.47, -0.53, -0.28, -1.34, -1.11, -94.75"
+    },
+    {
+        "Game number": 103,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.46",
+        "Good moves": "0.00%",
+        "Net history": "a7a6, a6a5, b8a6, a8b8, b8a8, a5a4, a6b8, b8a6, a8b8, b8a8",
+        "Stockfish history": "b1a3, e2e4, d2d4, f1d3, g1f3, e1g1, c2c3, f3g5, e4e5, d1f3, f3f7",
+        "Penalties and awards": "-0.57, -0.95, -0.49, -0.48, -0.17, -0.84, -0.18, -0.52, -1.03, -95.23"
+    },
+    {
+        "Game number": 104,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.80",
+        "Good moves": "10.00%",
+        "Net history": "a7a5, b8a6, a5a4, a8a7, a7a8, a8b8, b8a8, a8b8, h7h5, b8a8",
+        "Stockfish history": "h2h4, d2d4, e2e4, a2a3, b1c3, d1f3, g1h3, c1e3, e1c1, h3g5, f3f7",
+        "Penalties and awards": "-0.64, -0.64, -0.2, -0.72, 0.1, -0.64, -0.42, -0.64, -0.43, -95.57"
+    },
+    {
+        "Game number": 105,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-102.24",
+        "Good moves": "0.00%",
+        "Net history": "a2a4, a1a2, a2a1, b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, a4a5",
+        "Stockfish history": "g7g5, c7c5, g8f6, b8c6, d7d5, e7e5, c8e6, c5c4, g5g4, h7h5, f8b4, f6e4, d8f6, f6f2",
+        "Penalties and awards": "-0.45, -1.43, -0.33, -0.35, -0.41, -0.31, -0.57, -0.28, -0.73, -0.43, -0.73, -1.06, -1.73, -93.43"
+    },
+    {
+        "Game number": 106,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.52",
+        "Good moves": "6.25%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, b1a3, a3b1, a2a1, a4a5, a1a2, e1f2, g2g3, f2e1",
+        "Stockfish history": "f7f5, e7e5, d7d5, c7c5, g8f6, f8d6, b8c6, e8g8, f5f4, e5e4, g8h8, f6g4, g4f2, d8h4, f4g3, g3g2",
+        "Penalties and awards": "-0.45, -0.86, -0.2, -1.12, -0.03, -1.14, 0.34, -0.7, -0.56, -0.69, -0.73, -0.67, -4.78, -88.93, 0.0, 0.0"
+    },
+    {
+        "Game number": 107,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.06",
+        "Good moves": "5.00%",
+        "Net history": "a2a4, a1a2, a2a1, a4a5, a1a2, a2a1, a1a2, b1a3, a2a1, a1b1, b1a1, b2a3, a1a2, a2a1, a1b1, b1b8, e1f2, f2e1, g2g3, h2g3",
+        "Stockfish history": "b7b6, e7e5, g8f6, b6b5, d7d5, b8c6, a7a6, f8d6, e8g8, b5b4, b4a3, a8b8, c6a5, e5e4, e4e3, e3f2, f6g4, d8h4, d6g3, h4g3",
+        "Penalties and awards": "-0.45, -1.0, -0.03, -0.15, -0.82, 0.0, -0.83, -0.63, 0.13, -2.99, -0.36, -0.09, -0.03, -0.51, -2.04, -90.26, 0.0, 0.0, 0.0, 0.0"
+    },
+    {
+        "Game number": 108,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.84",
+        "Good moves": "8.33%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8b8, b8a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, b7a6, a8b8, b8b1, e8f7, f7e8, b1a1",
+        "Stockfish history": "f2f4, e2e4, d2d4, a2a3, g1f3, c2c4, b1c3, d1a4, f1d3, e1g1, f4f5, c1g5, e4e5, a4c2, a1e1, b2b4, b4b5, g1h1, b5a6, d4d5, e5e6, e6f7, f3e5, f5f6, f6f7",
+        "Penalties and awards": "-0.42, -0.55, -0.57, -0.59, -0.72, -0.11, -0.92, 0.03, -0.81, 0.02, -1.02, -0.31, -1.26, -0.25, -0.93, -0.11, -0.39, -0.52, -0.7, -0.64, -91.04, 0.0, 0.0, -0.03"
+    },
+    {
+        "Game number": 109,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.97",
+        "Good moves": "14.29%",
+        "Net history": "a7a6, h7h5, a6a5, b8a6, a8b8, b8a8, a8b8",
+        "Stockfish history": "a2a4, e2e4, d2d4, c1g5, f1c4, g1f3, f3e5, c4f7",
+        "Penalties and awards": "-0.22, -0.61, -0.72, 0.07, -0.71, -3.55, -94.23"
+    },
+    {
+        "Game number": 110,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.57",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1",
+        "Stockfish history": "c7c5, d7d5, e7e5, g8f6, b8c6, c5c4, f8c5, d8b6, c5f2",
+        "Penalties and awards": "-1.04, -0.81, -0.34, -0.41, -0.81, -0.67, -0.28, -3.36, -93.85"
+    },
+    {
+        "Game number": 111,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.40",
+        "Good moves": "10.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a4a5, a1a2, a2a1, a1a2, a2a1",
+        "Stockfish history": "d7d5, e7e5, b8c6, c8e6, d8f6, a7a6, e8c8, g8h6, f8c5, c5f2",
+        "Penalties and awards": "-0.45, -1.0, -0.09, -0.81, 0.04, -0.12, -0.86, -0.3, -1.93, -94.88"
+    },
+    {
+        "Game number": 112,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.20",
+        "Good moves": "7.69%",
+        "Net history": "b8a6, a8b8, b8a8, a6b8, b8a6, a8b8, g8h6, b7a6, b8a8, a8b8, a6a5, a7a6, g7h6",
+        "Stockfish history": "b2b4, a2a3, e2e4, g1f3, b1c3, d2d4, b4b5, b5a6, f1c4, a1b1, b1b8, c1h6, f3g5, c4f7",
+        "Penalties and awards": "-0.65, -0.8, -0.21, 0.1, -0.65, -3.08, -0.76, -0.08, -0.5, -2.0, -2.5, -4.07, -85.0"
+    },
+    {
+        "Game number": 113,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.58",
+        "Good moves": "27.78%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a4a5, a1a2, a2a1, a1a2, a2a1, a1a2, b1a3, a3b1, e1f2, f2e1, h1h2",
+        "Stockfish history": "g7g5, c7c5, g8f6, d7d5, b8c6, e7e5, c8e6, a7a6, d8c7, e8c8, e5e4, d5d4, e6a2, e4e3, e3f2, f6g4, g4h2, c7g3",
+        "Penalties and awards": "-0.45, -1.49, -0.33, -0.91, -0.08, -1.02, 0.02, 0.04, -1.07, -0.17, -0.7, -0.5, -3.1, 0.24, -5.3, 0.27, 0.25, -86.28"
+    },
+    {
+        "Game number": 114,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.96",
+        "Good moves": "18.18%",
+        "Net history": "a7a6, a6a5, b8a6, a5a4, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a6b8, a8a4, b8a6, b7a6, a6a5, e8f7, f7e8, h8h7",
+        "Stockfish history": "b1c3, d2d4, e2e4, g1f3, c3a4, a2a3, f1d3, e1g1, f1e1, b2b4, c2c4, d4d5, c1b2, c4c5, b4b5, e4e5, d1a4, b5a6, e5e6, e6f7, f3g5, g5h7, d3g6",
+        "Penalties and awards": "-0.66, -0.83, -0.11, -0.7, -0.68, -0.13, -0.59, -0.06, -0.85, -0.02, -1.14, 0.03, -0.72, -0.3, 0.01, -0.8, -2.4, -0.16, -89.91, 0.06, 0.03, -0.03"
+    },
+    {
+        "Game number": 115,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.95",
+        "Good moves": "4.00%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, g1h3, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a3a4, a2a1, e1d1, a1a2, a2a1, d1e1, e2d3, f1e2, e1f1, f1e1, e1f1, f1g1",
+        "Stockfish history": "b7b5, g8f6, e7e5, d7d5, b8d7, f8d6, c7c6, d7c5, e8g8, f8e8, d5d4, e5e4, d4d3, d3c2, c2d1r, b5b4, c8e6, e6b3, c5d3, e4d3, e8e2, e2e1, d8e7, e7e2, e2d1",
+        "Penalties and awards": "-0.36, -0.74, -0.36, -0.68, -0.02, -0.71, -0.03, 0.02, -0.67, -0.06, -1.25, -0.74, -2.49, -0.71, -3.78, -0.31, -1.67, -86.39, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0"
+    },
+    {
+        "Game number": 116,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-17.14",
+        "Good moves": "15.00%",
+        "Net history": "a7a5, b8a6, a5a4, a8b8, b8a8, a8b8, b8a8, a8a7, a7a8, a6b8, a8a2, b8a6, a6b8, b8a6, b7a6, d8c7, a6a5, c8a6, a6c8, a5a4",
+        "Stockfish history": "e2e4, d2d4, b1c3, c3a4, a4c3, g1f3, f1c4, e1g1, d4d5, f1e1, c1f4, a1a2, a2a1, c3b5, a1a6, b5c7, f4c7, d1d4, d4a7, a7a8, a8c8",
+        "Penalties and awards": "-0.52, -0.12, -0.58, -0.61, -0.03, -0.78, -0.08, -1.15, 0.07, -0.54, -3.87, 0.38, -0.8, 0.23, -0.09, -0.05, -0.9, -7.58, -0.03, -0.09"
+    },
+    {
+        "Game number": 117,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.11",
+        "Good moves": "10.00%",
+        "Net history": "a2a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2",
+        "Stockfish history": "g8h6, c7c5, d7d5, e7e5, b8c6, c8e6, d8f6, e5e4, h6g4, f6f2",
+        "Penalties and awards": "-0.42, -0.96, -0.12, -1.15, 0.05, -1.05, -0.08, -0.95, -0.58, -95.85"
+    },
+    {
+        "Game number": 118,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-100.05",
+        "Good moves": "18.18%",
+        "Net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a3a4, a1a2",
+        "Stockfish history": "g8f6, e7e5, d7d5, f8d6, b8c6, c8e6, f6g4, d5d4, e5e4, e4e3, e3f2",
+        "Penalties and awards": "-0.33, -0.74, -0.13, -0.58, -0.02, -0.78, 0.06, -2.25, 0.19, -1.46, -94.01"
+    },
+    {
+        "Game number": 119,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-101.68",
+        "Good moves": "0.00%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, g1h3, g2h3, a1b1, b1a1, a1b1",
+        "Stockfish history": "g7g5, g8f6, d7d5, e7e5, b8c6, g5g4, c8e6, g4h3, h8g8, f6e4, d8h4, h4f2",
+        "Penalties and awards": "-1.01, -1.0, -0.81, -0.71, -0.59, -0.45, -0.37, -3.71, -0.3, -0.72, -92.01, 0.0"
+    },
+    {
+        "Game number": 120,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-100.03",
+        "Good moves": "8.33%",
+        "Net history": "a7a5, b8a6, a5a4, a8a7, a7a8, a8b8, b8a8, a6b4, a8a2, h7h5, h8h7, h7h8",
+        "Stockfish history": "c2c4, d2d4, b1c3, d1a4, g1f3, e2e4, c4c5, b2b4, a4b4, a1a2, b4b3, f3g5, b3f7",
+        "Penalties and awards": "-0.38, -0.32, -0.91, -1.02, 0.09, -1.04, -0.32, -2.13, -2.4, -0.33, -2.7, -88.57"
+    },
+    {
+        "Game number": 121,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.97",
+        "Good moves": "8.33%",
+        "Net history": "a7a5, b8a6, a5a4, a8a7, a7a8, a8b8, b8a8, a6b4, a8a2, h7h5, h8h7, h7h8",
+        "Stockfish history": "c2c4, d2d4, b1c3, d1a4, g1f3, e2e4, c4c5, b2b4, a4b4, a1a2, b4b3, f3g5, b3f7",
+        "Penalties and awards": "-0.38, -0.32, -0.91, -1.02, 0.09, -1.04, -0.32, -2.13, -2.4, -0.33, -2.64, -88.57"
+    },
+    {
+        "Game number": 122,
+        "Game result": "0-1",
+        "Side": "White",
+        "Sum of penalties and awards": "-184.07",
+        "Good moves": "6.25%",
+        "Net history": "b1a3, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a3b1, h2h4, h1h2, d1c2, h2h1",
+        "Stockfish history": "d7d6, e7e5, d6d5, g8f6, b8c6, d5d4, c8g4, d8d5, e8c8, d5a2, a2a1, a1b1, c6b4, b4c2, b1c2, c2c1",
+        "Penalties and awards": "-1.01, -0.58, -0.34, -0.38, -0.62, -0.22, -0.58, -0.83, -0.39, -2.44, -1.26, -2.55, -0.81, -88.62, 0.05, -83.49"
+    },
+    {
+        "Game number": 123,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-96.60",
+        "Good moves": "5.56%",
+        "Net history": "b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, b7a6, a8b8, b8a8, a8b8, b8a8, a8b8, e8f7, f7e8, b8a8, d8c7, e8d8",
+        "Stockfish history": "b1c3, e2e4, g1f3, d2d4, d4d5, c1g5, d1d4, f1a6, e1c1, h1e1, e4e5, d4c4, e5e6, e6f7, d5d6, d6c7, f3e5, c4f7, f7f8",
+        "Penalties and awards": "-1.3, -0.4, -0.27, -0.42, -0.32, -0.62, -0.26, -0.13, -0.31, -0.6, -0.54, -1.95, -5.72, 0.17, -0.62, -83.25, -0.06, 0.0"
+    },
+    {
+        "Game number": 124,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-101.55",
+        "Good moves": "0.00%",
+        "Net history": "a7a5, a5a4, b8a6, a8b8, b8a8, a6b8, b8a6, a8b8, b8a8, a6b8, a8a4, b8a6, a6b8, b8a6, a6b8, b8a6, g8h6, h8g8, g8h8, h8g8, g8h8, e8d8, h8g8",
+        "Stockfish history": "a2a3, e2e4, d2d4, b1c3, f1b5, g1f3, e1g1, b5a4, b2b4, f1e1, d4d5, c3a4, c1b2, c2c4, b4b5, c4c5, b5a6, a6a7, a7a8q, d5d6, d6c7, c7d8r, a4b6, a8c8",
+        "Penalties and awards": "-0.66, -0.4, -0.87, -0.54, -0.13, -0.03, -0.59, -1.31, -0.13, -0.7, -0.68, -0.44, -0.31, -0.5, -0.04, -1.49, -4.3, -1.23, -1.85, -4.47, -80.88, 0.0, 0.0"
+    }
+]
