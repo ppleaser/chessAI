@@ -24,6 +24,7 @@ from utils.stockfish_evaluation import get_stockfish_evaluation
 
 last_model_number = 0
 num_training_cycles = 1000
+filename = f"models/reinforcement_learning_stockfish_model/game_results.json"
 
 def play_game(model, neural_net_color, display_queue, i, replay_buffer):
 
@@ -79,8 +80,6 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
     print("Game was finished")
 
     model = train_neural_net(model, replay_buffer, 64)
-
-    filename = f"models/reinforcement_learning_stockfish_model/game_results.json"
 
     if os.path.exists(filename):
         with open(filename, "r", encoding="utf-8") as file:
@@ -145,7 +144,7 @@ if __name__ == "__main__":
             display_queue = manager.Queue()
             processes = []
 
-            display_thread = threading.Thread(target=update_display, args=(display_queue,))
+            display_thread = threading.Thread(target=update_display, args=(display_queue, False, ))
             display_thread.daemon = True
             display_thread.start()
 
@@ -215,8 +214,6 @@ if __name__ == "__main__":
 
                         averaged_model.save(new_model_path)
                         print(f"Saved model: {new_model_number}")
-
-                        filename = f"models/reinforcement_learning_stockfish_model/game_results.json"
 
                         with open(filename, "r", encoding="utf-8") as file:
                             game_results = json.load(file)

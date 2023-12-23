@@ -2,8 +2,7 @@ import pygame
 import math
 import chess
 
-def update_display(display_queue):
-
+def update_display(display_queue, ai_only):
     pygame.init()
     pygame.display.set_caption("Chess Game")
     screen = pygame.display.set_mode((1900, 1030), pygame.RESIZABLE)
@@ -11,10 +10,10 @@ def update_display(display_queue):
     dark_square_color = (194, 159, 129)
 
     piece_images = {}
-    text_surface_top = [[None] * 4 for _ in range(2)]  # Два ряда для каждой стороны
-    text_surface_bottom = [[None] * 4 for _ in range(2)]
-    background_rect_top = [[None] * 4 for _ in range(2)]
-    background_rect_bottom = [[None] * 4 for _ in range(2)]
+    text_surface_top = [None] * 8
+    text_surface_bottom = [None] * 8
+    background_rect_top = [None] * 8
+    background_rect_bottom = [None] * 8
     clock = pygame.time.Clock()
     while True:
         pygame.event.pump()
@@ -117,24 +116,37 @@ def update_display(display_queue):
             text_color = (255, 255, 255)
             background_color = (0, 0, 0)  # Цвет фона
 
-            text_top = (
-                f"Stockfish ({-eval_score_before:.2f})"
-                if neural_net_color == chess.WHITE
-                else f"Neural Net ({eval_score_before:.2f})"
-            )
-            text_bottom = (
-                f"Stockfish ({-eval_score_before:.2f})"
-                if neural_net_color == chess.BLACK
-                else f"Neural Net ({eval_score_before:.2f})"
-            )
-
+            if not ai_only:
+                text_bottom = (
+                    f"Stockfish ({-eval_score_before:.2f})"
+                    if neural_net_color == chess.BLACK
+                    else f"Neural Net ({eval_score_before:.2f})"
+                )
+                text_top = (
+                    f"Stockfish ({-eval_score_before:.2f})"
+                    if neural_net_color == chess.WHITE 
+                    else f"Neural Net ({eval_score_before:.2f})"
+                )
+            
+            else: 
+                if neural_net_color == chess.BLACK:
+                    text_top = ( 
+                        f"Neural Net Black ({eval_score_before:.2f})")
+                    text_bottom = ( 
+                        f"Neural Net White ({-eval_score_before:.2f})")
+                else:
+                    text_top = ( 
+                        f"Neural Net Black ({-eval_score_before:.2f})")
+                    text_bottom = ( 
+                        f"Neural Net White ({eval_score_before:.2f})")
+                        
             (
-                text_surface_top[neural_net_color][process_number % 4],
-                background_rect_top[neural_net_color][process_number % 4],
+                text_surface_top[process_number % 8],
+                background_rect_top[process_number % 8],
             ) = draw_text(
                 screen,
-                text_surface_top[neural_net_color][process_number % 4],
-                background_rect_top[neural_net_color][process_number % 4],
+                text_surface_top[process_number % 8],
+                background_rect_top[process_number % 8],
                 text_top,
                 text_color,
                 (x_offset + 200, y_offset + 25),
@@ -143,12 +155,12 @@ def update_display(display_queue):
             )
 
             (
-                text_surface_bottom[neural_net_color][process_number % 4],
-                background_rect_bottom[neural_net_color][process_number % 4],
+                text_surface_bottom[process_number % 8],
+                background_rect_bottom[process_number % 8],
             ) = draw_text(
                 screen,
-                text_surface_bottom[neural_net_color][process_number % 4],
-                background_rect_bottom[neural_net_color][process_number % 4],
+                text_surface_bottom[process_number % 8],
+                background_rect_bottom[process_number % 8],
                 text_bottom,
                 text_color,
                 (x_offset + 200, y_offset + 8 * 50 + 75),
@@ -160,22 +172,25 @@ def update_display(display_queue):
             clock.tick(120)
 
 def draw_arrow(screen, color, start, end, width = 8):
-    pygame.draw.line(screen, color, start, end, width)
+    try:
+        pygame.draw.line(screen, color, start, end, width)
 
-    # Расчет направления стрелки
-    direction = [end[0] - start[0], end[1] - start[1]]
-    vec_len = math.sqrt(direction[0]**2 + direction[1]**2)
-    direction[0] /= vec_len
-    direction[1] /= vec_len
+        # Расчет направления стрелки
+        direction = [end[0] - start[0], end[1] - start[1]]
+        vec_len = math.sqrt(direction[0]**2 + direction[1]**2)
+        direction[0] /= vec_len
+        direction[1] /= vec_len
 
-    # Расчет точек для треугольника стрелки
-    arrow_size = 15
-    left_point = [end[0] - direction[0]*arrow_size - direction[1]*arrow_size/2, 
-                  end[1] - direction[1]*arrow_size + direction[0]*arrow_size/2]
-    right_point = [end[0] - direction[0]*arrow_size + direction[1]*arrow_size/2, 
-                   end[1] - direction[1]*arrow_size - direction[0]*arrow_size/2]
+        # Расчет точек для треугольника стрелки
+        arrow_size = 15
+        left_point = [end[0] - direction[0]*arrow_size - direction[1]*arrow_size/2, 
+                    end[1] - direction[1]*arrow_size + direction[0]*arrow_size/2]
+        right_point = [end[0] - direction[0]*arrow_size + direction[1]*arrow_size/2, 
+                    end[1] - direction[1]*arrow_size - direction[0]*arrow_size/2]
 
-    pygame.draw.polygon(screen, color, [end, left_point, right_point])
+        pygame.draw.polygon(screen, color, [end, left_point, right_point])
+    except:
+        pass
 
 
 def draw_text(screen, text_surface, background_rect, text, color, position, font, background_color):
