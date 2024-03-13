@@ -17,7 +17,7 @@ from pygame.locals import *
 from tensorflow.keras import models
 from gui.gui import draw_board, update_display
 from utils.tensors import board_to_tensor, move_to_tensor
-from utils.moves import get_neural_net_move, get_stockfish_move
+from utils.moves import get_neural_net_move
 from utils.models import average_models, create_model
 from utils.train import train_neural_net
 from utils.stockfish_evaluation import get_stockfish_evaluation
