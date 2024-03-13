@@ -50,18 +50,16 @@ def play_game(model, display_queue, i, replay_buffer):
         else:
              neural_net_moves_black.append(neural_net_move.uci())
 
-        board.push(neural_net_move)
-
         eval_score_before = get_stockfish_evaluation(board, neural_net_color)
         last_move = neural_net_move
         changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
         display_queue.put(changes_buffer)
-
+        board.push(neural_net_move)
         eval_score_after = get_stockfish_evaluation(board, neural_net_color)
         next_state = board_to_tensor(board)
         done = board.is_game_over()
         reward = round(eval_score_after - eval_score_before, 2)
-
+        print(eval_score_before, eval_score_after, reward)
         if neural_net_color == chess.WHITE:
             rewards_white.append(reward)
         else:

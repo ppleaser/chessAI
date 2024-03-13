@@ -36,18 +36,18 @@ def process_historical_games_data(filename, model):
                             eval_score_after = get_stockfish_evaluation(board, is_white_turn)
                             reward = round(eval_score_after - eval_score_before, 2)  # Используем разницу оценок в качестве награды
                             training_data.append((state, action, reward, next_state, done))
-                            print("Обучение...")
+                            print(eval_score_before, eval_score_after, reward)
                         else:
                             print(f"Пропускаем недопустимый ход {san_move} в строке {index}")
                     except Exception as e:
                         print(f"Пропускаем недопустимый ход {san_move} в строке {index}")
                         print(e)
                         continue
-        
-        if (index + 1) % 20 == 0: 
-            print(len(training_data))
-            model = train_neural_net(model, training_data, batch_size=128)
-            training_data = []  
+
+        print(len(training_data))
+        model = train_neural_net(model, training_data, batch_size=128)
+        training_data = []  
+
     return model
 
 
