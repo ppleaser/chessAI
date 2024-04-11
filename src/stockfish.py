@@ -22,30 +22,48 @@ from utils.models import average_models, create_model
 from utils.train import train_neural_net
 from utils.stockfish_evaluation import get_stockfish_evaluation
 
+# Встановлюємо початковий номер моделі
 last_model_number = 0
+
+# Встановлюємо кількість навчальних циклів
 num_training_cycles = 1000
+
+# Шлях до файлу з результатами ігор
 filename = f"models/reinforcement_learning_stockfish_model/game_results.json"
 
 def play_game(model, neural_net_color, display_queue, i, replay_buffer):
+    """
+    Функція для гри в шахи між нейронною мережею та Stockfish.
 
+    Параметри:
+    - model: нейронна мережа для гри в шахи.
+    - neural_net_color: колір сторони нейронної мережі (білий або чорний).
+    - display_queue: черга для відображення змін дошки.
+    - i: номер гри.
+    - replay_buffer: буфер для навчання нейронної мережі.
+    """
+    # Створюємо дошку для гри
     board = chess.Board()
     last_move = None
 
-    total_moves = 0
-    correct_moves = 0
-    neural_net_moves = []
-    stockfish_moves = []
-    rewards = []
+    total_moves = 0  # Загальна кількість ходів
+    correct_moves = 0  # Кількість правильних ходів
+    neural_net_moves = []  # Історія ходів нейронної мережі
+    stockfish_moves = []  # Історія ходів Stockfish
+    rewards = []  # Нагороди за правильні ходи
 
-    first_move = True
+    first_move = True  # Прапор для перевірки першого ходу
 
+    # Гра триває, доки не завершиться
     while not board.is_game_over():
         state = board_to_tensor(board)
         neural_net_move = None
         stockfish_move = None
         eval_score_before = get_stockfish_evaluation(board, neural_net_color)
 
+        # Якщо черга нейронної мережі
         if board.turn == neural_net_color:
+            # Отримуємо хід від нейронної мережі
             neural_net_move = get_neural_net_move(model, board)
             neural_net_moves.append(neural_net_move.uci())
             board.push(neural_net_move)
@@ -54,6 +72,7 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
             changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
             display_queue.put(changes_buffer)
         else:
+            # Отримуємо хід від Stockfish
             stockfish_move = get_stockfish_move(board, first_move)
             first_move = False
             board.push(stockfish_move)
@@ -68,8 +87,10 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
         reward = round(eval_score_after - eval_score_before, 2)
         rewards.append(reward)
 
+        # Перетворюємо хід у тензор
         action = move_to_tensor(neural_net_move)
 
+        # Додаємо епізод у буфер повторення для навчання
         replay_buffer.append((state, action, reward, next_state, done))
 
         if reward > 0:
@@ -77,16 +98,19 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
 
         total_moves += 1
 
-    print("Game was finished")
+    print("Гра завершена")
 
+    # Тренуємо нейронну мережу
     model = train_neural_net(model, replay_buffer, 64)
 
+    # Перевіряємо наявність файлу результатів ігор
     if os.path.exists(filename):
         with open(filename, "r", encoding="utf-8") as file:
             game_results = json.load(file)
     else:
         game_results = []
 
+    # Створюємо результат гри
     game_result = {
         "Game number": len(game_results) + 1,
         "Game result": board.result(),
@@ -97,67 +121,88 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
         "Stockfish history": ', '.join(stockfish_moves),
         "Penalties and awards": ', '.join(map(str, rewards))
     }
+
+    # Додаємо результат гри до списку результатів
     game_results.append(game_result)
 
-    # Записываем обновленные результаты игр обратно в файл
+    # Записуємо оновлені результати ігор у файл
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(game_results, file, indent=4)
 
     return model
 
 def run_game_for_color(color, result_queue, display_queue, i, replay_buffer):
+    """
+    Функція для запуску гри для певного кольору (білий або чорний) з нейронною мережею та Stockfish.
 
+    Параметри:
+    - color: колір сторони гри (білий або чорний).
+    - result_queue: черга для результатів гри.
+    - display_queue: черга для відображення змін дошки.
+    - i: номер гри.
+    - replay_buffer: буфер для навчання нейронної мережі.
+    """
     try:
+        # Знаходимо всі моделі у папці
         files = os.listdir("models/reinforcement_learning_stockfish_model")
         model_numbers = [
             int(file.split("_")[1]) for file in files if file.startswith("model_")
         ]
 
+        # Якщо моделі існують, завантажуємо останню
         if model_numbers:
             last_model_number = max(model_numbers)
             model = models.load_model(
                 f"models/reinforcement_learning_stockfish_model/model_{last_model_number}"
             )
 
+            # Перевіряємо, чи модель скомпільована
             if not model._is_compiled:
                 model.compile(optimizer="adam", loss="mean_squared_error")
 
             print(f"Loaded model: {last_model_number}")
         else:
-            raise IOError("No models was found")
+            raise IOError("No models found")
 
+        # Граємо гру
         result = play_game(model, color, display_queue, i, replay_buffer)
+        # Додаємо результат до черги результатів
         result_queue.put(result)
         return
     except KeyboardInterrupt:
         print(f"Process {os.getpid()} received KeyboardInterrupt. Terminating...")
         sys.exit(0)
 
-
 if __name__ == "__main__":
     try:
         freeze_support()
 
         with Manager() as manager:
+            # Створюємо черги та буфери для управління процесами
             replay_buffer = manager.list()
             result_queue = manager.Queue()
             display_queue = manager.Queue()
             processes = []
 
-            display_thread = threading.Thread(target=update_display, args=(display_queue, False, ))
+            # Запускаємо потік для оновлення дисплею
+            display_thread = threading.Thread(target=update_display, args=(display_queue, False,))
             display_thread.daemon = True
             display_thread.start()
 
+            # Знаходимо всі моделі у папці
             files = os.listdir("models/reinforcement_learning_stockfish_model")
             model_numbers = [
                 int(file.split("_")[1]) for file in files if file.startswith("model_")
             ]
+            # Якщо немає моделей, створюємо нову
             if not model_numbers:
                 model = create_model()
                 new_model_path = f"models/reinforcement_learning_stockfish_model/model_1"
                 model.save(new_model_path)
 
+            # Цикл навчання
             for _ in range(num_training_cycles):
+                # Запускаємо процеси для гри за обома кольорами
                 for i in range(8):
                     color = chess.WHITE if i < 4 else chess.BLACK
                     process = Process(
@@ -168,18 +213,22 @@ if __name__ == "__main__":
                     processes.append(process)
                     process.start()
 
+                # Обробник сигналу KeyboardInterrupt
                 def signal_handler(sig, frame):
                     process.terminate()
                     sys.exit(1)
 
                 signal.signal(signal.SIGINT, signal_handler)
 
+                # Чекаємо завершення процесів
                 for process in processes:
                     process.join()
 
+                # Якщо є результати в черзі
                 if not result_queue.empty():
                     my_models = [result_queue.get() for _ in processes]
 
+                    # Якщо отримано достатньо моделей, середній їх
                     if len(my_models) >= 8:
                         averaged_model = average_models(my_models)
                         files = os.listdir(
@@ -191,37 +240,45 @@ if __name__ == "__main__":
                             if file.startswith("model_")
                         ]
 
+                        # Знаходимо останній номер моделі
                         if model_numbers:
                             last_model_number = max(model_numbers)
                         else:
                             last_model_number = 0
 
+                        # Визначаємо номер нової моделі
                         new_model_number = last_model_number + 1
                         new_model_path = f"models/reinforcement_learning_stockfish_model/model_{new_model_number}"
 
+                        # Перевіряємо, чи модель скомпільована
                         if not averaged_model._is_compiled:
                             averaged_model.compile(
                                 optimizer="adam", loss="mean_squared_error"
                             )
-                            
+
                         print("Training averaged model...")
+                        # Тренуємо нейронну мережу
                         averaged_model = train_neural_net(
                             averaged_model, replay_buffer, 64
                         )
-                        
-                        for old_model_path in glob.glob("models/reinforcement_learning_stockfish_model/model_*"):
-                                shutil.rmtree(old_model_path)
 
+                        # Видаляємо старі моделі
+                        for old_model_path in glob.glob("models/reinforcement_learning_stockfish_model/model_*"):
+                            shutil.rmtree(old_model_path)
+
+                        # Зберігаємо нову модель
                         averaged_model.save(new_model_path)
                         print(f"Saved model: {new_model_number}")
 
+                        # Відкриваємо файл з результатами ігор
                         with open(filename, "r", encoding="utf-8") as file:
                             game_results = json.load(file)
 
+                        # Отримуємо дані про ігри
                         game_numbers = [result["Game number"] for result in game_results]
                         sum_penalties_awards = [float(result["Sum of penalties and awards"]) for result in game_results]
 
-                        # Создаем график
+                        # Створюємо графік
                         plt.figure(figsize=(10, 6))
                         plt.plot(game_numbers, sum_penalties_awards, marker='o')
                         plt.title('Sum of Penalties and Awards per Game')
@@ -230,9 +287,11 @@ if __name__ == "__main__":
                         plt.grid(True)
                         plt.savefig('models/reinforcement_learning_stockfish_model/plot.png')
 
+                # Очищаємо списки процесів та моделей
                 processes = []
                 my_models = []
                 results = []
+
     except KeyboardInterrupt:
         for process in processes:
             process.terminate()

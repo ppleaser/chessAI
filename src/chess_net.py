@@ -1,32 +1,49 @@
 import torch
 import torch.nn as nn
 
-
 class ChessNet(nn.Module):
     def __init__(self):
-        super(ChessNet, self).__init__()
+        super(ChessNet, self).__init__()  # Викликаємо ініціалізатор базового класу nn.Module
+        # Створюємо перший шар згортки з 12 каналами вхідного зображення і 64 вихідними каналами, ядром 3x3 і з заповненням країв
         self.conv1 = nn.Conv2d(12, 64, kernel_size=3, padding=1)
+        # Ініціалізуємо ваги шару згортки за методом Ксав'є
         nn.init.xavier_uniform_(self.conv1.weight)
+        # Створюємо шар нормалізації за величиною середнього та стандартного відхилення
         self.bn1 = nn.BatchNorm2d(64)
+        # Створюємо другий шар згортки з 64 вихідних каналів та 128 вихідних каналів
         self.conv2 = nn.Conv2d(64, 128, kernel_size=3, padding=1)
-        nn.init.xavier_uniform_(self.conv2.weight)
-        self.bn2 = nn.BatchNorm2d(128)
+        nn.init.xavier_uniform_(self.conv2.weight)  # Ініціалізуємо ваги шару згортки
+        self.bn2 = nn.BatchNorm2d(128)  # Шар нормалізації за величиною середнього та стандартного відхилення
+        # Створюємо третій шар згортки з 128 вихідних каналів та 256 вихідних каналів
         self.conv3 = nn.Conv2d(128, 256, kernel_size=3, padding=1)
-        nn.init.xavier_uniform_(self.conv3.weight)
-        self.bn3 = nn.BatchNorm2d(256)
+        nn.init.xavier_uniform_(self.conv3.weight)  # Ініціалізуємо ваги шару згортки
+        self.bn3 = nn.BatchNorm2d(256)  # Шар нормалізації за величиною середнього та стандартного відхилення
+        
+        # Перший повністю зв'язаний шар з 256 * 8 * 8 входів та 256 виходів
         self.fc1 = nn.Linear(256 * 8 * 8, 256)
-        nn.init.xavier_uniform_(self.fc1.weight)
+        nn.init.xavier_uniform_(self.fc1.weight)  # Ініціалізуємо ваги шару
+
+        # Другий повністю зв'язаний шар з 256 входів та 64 виходів
         self.fc2 = nn.Linear(256, 64)
-        nn.init.xavier_uniform_(self.fc2.weight)
+        nn.init.xavier_uniform_(self.fc2.weight)  # Ініціалізуємо ваги шару
+        
+        # Третій повністю зв'язаний шар з 64 входів та 1 виходом
         self.fc3 = nn.Linear(64, 1)
-        nn.init.xavier_uniform_(self.fc3.weight)
+        nn.init.xavier_uniform_(self.fc3.weight)  # Ініціалізуємо ваги шару
 
     def forward(self, x):
+        # Проходження через перший шар згортки, нормалізацію та функцію активації ReLU
         x = torch.relu(self.bn1(self.conv1(x.view(-1, 12, 8, 8))))
+        # Проходження через другий шар згортки, нормалізацію та функцію активації ReLU
         x = torch.relu(self.bn2(self.conv2(x)))
+        # Проходження через третій шар згортки, нормалізацію та функцію активації ReLU
         x = torch.relu(self.bn3(self.conv3(x)))
+        # Розплющення вектора перед подачею у повністю зв'язані шари
         x = x.view(-1, 256 * 8 * 8)
+        # Проходження через перший повністю зв'язаний шар та функцію активації ReLU
         x = torch.relu(self.fc1(x))
+        # Проходження через другий повністю зв'язаний шар та функцію активації ReLU
         x = torch.relu(self.fc2(x))
+        # Проходження через третій повністю зв'язаний шар, отримання вихідного значення
         x = self.fc3(x)
-        return x
+        return x  # Повертаємо вихід
