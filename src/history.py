@@ -47,7 +47,6 @@ def process_historical_games_data(filename, model):
         print(len(training_data))
         model = train_neural_net(model, training_data, batch_size=128)
         training_data = []  
-
     return model
 
 
