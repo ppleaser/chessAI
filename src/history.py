@@ -71,7 +71,7 @@ if __name__ == "__main__":
         # Завантажити історичні дані ігор з CSV та навчити модель
         model = process_historical_games_data(historical_games_filename, model)
 
-        # Зберегти навчений модель
+        # Зберегти навчену модель
         model.save("models/historical_model/trained_model")
 
     except KeyboardInterrupt:

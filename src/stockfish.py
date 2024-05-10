@@ -77,10 +77,11 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
             first_move = False
             board.push(stockfish_move)
             last_move = stockfish_move
+            eval_score_after = get_stockfish_evaluation(board, neural_net_color)
             changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
             display_queue.put(changes_buffer)
             stockfish_moves.append(stockfish_move.uci())
-            continue
+            
 
         next_state = board_to_tensor(board)
         done = board.is_game_over()
@@ -88,7 +89,7 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
         rewards.append(reward)
 
         # Перетворюємо хід у тензор
-        action = move_to_tensor(neural_net_move)
+        action = move_to_tensor(last_move)
 
         # Додаємо епізод у буфер повторення для навчання
         replay_buffer.append((state, action, reward, next_state, done))
@@ -143,7 +144,7 @@ def run_game_for_color(color, result_queue, display_queue, i, replay_buffer):
     - replay_buffer: буфер для навчання нейронної мережі.
     """
     try:
-        # Знаходимо всі моделі у папці
+        # Знаходимо всі моделі у теці
         files = os.listdir("models/reinforcement_learning_stockfish_model")
         model_numbers = [
             int(file.split("_")[1]) for file in files if file.startswith("model_")
@@ -228,7 +229,7 @@ if __name__ == "__main__":
                 if not result_queue.empty():
                     my_models = [result_queue.get() for _ in processes]
 
-                    # Якщо отримано достатньо моделей, середній їх
+                    # Якщо отримано достатньо моделей
                     if len(my_models) >= 8:
                         averaged_model = average_models(my_models)
                         files = os.listdir(

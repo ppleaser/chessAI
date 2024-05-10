@@ -1,3 +1,12 @@
 [
-  
+    {
+        "Game number": 1,
+        "Game result": "1-0",
+        "Side": "Black",
+        "Sum of penalties and awards": "-99.82",
+        "Good moves": "21.05%",
+        "Net history": "b8a6, a8b8, b8a8, h7h5, a8b8, b8a8, a8b8, b8a8, h8h7",
+        "Stockfish history": "c2c4, d2d4, b1c3, e2e4, c4c5, g1f3, c1g5, f3e5, f1c4, c4f7",
+        "Penalties and awards": "0.09, -0.45, -0.11, -0.28, -0.11, -0.22, -0.03, -0.67, -0.06, -0.66, 0.1, -0.42, 0.02, -1.86, -0.5, -2.68, 0.03, -92.0, -0.01"
+    }
 ]

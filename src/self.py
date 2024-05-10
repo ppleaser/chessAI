@@ -184,8 +184,8 @@ def learn_position():
         average_accuracies.append(average_accuracy)
         print("\nГра була завершена. Середня точність: ", average_accuracy, "\n")
         
-        # Відображаємо середню точність кожні 5 ігор або у кінці навчання
-        if i % 5 == 0 or i == games:
+        print(game_accuracies)
+        if i % 2 == 0 or i == games:
             plt.plot(average_accuracies)
             plt.ylim([0, 100])
             plt.xlabel('Game')
