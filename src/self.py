@@ -4,7 +4,7 @@ import chess.svg
 import chess.engine
 import os
 import threading
-import signal
+
 import sys
 import json
 import glob
@@ -12,10 +12,11 @@ import random
 import shutil
 import matplotlib.pyplot as plt
 
+
 import torch
 import torch.optim as optim
 
-from multiprocessing import Process, Manager, freeze_support
+from multiprocessing import Process, Manager, freeze_support,  Event
 from pygame.locals import *
 from tensorflow.keras import models
 from gui.gui import draw_board, update_display
@@ -27,9 +28,6 @@ from chess_net import ChessNet
 
 # Останній номер моделі для зберігання результатів гри
 last_model_number = 0
-
-# Кількість циклів навчання
-num_training_cycles = 1000
 
 # Шлях до файлу, де зберігаються результати гри
 filename = f"models/self_learning_model/game_results.json"
@@ -114,7 +112,7 @@ def calculate_accuracy(neural_net_score, stockfish_score):
     deviation = abs(neural_net_score - stockfish_score)
     return max(0, 100 - deviation * 20)
 
-def train_neural_net(neural_net, optimizer, board, neural_net_color, accuracies):
+def train_neural_net2(neural_net, optimizer, board, neural_net_color, accuracies):
     """
     Навчає нейронну мережу, використовуючи дані з шахової дошки та оцінки Stockfish.
 
@@ -177,7 +175,7 @@ def learn_position():
         while not board.is_game_over():
             move = random.choice(list(board.legal_moves))
             board.push(move)
-            train_neural_net(neural_net, optimizer, board, board.turn, game_accuracies)
+            train_neural_net2(neural_net, optimizer, board, board.turn, game_accuracies)
 
         # Розраховуємо середню точність за останню гру
         average_accuracy = sum(game_accuracies) / len(game_accuracies)
@@ -251,10 +249,9 @@ def play_game(model, display_queue, i, replay_buffer):
         
         # Оновлюємо дошку і робимо хід
         last_move = neural_net_move
+        board.push(neural_net_move)
         changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
         display_queue.put(changes_buffer)
-        board.push(neural_net_move)
-        
         # Отримуємо оцінку позиції після ходу
         eval_score_after = get_trained_model_evaluation(board, neural_net_color)
         
@@ -292,8 +289,9 @@ def play_game(model, display_queue, i, replay_buffer):
 
     print("Гра була завершена")
 
+
     # Навчаємо модель на основі буфера повтору і повертаємо оновлену модель
-    model = train_neural_net(model, replay_buffer, 64)
+    model = train_neural_net(model, replay_buffer, 128)
 
     # Якщо файл з результатами гри існує, читаємо його вміст
     if os.path.exists(filename):
@@ -322,7 +320,7 @@ def play_game(model, display_queue, i, replay_buffer):
 
     return model
 
-def run_game_for_color(result_queue, display_queue, i, replay_buffer):
+def run_game_for_color(result_queue, display_queue, i, replay_buffer, event):
     """
     Запускає гру для певного кольору (білий або чорний), використовуючи задану модель нейронної мережі.
 
@@ -357,147 +355,134 @@ def run_game_for_color(result_queue, display_queue, i, replay_buffer):
         # Запускаємо гру
         result = play_game(model, display_queue, i, replay_buffer)
         result_queue.put(result)
-        return
-        
-    except KeyboardInterrupt:
-        # Обробка клавіатурного переривання (Ctrl+C)
-        print(f"Процес {os.getpid()} отримав KeyboardInterrupt. Завершення...")
-        sys.exit(0)
+        if result_queue.qsize() == 8:
+                    my_models = [result_queue.get() for _ in range(8)]
 
-
-def play_chess_learning():
-    """
-    Запускає процес навчання гри в шахи.
-
-    Параметри:
-    - Немає параметрів
-    """
-    try:
-        # Функція для забезпечення підтримки паралельної обробки
-        freeze_support()
-        
-        # Використовуємо менеджер для створення спільних структур даних
-        with Manager() as manager:
-            replay_buffer = manager.list()  # Буфер повтору для навчання
-            result_queue = manager.Queue()  # Черга для передачі результатів
-            display_queue = manager.Queue()  # Черга для передачі даних для візуалізації
-            processes = []  # Список процесів
-            
-            # Створюємо окремий потік для оновлення візуалізації
-            display_thread = threading.Thread(target=update_display, args=(display_queue, True,))
-            display_thread.daemon = True
-            display_thread.start()
-
-            # Перевіряємо наявність файлів моделей
-            files = os.listdir("models/self_learning_model")
-            model_numbers = [
-                int(file.split("_")[1]) for file in files if file.startswith("model_")
-            ]
-            
-            # Якщо моделі не знайдені, створюємо нову
-            if not model_numbers:
-                model = create_model()
-                new_model_path = f"models/self_learning_model/model_1"
-                model.save(new_model_path)
-
-            # Запускаємо задану кількість навчальних циклів
-            for _ in range(num_training_cycles):
-                # Запускаємо процеси гри для кожного з 8 кольорів
-                for i in range(8):
-                    process = Process(
-                        target=run_game_for_color,
-                        args=(result_queue, display_queue, i, replay_buffer),
-                    )
-                    process.daemon = True
-                    processes.append(process)
-                    process.start()
-
-                # Обробка сигналу завершення
-                def signal_handler(sig, frame):
-                    process.terminate()
-                    sys.exit(1)
-
-                signal.signal(signal.SIGINT, signal_handler)
-
-                # Очікуємо завершення всіх процесів
-                for process in processes:
-                    process.join()
-
-                # Якщо є результати в черзі, отримуємо їх
-                if not result_queue.empty():
-                    my_models = [result_queue.get() for _ in processes]
-
-                    # Якщо є принаймні 8 моделей, середньоважимо їх
-                    if len(my_models) >= 8:
-                        averaged_model = average_models(my_models)
+                    averaged_model = average_models(my_models)
                         
                         # Отримуємо список наявних номерів моделей
-                        files = os.listdir(
+                    files = os.listdir(
                             "models/self_learning_model"
                         )
-                        model_numbers = [
+                    model_numbers = [
                             int(file.split("_")[1])
                             for file in files
                             if file.startswith("model_")
                         ]
 
                         # Визначаємо останній номер моделі або встановлюємо як 0
-                        if model_numbers:
+                    if model_numbers:
                             last_model_number = max(model_numbers)
-                        else:
+                    else:
                             last_model_number = 0
 
                         # Визначаємо новий номер моделі і шлях для її збереження
-                        new_model_number = last_model_number + 1
-                        new_model_path = f"models/self_learning_model/model_{new_model_number}"
+                    new_model_number = last_model_number + 1
+                    new_model_path = f"models/self_learning_model/model_{new_model_number}"
 
                         # Перевіряємо, чи скомпільована модель
-                        if not averaged_model._is_compiled:
+                    if not averaged_model._is_compiled:
                             averaged_model.compile(
                                 optimizer="adam", loss="mean_squared_error"
                             )
                             
                         # Тренуємо середньоважену модель
-                        print("Тренування середньоваженої моделі...")
-                        averaged_model = train_neural_net(
-                            averaged_model, replay_buffer, 64
+                    print("Тренування середньоваженої моделі...")
+                    averaged_model = train_neural_net(
+                            averaged_model, replay_buffer, 128
                         )
                         
                         # Видаляємо старі моделі
-                        for old_model_path in glob.glob("models/self_learning_model/model_*"):
+                    for old_model_path in glob.glob("models/self_learning_model/model_*"):
                             shutil.rmtree(old_model_path)
 
                         # Зберігаємо нову середньоважену модель
-                        averaged_model.save(new_model_path)
-                        print(f"Збережена модель: {new_model_number}")
+                    averaged_model.save(new_model_path)
+                    print(f"Збережена модель: {new_model_number}")
 
                         # Зчитуємо результати ігор з файлу
-                        with open(filename, "r", encoding="utf-8") as file:
+                    with open(filename, "r", encoding="utf-8") as file:
                             game_results = json.load(file)
 
                         # Отримуємо номери ігор і суми штрафів та нагород
-                        game_numbers = [result["Game number"] for result in game_results]
-                        sum_penalties_awards = [float(result["Sum of penalties and awards"]) for result in game_results]
+                    game_numbers = [result["Game number"] for result in game_results]
+                    sum_penalties_awards = [float(result["Sum of penalties and awards"]) for result in game_results]
 
                         # Створюємо графік
-                        plt.figure(figsize=(10, 6))
-                        plt.plot(game_numbers, sum_penalties_awards, marker='o')
-                        plt.title('Сума штрафів та нагород за гру')
-                        plt.xlabel('Номер гри')
-                        plt.ylabel('Сума штрафів та нагород')
-                        plt.grid(True)
-                        plt.savefig('models/self_learning_model/plot.png')
+                    plt.figure(figsize=(10, 6))
+                    plt.plot(game_numbers, sum_penalties_awards, marker='o')
+                    plt.title('Сума штрафів та нагород за гру')
+                    plt.xlabel('Номер гри')
+                    plt.ylabel('Сума штрафів та нагород')
+                    plt.grid(True)
+                    plt.savefig('models/self_learning_model/plot.png')
 
-                # Очищуємо списки процесів та моделей
-                processes = []
-                my_models = []
-
+                    my_models = []
+                    event.set()
+        return model
+        
     except KeyboardInterrupt:
         # Обробка клавіатурного переривання (Ctrl+C)
-        for process in processes:
-            process.terminate()
-        pygame.quit()
-        exit()
+        print(f"Процес {os.getpid()} отримав KeyboardInterrupt. Завершення...")
+        sys.exit(0)
+    except: 
+          return model
+
+
+def play_chess_learning(num_training_cycles):
+    """
+    Запускає процес навчання гри в шахи.
+
+    """
+    for _ in range(num_training_cycles):
+        try:
+            # Використовуємо менеджер для створення спільних структур даних
+            with Manager() as manager:
+                replay_buffer = manager.list()  # Буфер повтору для навчання
+                result_queue = manager.Queue()  # Черга для передачі результатів
+                display_queue = manager.Queue()  # Черга для передачі даних для візуалізації
+                processes = []  # Список процесів
+                
+                # Створюємо окремий потік для оновлення візуалізації
+                display_thread = threading.Thread(target=update_display, args=(display_queue, True,))
+                display_thread.daemon = True
+                display_thread.start()
+
+                # Перевіряємо наявність файлів моделей
+                files = os.listdir("models/self_learning_model")
+                model_numbers = [
+                    int(file.split("_")[1]) for file in files if file.startswith("model_")
+                ]
+                
+                # Якщо моделі не знайдені, створюємо нову
+                if not model_numbers:
+                    model = create_model()
+                    new_model_path = f"models/self_learning_model/model_1"
+                    model.save(new_model_path)
+
+                event = Event()
+            
+                for i in range(8):
+                    process = Process(
+                        target=run_game_for_color,
+                        args=(result_queue, display_queue, i, replay_buffer, event),
+                    )
+                    process.daemon = True
+                    processes.append(process)
+                    process.start()
+
+                event.wait()
+                for process in processes:
+                    process.terminate()
+        except Exception as e:
+            print(f"Error during training cycle: {e}")
+
+        except KeyboardInterrupt:
+            # Обробка клавіатурного переривання (Ctrl+C)
+            for process in processes:
+                process.terminate()
+            pygame.quit()
+            exit()
 
 if __name__ == "__main__":
     # Вибір режиму
@@ -507,6 +492,6 @@ if __name__ == "__main__":
     mode = input("Введіть 1 або 2: ")
     
     if mode == "1":
-        play_chess_learning()
+        play_chess_learning(1000)
     elif mode == "2":
         learn_position()

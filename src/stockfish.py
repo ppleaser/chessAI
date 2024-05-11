@@ -102,7 +102,7 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
     print("Гра завершена")
 
     # Тренуємо нейронну мережу
-    model = train_neural_net(model, replay_buffer, 64)
+    model = train_neural_net(model, replay_buffer, 128)
 
     # Перевіряємо наявність файлу результатів ігор
     if os.path.exists(filename):
@@ -214,10 +214,10 @@ if __name__ == "__main__":
                     processes.append(process)
                     process.start()
 
-                # Обробник сигналу KeyboardInterrupt
-                def signal_handler(sig, frame):
-                    process.terminate()
-                    sys.exit(1)
+                    def signal_handler(sig, frame):
+                        for process in processes:
+                            process.terminate()
+                        sys.exit(1)
 
                 signal.signal(signal.SIGINT, signal_handler)
 
@@ -260,7 +260,7 @@ if __name__ == "__main__":
                         print("Training averaged model...")
                         # Тренуємо нейронну мережу
                         averaged_model = train_neural_net(
-                            averaged_model, replay_buffer, 64
+                            averaged_model, replay_buffer, 128
                         )
 
                         # Видаляємо старі моделі
