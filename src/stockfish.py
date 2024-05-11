@@ -184,9 +184,9 @@ if __name__ == "__main__":
             result_queue = manager.Queue()
             display_queue = manager.Queue()
             processes = []
-
+            stop_flag = threading.Event()
             # Запускаємо потік для оновлення дисплею
-            display_thread = threading.Thread(target=update_display, args=(display_queue, False,))
+            display_thread = threading.Thread(target=update_display, args=(display_queue, False, stop_flag))
             display_thread.daemon = True
             display_thread.start()
 

@@ -432,8 +432,10 @@ def run_game_for_color(result_queue, display_queue, i, replay_buffer, event):
 def play_chess_learning(num_training_cycles):
     """
     Запускає процес навчання гри в шахи.
-
+    
     """
+    freeze_support()
+    
     for _ in range(num_training_cycles):
         try:
             # Використовуємо менеджер для створення спільних структур даних
@@ -442,12 +444,10 @@ def play_chess_learning(num_training_cycles):
                 result_queue = manager.Queue()  # Черга для передачі результатів
                 display_queue = manager.Queue()  # Черга для передачі даних для візуалізації
                 processes = []  # Список процесів
-                
+                stop_flag = threading.Event()
                 # Створюємо окремий потік для оновлення візуалізації
-                display_thread = threading.Thread(target=update_display, args=(display_queue, True,))
-                display_thread.daemon = True
-                display_thread.start()
 
+               
                 # Перевіряємо наявність файлів моделей
                 files = os.listdir("models/self_learning_model")
                 model_numbers = [
@@ -471,9 +471,20 @@ def play_chess_learning(num_training_cycles):
                     processes.append(process)
                     process.start()
 
+                try:
+                    display_thread = threading.Thread(target=update_display, args=(display_queue, True, stop_flag))
+                    display_thread.daemon = True
+                    display_thread.start()
+                except:
+                     pass
+                      
                 event.wait()
+
+ 
                 for process in processes:
                     process.terminate()
+                stop_flag.set()  
+
         except Exception as e:
             print(f"Error during training cycle: {e}")
 

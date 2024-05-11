@@ -4,7 +4,7 @@ import numpy as np
 
 from .tensors import board_to_tensor, move_to_tensor
 
-def get_neural_net_move(model, board, exploration_factor=0.1):
+def get_neural_net_move(model, board, exploration_factor=0.2):
 
     legal_moves = list(board.legal_moves)
     board_copy = board.copy()  # Создаем копию доски

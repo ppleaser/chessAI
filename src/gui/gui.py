@@ -2,174 +2,182 @@ import pygame
 import math
 import chess
 
-def update_display(display_queue, ai_only):
-    pygame.init()
-    pygame.display.set_caption("Chess Game")
-    screen = pygame.display.set_mode((1900, 1030), pygame.RESIZABLE)
-    light_square_color = (241, 224, 194)
-    dark_square_color = (194, 159, 129)
+def update_display(display_queue, ai_only, stop_flag):
+    try:
+        pygame.init()
+        print("Создание окна")
+        pygame.display.set_caption("Chess Game")
+        screen = pygame.display.set_mode((1900, 1030), pygame.RESIZABLE)
+        light_square_color = (241, 224, 194)
+        dark_square_color = (194, 159, 129)
 
-    piece_images = {}
-    text_surface_top = [None] * 8
-    text_surface_bottom = [None] * 8
-    background_rect_top = [None] * 8
-    background_rect_bottom = [None] * 8
-    clock = pygame.time.Clock()
-    while True:
-        pygame.event.pump()
-        if not display_queue.empty():
-            (
-                board_info,
-                process_number,
-                neural_net_color,
-                eval_score_before,
-                board,
-                last_move,
-            ) = display_queue.get()
-
-            for piece_info in board_info:
-                image_path, position = piece_info[:2]
-                if image_path not in piece_images and image_path != "highlight":
-                    piece_images[image_path] = pygame.transform.scale(
-                        pygame.image.load(image_path), (50, 50)
-                    )
-
-            x_offset = ((screen.get_width() - (4 * 400 + 3 * 50)) / 2) + (
-                process_number % 4 * (400 + 50)
-            )
-            y_offset = 0 if process_number < 4 else screen.get_height() / 2
-
-            for row in range(8):
-                for col in range(8):
-                    color = (
-                        light_square_color
-                        if (row + col) % 2 == 0
-                        else dark_square_color
-                    )
-                    pygame.draw.rect(
-                        screen,
-                        color,
-                        (col * 50 + x_offset, row * 50 + y_offset + 50, 50, 50),
-                    )
-
-            for piece_info in board_info:
-                image_path, position = piece_info[:2]
-                if image_path == "highlight":
-                    start_position, end_position = position, piece_info[2]
-                    if (
-                        board.piece_type_at(last_move.to_square) == chess.KNIGHT
-                    ):  # Если ход совершает конь
-                        if abs(start_position[0] - end_position[0]) > abs(
-                            start_position[1] - end_position[1]
-                        ):
-                            intermediate_position = (end_position[0], start_position[1])
-                        else:
-                            intermediate_position = (start_position[0], end_position[1])
-                        pygame.draw.line(
-                            screen,
-                            (0, 255, 0),
-                            (
-                                start_position[0] + x_offset,
-                                start_position[1] + y_offset + 50,
-                            ),
-                            (
-                                intermediate_position[0] + x_offset,
-                                intermediate_position[1] + y_offset + 50,
-                            ),
-                            3,
-                        )
-                        draw_arrow(
-                            screen,
-                            (0, 255, 0),
-                            (
-                                intermediate_position[0] + x_offset,
-                                intermediate_position[1] + y_offset + 50,
-                            ),
-                            (
-                                end_position[0] + x_offset,
-                                end_position[1] + y_offset + 50,
-                            ),
-                            3,
-                        )
-                    else:
-                        draw_arrow(
-                            screen,
-                            (0, 255, 0),
-                            (
-                                start_position[0] + x_offset,
-                                start_position[1] + y_offset + 50,
-                            ),
-                            (
-                                end_position[0] + x_offset,
-                                end_position[1] + y_offset + 50,
-                            ),
-                            3,
-                        )
-                else:
-                    screen.blit(
-                        piece_images[image_path],
-                        (position[0] + x_offset, position[1] + y_offset + 50),
-                    )
-
-            # Добавляем текст над и под каждой доской
-            font = pygame.font.Font(None, 32)
-            text_color = (255, 255, 255)
-            background_color = (0, 0, 0)  # Цвет фона
-
-            if not ai_only:
-                text_bottom = (
-                    f"Stockfish ({-eval_score_before:.2f})"
-                    if neural_net_color == chess.BLACK
-                    else f"Neural Net ({eval_score_before:.2f})"
-                )
-                text_top = (
-                    f"Stockfish ({-eval_score_before:.2f})"
-                    if neural_net_color == chess.WHITE 
-                    else f"Neural Net ({eval_score_before:.2f})"
-                )
+        piece_images = {}
+        text_surface_top = [None] * 8
+        text_surface_bottom = [None] * 8
+        background_rect_top = [None] * 8
+        background_rect_bottom = [None] * 8
+        clock = pygame.time.Clock()
+        while True:
+            pygame.event.pump()
+            if stop_flag.is_set():
+                pygame.quit()
+                break
+            if not display_queue.empty():
             
-            else: 
-                if neural_net_color == chess.BLACK:
-                    text_top = ( 
-                        f"Neural Net Black ({eval_score_before:.2f})")
-                    text_bottom = ( 
-                        f"Neural Net White ({-eval_score_before:.2f})")
-                else:
-                    text_top = ( 
-                        f"Neural Net Black ({-eval_score_before:.2f})")
-                    text_bottom = ( 
-                        f"Neural Net White ({eval_score_before:.2f})")
-                        
-            (
-                text_surface_top[process_number % 8],
-                background_rect_top[process_number % 8],
-            ) = draw_text(
-                screen,
-                text_surface_top[process_number % 8],
-                background_rect_top[process_number % 8],
-                text_top,
-                text_color,
-                (x_offset + 200, y_offset + 25),
-                font,
-                background_color,
-            )
+                (
+                    board_info,
+                    process_number,
+                    neural_net_color,
+                    eval_score_before,
+                    board,
+                    last_move,
+                ) = display_queue.get()
 
-            (
-                text_surface_bottom[process_number % 8],
-                background_rect_bottom[process_number % 8],
-            ) = draw_text(
-                screen,
-                text_surface_bottom[process_number % 8],
-                background_rect_bottom[process_number % 8],
-                text_bottom,
-                text_color,
-                (x_offset + 200, y_offset + 8 * 50 + 75),
-                font,
-                background_color,
-            )
+                for piece_info in board_info:
+                    image_path, position = piece_info[:2]
+                    if image_path not in piece_images and image_path != "highlight":
+                        piece_images[image_path] = pygame.transform.scale(
+                            pygame.image.load(image_path), (50, 50)
+                        )
 
-            pygame.display.flip()
-            clock.tick(120)
+                x_offset = ((screen.get_width() - (4 * 400 + 3 * 50)) / 2) + (
+                    process_number % 4 * (400 + 50)
+                )
+                y_offset = 0 if process_number < 4 else screen.get_height() / 2
+
+                for row in range(8):
+                    for col in range(8):
+                        color = (
+                            light_square_color
+                            if (row + col) % 2 == 0
+                            else dark_square_color
+                        )
+                        pygame.draw.rect(
+                            screen,
+                            color,
+                            (col * 50 + x_offset, row * 50 + y_offset + 50, 50, 50),
+                        )
+
+                for piece_info in board_info:
+                    image_path, position = piece_info[:2]
+                    if image_path == "highlight":
+                        start_position, end_position = position, piece_info[2]
+                        if (
+                            board.piece_type_at(last_move.to_square) == chess.KNIGHT
+                        ):  # Если ход совершает конь
+                            if abs(start_position[0] - end_position[0]) > abs(
+                                start_position[1] - end_position[1]
+                            ):
+                                intermediate_position = (end_position[0], start_position[1])
+                            else:
+                                intermediate_position = (start_position[0], end_position[1])
+                            pygame.draw.line(
+                                screen,
+                                (0, 255, 0),
+                                (
+                                    start_position[0] + x_offset,
+                                    start_position[1] + y_offset + 50,
+                                ),
+                                (
+                                    intermediate_position[0] + x_offset,
+                                    intermediate_position[1] + y_offset + 50,
+                                ),
+                                3,
+                            )
+                            draw_arrow(
+                                screen,
+                                (0, 255, 0),
+                                (
+                                    intermediate_position[0] + x_offset,
+                                    intermediate_position[1] + y_offset + 50,
+                                ),
+                                (
+                                    end_position[0] + x_offset,
+                                    end_position[1] + y_offset + 50,
+                                ),
+                                3,
+                            )
+                        else:
+                            draw_arrow(
+                                screen,
+                                (0, 255, 0),
+                                (
+                                    start_position[0] + x_offset,
+                                    start_position[1] + y_offset + 50,
+                                ),
+                                (
+                                    end_position[0] + x_offset,
+                                    end_position[1] + y_offset + 50,
+                                ),
+                                3,
+                            )
+                    else:
+                        screen.blit(
+                            piece_images[image_path],
+                            (position[0] + x_offset, position[1] + y_offset + 50),
+                        )
+
+                # Добавляем текст над и под каждой доской
+                font = pygame.font.Font(None, 32)
+                text_color = (255, 255, 255)
+                background_color = (0, 0, 0)  # Цвет фона
+
+                if not ai_only:
+                    text_bottom = (
+                        f"Stockfish ({-eval_score_before:.2f})"
+                        if neural_net_color == chess.BLACK
+                        else f"Neural Net ({eval_score_before:.2f})"
+                    )
+                    text_top = (
+                        f"Stockfish ({-eval_score_before:.2f})"
+                        if neural_net_color == chess.WHITE 
+                        else f"Neural Net ({eval_score_before:.2f})"
+                    )
+                
+                else: 
+                    if neural_net_color == chess.BLACK:
+                        text_top = ( 
+                            f"Neural Net Black ({eval_score_before:.2f})")
+                        text_bottom = ( 
+                            f"Neural Net White ({-eval_score_before:.2f})")
+                    else:
+                        text_top = ( 
+                            f"Neural Net Black ({-eval_score_before:.2f})")
+                        text_bottom = ( 
+                            f"Neural Net White ({eval_score_before:.2f})")
+                            
+                (
+                    text_surface_top[process_number % 8],
+                    background_rect_top[process_number % 8],
+                ) = draw_text(
+                    screen,
+                    text_surface_top[process_number % 8],
+                    background_rect_top[process_number % 8],
+                    text_top,
+                    text_color,
+                    (x_offset + 200, y_offset + 25),
+                    font,
+                    background_color,
+                )
+
+                (
+                    text_surface_bottom[process_number % 8],
+                    background_rect_bottom[process_number % 8],
+                ) = draw_text(
+                    screen,
+                    text_surface_bottom[process_number % 8],
+                    background_rect_bottom[process_number % 8],
+                    text_bottom,
+                    text_color,
+                    (x_offset + 200, y_offset + 8 * 50 + 75),
+                    font,
+                    background_color,
+                )
+
+                pygame.display.flip()
+                clock.tick(120)
+    except Exception as e:
+        print(e)
 
 def draw_arrow(screen, color, start, end, width = 8):
     try:
