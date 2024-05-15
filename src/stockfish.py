@@ -85,9 +85,16 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
 
         next_state = board_to_tensor(board)
         done = board.is_game_over()
-        reward = round(eval_score_after - eval_score_before, 2)
-        rewards.append(reward)
+        uci_move = neural_net_move.uci() if neural_net_move else None
+        is_repeat_move = uci_move in neural_net_moves if uci_move else False
 
+        if is_repeat_move and eval_score_after < eval_score_before:
+            reward = (eval_score_after - eval_score_before) * 2
+            print("Повтор ходу: ", uci_move, "Штраф був змінений: ", reward)
+        else:
+            reward = eval_score_after - eval_score_before
+        
+        print(reward)
         # Перетворюємо хід у тензор
         action = move_to_tensor(last_move)
 

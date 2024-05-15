@@ -36,7 +36,7 @@ def process_historical_games_data(filename, model):
                             print(move)  # Виводимо хід
                             is_white_turn = not is_white_turn  # Змінюємо чергу ходу
                             eval_score_after = get_stockfish_evaluation(board, is_white_turn)  # Оцінка після ходу
-                            reward = round(eval_score_after - eval_score_before, 2)  # Використовуємо різницю оцінок як винагороду
+                            reward = eval_score_after - eval_score_before  # Використовуємо різницю оцінок як винагороду
                             training_data.append((state, action, reward, next_state, done))  # Додаємо дані для навчання
                             print(eval_score_before, eval_score_after, reward)
                         else:

@@ -5,7 +5,6 @@ import chess
 def update_display(display_queue, ai_only, stop_flag):
     try:
         pygame.init()
-        print("Создание окна")
         pygame.display.set_caption("Chess Game")
         screen = pygame.display.set_mode((1900, 1030), pygame.RESIZABLE)
         light_square_color = (241, 224, 194)
