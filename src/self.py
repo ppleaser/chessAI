@@ -25,6 +25,7 @@ from utils.moves import get_neural_net_move
 from utils.models import average_models, create_model
 from utils.train import train_neural_net
 from chess_net import ChessNet
+from utils.moves import get_neural_net_positions
 
 # Останній номер моделі для зберігання результатів гри
 last_model_number = 0
@@ -226,6 +227,8 @@ def play_game(model, display_queue, i, replay_buffer):
     neural_net_moves_black = []
     rewards_white = []
     rewards_black = []
+    last_positions_white = []
+    last_positions_black = []
 
     # Гра поки не закінчиться
     while not board.is_game_over():
@@ -242,7 +245,7 @@ def play_game(model, display_queue, i, replay_buffer):
         if neural_net_color == chess.WHITE:
             neural_net_moves_white.append(neural_net_move.uci())
         else:
-             neural_net_moves_black.append(neural_net_move.uci())
+            neural_net_moves_black.append(neural_net_move.uci())
 
         # Отримуємо оцінку позиції перед ходом
         eval_score_before = get_trained_model_evaluation(board, neural_net_color)
@@ -252,6 +255,7 @@ def play_game(model, display_queue, i, replay_buffer):
         board.push(neural_net_move)
         changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
         display_queue.put(changes_buffer)
+        
         # Отримуємо оцінку позиції після ходу
         eval_score_after = get_trained_model_evaluation(board, neural_net_color)
         
@@ -260,10 +264,23 @@ def play_game(model, display_queue, i, replay_buffer):
         
         # Перевіряємо, чи гра закінчена
         done = board.is_game_over()
-        
+
+        # Перевірка на повторний хід і хід назад
+        if neural_net_color == chess.WHITE:
+            is_repeat_move = neural_net_move.uci() in neural_net_moves_white
+            is_back_move = get_neural_net_positions(board, neural_net_color) in last_positions_white
+            last_positions_white.append(get_neural_net_positions(board, neural_net_color))
+        else:
+            is_repeat_move = neural_net_move.uci() in neural_net_moves_black
+            is_back_move = get_neural_net_positions(board, neural_net_color) in last_positions_black
+            last_positions_black.append(get_neural_net_positions(board, neural_net_color))
+
         # Розраховуємо винагороду (reward) як різницю між оцінками до і після ходу
-        reward = round(eval_score_after - eval_score_before, 2)
-        print(eval_score_before, eval_score_after, reward)
+        if (is_repeat_move or is_back_move) and eval_score_after < eval_score_before:
+            reward = (eval_score_after - eval_score_before) * 2
+            print(f"Повтор ходу або хід назад ({'білий' if neural_net_color == chess.WHITE else 'чорний'}): {neural_net_move.uci()} Штраф був змінений: {reward}")
+        else:
+            reward = eval_score_after - eval_score_before
         
         # Додаємо винагороду в списки відповідного кольору
         if neural_net_color == chess.WHITE:
@@ -289,32 +306,37 @@ def play_game(model, display_queue, i, replay_buffer):
 
     print("Гра була завершена")
 
+    # Додаємо підсумкову інформацію про гру для кожного кольору
+    print(f"Білий: правильні ходи - {correct_moves_white}/{total_moves_white}, штрафи та нагороди - {sum(rewards_white)}")
+    print(f"Чорний: правильні ходи - {correct_moves_black}/{total_moves_black}, штрафи та нагороди - {sum(rewards_black)}")
 
-    # Навчаємо модель на основі буфера повтору і повертаємо оновлену модель
+    # Тренуємо нейронну мережу
     model = train_neural_net(model, replay_buffer, 128)
 
-    # Якщо файл з результатами гри існує, читаємо його вміст
+    # Перевіряємо наявність файлу результатів ігор
+    filename = "game_results.json"
     if os.path.exists(filename):
         with open(filename, "r", encoding="utf-8") as file:
             game_results = json.load(file)
     else:
         game_results = []
 
-    # Створюємо словник для результату гри
+    # Створюємо результат гри
     game_result = {
         "Game number": len(game_results) + 1,
         "Game result": board.result(),
-        "Sum of penalties and awards": f"{sum(rewards_white + rewards_black):.2f}",
-        "WHITE Good moves": f"{correct_moves_white / total_moves_white * 100:.2f}%",
-        "BLACK Good moves": f"{correct_moves_black / total_moves_black * 100:.2f}%",
-        "Net WHITE history": ', '.join(neural_net_moves_white),
-        "NET BLACK history": ', '.join(neural_net_moves_black),
-        "WHITE Penalties and awards": ', '.join(map(str, rewards_white)),
-        "BLACK Penalties and awards": ', '.join(map(str, rewards_black))
+        "White good moves": f"{correct_moves_white / total_moves_white * 100:.2f}%",
+        "Black good moves": f"{correct_moves_black / total_moves_black * 100:.2f}%",
+        "White penalties and awards": f"{sum(rewards_white):.2f}",
+        "Black penalties and awards": f"{sum(rewards_black):.2f}",
+        "White net history": ', '.join(neural_net_moves_white),
+        "Black net history": ', '.join(neural_net_moves_black)
     }
+
+    # Додаємо результат гри до списку результатів
     game_results.append(game_result)
 
-    # Записуємо оновлені результати гри в файл
+    # Записуємо оновлені результати ігор у файл
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(game_results, file, indent=4)
 
