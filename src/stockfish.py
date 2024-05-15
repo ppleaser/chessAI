@@ -21,6 +21,7 @@ from utils.moves import get_neural_net_move, get_stockfish_move
 from utils.models import average_models, create_model
 from utils.train import train_neural_net
 from utils.stockfish_evaluation import get_stockfish_evaluation
+from utils.moves import get_neural_net_positions
 
 # Встановлюємо початковий номер моделі
 last_model_number = 0
@@ -30,22 +31,6 @@ num_training_cycles = 1000
 
 # Шлях до файлу з результатами ігор
 filename = f"models/reinforcement_learning_stockfish_model/game_results.json"
-
-def get_neural_net_positions(board, neural_net_color):
-    """
-    Функція для отримання позицій фігур нейромережі.
-
-    Параметри:
-    - board: дошка для гри.
-    - neural_net_color: колір сторони нейронної мережі (білий або чорний).
-    """
-    pieces = board.pieces(chess.KING, neural_net_color) | \
-             board.pieces(chess.QUEEN, neural_net_color) | \
-             board.pieces(chess.ROOK, neural_net_color) | \
-             board.pieces(chess.BISHOP, neural_net_color) | \
-             board.pieces(chess.KNIGHT, neural_net_color) | \
-             board.pieces(chess.PAWN, neural_net_color)
-    return pieces
 
 def play_game(model, neural_net_color, display_queue, i, replay_buffer):
     """
@@ -231,7 +216,7 @@ if __name__ == "__main__":
             for _ in range(num_training_cycles):
                 # Запускаємо процеси для гри за обома кольорами
                 for i in range(8):
-                    color =  chess.BLACK
+                    color = chess.BLACK
                     process = Process(
                         target=run_game_for_color,
                         args=(color, result_queue, display_queue, i, replay_buffer),

@@ -4,6 +4,22 @@ import numpy as np
 
 from .tensors import board_to_tensor, move_to_tensor
 
+def get_neural_net_positions(board, neural_net_color):
+    """
+    Функція для отримання позицій фігур нейромережі.
+
+    Параметри:
+    - board: дошка для гри.
+    - neural_net_color: колір сторони нейронної мережі (білий або чорний).
+    """
+    pieces = board.pieces(chess.KING, neural_net_color) | \
+             board.pieces(chess.QUEEN, neural_net_color) | \
+             board.pieces(chess.ROOK, neural_net_color) | \
+             board.pieces(chess.BISHOP, neural_net_color) | \
+             board.pieces(chess.KNIGHT, neural_net_color) | \
+             board.pieces(chess.PAWN, neural_net_color)
+    return pieces
+
 def get_neural_net_move(model, board, exploration_factor=0.3):
 
     legal_moves = list(board.legal_moves)
