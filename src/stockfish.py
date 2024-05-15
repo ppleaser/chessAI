@@ -31,6 +31,22 @@ num_training_cycles = 1000
 # Шлях до файлу з результатами ігор
 filename = f"models/reinforcement_learning_stockfish_model/game_results.json"
 
+def get_neural_net_positions(board, neural_net_color):
+    """
+    Функція для отримання позицій фігур нейромережі.
+
+    Параметри:
+    - board: дошка для гри.
+    - neural_net_color: колір сторони нейронної мережі (білий або чорний).
+    """
+    pieces = board.pieces(chess.KING, neural_net_color) | \
+             board.pieces(chess.QUEEN, neural_net_color) | \
+             board.pieces(chess.ROOK, neural_net_color) | \
+             board.pieces(chess.BISHOP, neural_net_color) | \
+             board.pieces(chess.KNIGHT, neural_net_color) | \
+             board.pieces(chess.PAWN, neural_net_color)
+    return pieces
+
 def play_game(model, neural_net_color, display_queue, i, replay_buffer):
     """
     Функція для гри в шахи між нейронною мережею та Stockfish.
@@ -51,6 +67,7 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
     neural_net_moves = []  # Історія ходів нейронної мережі
     stockfish_moves = []  # Історія ходів Stockfish
     rewards = []  # Нагороди за правильні ходи
+    last_positions = []
 
     first_move = True  # Прапор для перевірки першого ходу
 
@@ -71,6 +88,7 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
             last_move = neural_net_move
             changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
             display_queue.put(changes_buffer)
+            last_positions.append(get_neural_net_positions(board, neural_net_color))
         else:
             # Отримуємо хід від Stockfish
             stockfish_move = get_stockfish_move(board, first_move)
@@ -87,10 +105,11 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
         done = board.is_game_over()
         uci_move = neural_net_move.uci() if neural_net_move else None
         is_repeat_move = uci_move in neural_net_moves if uci_move else False
-
-        if is_repeat_move and eval_score_after < eval_score_before:
+        is_back_move = get_neural_net_positions(board, neural_net_color) in last_positions
+        if (is_repeat_move or is_back_move) and eval_score_after < eval_score_before:
             reward = (eval_score_after - eval_score_before) * 2
-            print("Повтор ходу: ", uci_move, "Штраф був змінений: ", reward)
+            print(is_repeat_move, is_back_move)
+            print("Повтор ходу або хід назад: ", uci_move, "Штраф був змінений: ", reward)
         else:
             reward = eval_score_after - eval_score_before
         
@@ -212,7 +231,7 @@ if __name__ == "__main__":
             for _ in range(num_training_cycles):
                 # Запускаємо процеси для гри за обома кольорами
                 for i in range(8):
-                    color = chess.WHITE if i < 4 else chess.BLACK
+                    color =  chess.BLACK
                     process = Process(
                         target=run_game_for_color,
                         args=(color, result_queue, display_queue, i, replay_buffer),
