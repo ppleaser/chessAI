@@ -313,8 +313,6 @@ def play_game(model, display_queue, i, replay_buffer):
     # Тренуємо нейронну мережу
     model = train_neural_net(model, replay_buffer, 128)
 
-    # Перевіряємо наявність файлу результатів ігор
-    filename = "game_results.json"
     if os.path.exists(filename):
         with open(filename, "r", encoding="utf-8") as file:
             game_results = json.load(file)
