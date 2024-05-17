@@ -2836,5 +2836,655 @@
         "NET BLACK history": "h7h6, h6h5, h5h4, h8h5, e8f7, h4h3, f7e8, h3g2, g2h1r, h5h3, h3g3, h1h2, h2g2, g2g4, g4g3, g3g5, g5g4, g8h6, h6g4, a7a6, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a6a5, a5a4, a4b3, b3b2, b2a1r, a1a2, a2b2, b2a2, a2b2, b2b3, b3g3, g3g2, g2f2, f2g2, g2f2, f2g2, g2f2, f2f4, f4g4, g4g2, g2f2, f2g2",
         "WHITE Penalties and awards": "0.41, 3.1, -1.37, -2.03, -1.18, 0.47, -0.65, 0.68, -0.13, 0.25, 0.11, 2.6, 1.54, -1.5, -1.77, -1.2, 2.01, -3.49, 1.84, -1.05, 4.23, -4.17, 4.23, -0.83, -2.44, 3.74, -3.74, 3.84, -3.47, 1.47, -0.92, -1.42, 1.36, -1.46, 3.14, -3.28, 2.81, -0.9, -1.31, 2.35, -2.13, 2.35, -2.13, 2.35, -1.87, 2.14, -2.13, 2.35, -2.13",
         "BLACK Penalties and awards": "1.03, -1.12, -1.52, 0.55, -0.24, -0.59, 0.28, 0.4, 0.75, -1.94, -0.56, -0.07, 0.04, 1.42, -0.3, 1.33, -1.01, 0.44, -2.29, -1.59, -0.21, 0.17, -0.21, 0.2, -0.22, 0.22, -3.39, 2.65, 2.87, -0.93, 0.03, -1.68, -1.81, 1.74, -1.76, 1.02, -0.84, -0.4, 1.83, -1.38, 1.83, -1.38, 1.83, -0.16, 0.81, -0.45, 1.83, -1.38"
+    },
+    {
+        "Game number": 259,
+        "Game result": "1/2-1/2",
+        "White good moves": "34.62%",
+        "Black good moves": "48.00%",
+        "White penalties and awards": "-35.92",
+        "Black penalties and awards": "-2.54",
+        "White net history": "g2g4, g4h5, f1g2, g2f1, f1g2, h2h4, h4h5, h1h3, h3g3, f2g3, g3g4, g1h3, h3f2, f2e4, e4g3, g3f5, e1f1, f5g3, g3e4, e4g3, g3e4, e4g3, g3e4, e4g3, g3e4, e4g3",
+        "Black net history": "h7h5, h8h5, h5h3, h3g3, g3g2, g2g4, g4g2, g2g4, g4g3, g7g5, f8h6, h6f8, f8h6, h6f8, f8h6, h6g7, g7f8, f8h6, h6f8, f8h6, h6f8, f8h6, h6f8, f8h6, h6f8"
+    },
+    {
+        "Game number": 260,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.39%",
+        "Black good moves": "48.39%",
+        "White penalties and awards": "-20.24",
+        "Black penalties and awards": "-15.63",
+        "White net history": "g2g4, g4g5, f1g2, g2f1, f1g2, g2f1, b2b3, f2g3, g3g4, c1b2, b2c1, f1g2, g2f1, h1h3, f1g2, g2f1, f1g2, g2h3, h3f1, f1g2, g2f1, f1g2, g2f1, f1g2, g2f1, f1g2, g2f1, f1g2, g2f1, f1g2, g2f1",
+        "Black net history": "h7h6, h6g5, h8h3, g5g4, g4g3, g3h2, h3g3, g7g5, f8h6, h6f8, f8h6, h2g1n, h6f8, g1h3, h3g1, f8h6, g1h3, h6g7, g7b2, b2h8, h8b2, b2h8, h8a1, a1b2, b2a1, a1b2, b2a1, a1b2, b2a1, a1b2, b2a1"
+    },
+    {
+        "Game number": 261,
+        "Game result": "1/2-1/2",
+        "White good moves": "51.35%",
+        "Black good moves": "43.24%",
+        "White penalties and awards": "-28.28",
+        "Black penalties and awards": "-48.27",
+        "White net history": "g2g3, g3g4, f1g2, g2f1, b2b3, f1g2, g2f1, h2g3, g3g4, g4g5, g5g6, g6f7, g1h3, h3f4, f4g2, g2f4, f4g2, g2h4, h4g2, e1f2, g2f4, f4g2, g2f4, f2g2, g2h2, h2g3, g3g4, g4h3, h3g4, g4h4, h4g4, g4h4, h4g4, g4h4, h4g4, g4h3, h3g4",
+        "Black net history": "h7h5, h5g4, g4g3, g3g2, g2h1r, h8h3, h3g3, h1h2, h2g2, g2g4, g4g2, e8f7, g2g4, g4g2, f7e8, g7g5, g5g4, g4g3, g3f2, f8g7, g7h6, h6g5, g5f4, f4h2, e8f8, f8e8, g8h6, h6g4, e8f8, f8g7, g7f8, f8e8, e8f8, f8e8, e8f8, f8e8, e8f8"
+    },
+    {
+        "Game number": 262,
+        "Game result": "1/2-1/2",
+        "White good moves": "45.95%",
+        "Black good moves": "62.16%",
+        "White penalties and awards": "-44.82",
+        "Black penalties and awards": "-15.14",
+        "White net history": "g2g4, g4g5, f1g2, g2h3, f2f3, f3f4, f4f5, f5f6, g1f3, h1g1, f3g5, h2g3, g3g4, g1g2, g2g1, g1g2, g2g3, g3g2, g2f2, f2h2, h2g2, g2g3, g3g2, g2f2, f2g2, g2g3, g3h3, h3g3, g3g2, g2f2, f2g2, g2g3, g3g2, g2f2, f2g2, g2g3, g3g2",
+        "Black net history": "h7h6, h6g5, g5g4, g4h3, h8h4, h4h5, h5g5, g5g2, g2g4, g4g2, g2g3, g7g6, h3h2, h2h1q, h1g2, f8g7, g7f8, f8g7, g7f8, f8g7, g7f8, f8g7, g7f8, f8h6, h6g5, g5f4, f4g3, g6g5, e8f8, f8e8, e8f8, f8e8, e8f8, f8e8, e8f8, g8h6, h6g8"
+    },
+    {
+        "Game number": 263,
+        "Game result": "1/2-1/2",
+        "White good moves": "52.78%",
+        "Black good moves": "57.14%",
+        "White penalties and awards": "-20.57",
+        "Black penalties and awards": "-28.01",
+        "White net history": "b2b3, g2g4, f1g2, g2f1, c1b2, b2c1, c1b2, b2c1, b3a4, h2h3, h3g4, g4g5, h1h3, g5h6, h3f3, f3g3, g3g2, g2g4, g4g2, g2g4, g4g2, g2g3, g3g2, g2g4, g4g2, g2g4, g4g7, g7g2, g2g4, g4g2, g2g4, g4g2, g2g4, g4g2, g2g4, g4g2",
+        "Black net history": "h7h5, h5g4, g4g3, g3g2, g2f1b, h8h4, h4f4, f4a4, g7g5, g5g4, f1g2, g2f1, f8h6, f1g2, g2f1, f1g2, e8f8, f8e8, e8f8, f8e8, e8f8, g8h6, h6g4, a7a6, f8e8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, e8f8, f8e8"
+    },
+    {
+        "Game number": 264,
+        "Game result": "1/2-1/2",
+        "White good moves": "44.74%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "-43.44",
+        "Black penalties and awards": "-11.23",
+        "White net history": "g2g4, g4g5, f1g2, g2e4, e4g2, e1f1, g2e4, h2g3, g3g4, h1h2, h2g2, g2g3, g3g2, g2g3, g3g2, g2g3, g3g2, g2g3, g3g1, g1g3, g3g1, g1g3, g3g1, g1g3, g3g2, g2g3, g3g1, g1g3, g3g1, g1g3, g3g2, g2g3, g3g2, g2g3, g3g2, g2g3, g3g2, g2g3",
+        "Black net history": "h7h6, h6g5, g5g4, g4g3, g3f2, h8h3, h3g3, f2g1b, g1f2, f2h4, h4g3, g7g5, f8h6, h6f8, f8h6, h6g7, g7h6, h6f8, f8h6, h6g7, g7f8, f8h6, h6f8, f8h6, h6f8, f8h6, e8f8, f8g7, g7f8, f8e8, h6f8, f8h6, h6f8, f8h6, e8f8, f8e8, h6f8, f8h6"
+    },
+    {
+        "Game number": 265,
+        "Game result": "1/2-1/2",
+        "White good moves": "45.45%",
+        "Black good moves": "52.73%",
+        "White penalties and awards": "-53.33",
+        "Black penalties and awards": "-100.84",
+        "White net history": "b2b3, g2g4, g4h5, f1g2, g2f1, f1g2, g2b7, b7g2, g2f1, f1g2, g2f1, f1g2, g2f1, c1b2, b2c1, f1g2, g2f1, f1g2, g2a8, f2f3, a8b7, f3f4, b7f3, f3g4, g4h3, h3g4, e1f1, g4h3, h3g2, g2h3, h3g4, g4h5, f1g2, g2h3, h5g4, g4h5, h5g4, g4f3, f3g4, g4h5, h5g4, g4h5, h5g4, g4h5, h5g4, g4h5, h5g4, g4h5, h5g4, g4f5, h3g4, g4h3, f5g4, g4h5, h5g4",
+        "Black net history": "h7h6, h6h5, h8h5, h5h3, h3g3, g3b3, b3h3, h3g3, g3g2, g7g5, g5g4, g4g3, g3g2, g2h1r, a7a6, f8h6, h6f4, f4g3, g3h2, h2g1, h1h2, h2g2, g2g4, g1e3, e3f4, f4g3, g3f4, f4g3, g3f4, f4g3, g3f2, f2g3, g3f4, f4g3, g3f4, f4g3, g3f2, f2g3, g3f4, f4g3, g3e1, e1h4, h4g3, g3f4, f4g3, g3e1, e1g3, g3f4, f4g3, g3f4, f4g3, g3f4, f4h2, h2f4, f4g3"
+    },
+    {
+        "Game number": 266,
+        "Game result": "1/2-1/2",
+        "White good moves": "46.88%",
+        "Black good moves": "52.38%",
+        "White penalties and awards": "-106.48",
+        "Black penalties and awards": "-174.86",
+        "White net history": "g2g4, g4g5, g5g6, g6f7, f1g2, g2f1, f1g2, g2f1, f1g2, g2f1, b2b3, c1b2, b2c1, f1g2, g2f1, f1g2, g2f1, f1g2, g2b7, h2h3, b7g2, f2f3, h3g4, g4g5, e1f2, f2g3, g3g2, g2g3, g3f4, f3g4, g4g5, f4g4, g4h3, h3g4, g4f4, g1h3, f4g4, g4f3, h3f2, f2g4, g4f2, f2g4, g4h2, h2g4, g4f2, f3g4, g4f4, f4g4, g4f3, f2g4, g4f2, f2g4, g4f2, f2g4, g4f2, f2g4, g4f2, f2g4, g4f2, f2g4, g4f2, f2g4, g4h2, h2g4",
+        "Black net history": "a7a6, a8a7, a7a8, e8f7, f7e8, h7h6, g7g5, g5g4, g4g3, g3g2, g2h1r, f8g7, g7a1, a1b2, b2g7, g7b2, b2g7, g7b2, b2g7, h1h2, h2g2, g2g4, g7b2, h6g5, b2a1, h8h3, h3g3, g5g4, a1b2, b2g7, g7b2, b2h8, h8b2, b2g7, g7h8, h8b2, b2a1, a1b2, b2g7, g7b2, b2g7, g7b2, b2g7, g7b2, b2g7, g7f8, f8h6, h6g5, g5f4, f4g3, g3h2, h2g3, g3f4, f4h2, h2g3, g3f4, f4g3, g3f4, f4g3, g3f4, f4g3, g3f4, f4g3"
+    },
+    {
+        "Game number": 267,
+        "Game result": "1/2-1/2",
+        "White good moves": "45.95%",
+        "Black good moves": "40.54%",
+        "White penalties and awards": "-26.34",
+        "Black penalties and awards": "-81.70",
+        "White net history": "a2a4, g2g4, g4f5, d2d4, c1e3, b1a3, d1d3, e3d2, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, d3b3, e1c1, d1e1, d2f4, b3a2, a3b1, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3",
+        "Black net history": "f7f6, f6f5, e8f7, e7e6, a7a5, c7c5, b8a6, a6b8, b8a6, a6b8, a8a7, b8a6, a6b8, b8a6, a6b8, b8a6, a6b8, a7a8, b8a6, g8f6, f6g4, g4f6, a6b8, f6g4, b8a6, a8b8, g4f6, f6g4, g4f6, f6e8, d8f6, f6d8, e8f6, f6g4, g4f6, f6g4, g4f6"
+    },
+    {
+        "Game number": 268,
+        "Game result": "1/2-1/2",
+        "White good moves": "50.82%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "-69.30",
+        "Black penalties and awards": "-29.34",
+        "White net history": "a2a4, g2g4, g4f5, d2d4, c1g5, b1a3, g5e7, d1b1, b1a2, a2b1, b1a2, a2b1, b1a2, a2b1, e2e4, e1d1, d1e1, e1d1, b1a2, f1g2, g2f1, a2g8, d1e1, a3b1, e4d5, b1a3, f2g3, a3b1, b1a3, e1d1, a3b1, b1a3, a3b1, b1a3, a3b1, a1a2, a2a1, a1a3, a3a1, a1a2, b1a3, a3b1, b1a3, a3b1, b1a3, f1a6, a6f1, a3b1, a2a3, d1e1, a3a2, b1a3, a2a1, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3",
+        "Black net history": "f7f6, f6f5, e8f7, c7c5, a7a5, b8a6, f8e7, a8b8, f7e8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, e7h4, d8f6, g8e7, e8f8, h4g3, h8g8, f8g8, g8h8, e7d5, f6f8, f8f6, f6h4, h4f6, f6e7, e7e8, e8g8, g8e8, e8g8, g8e8, h7h6, e8g8, g8e8, e8g8, g8e8, e8g8, g8e8, e8d8, d8e8, e8g8, g8f8, f8f6, f6h4, h4f6, f6h4, h4f6, f6h4, h4f6, f6h4, h4f6, f6f8, f8f6, f6f8, f8f6, f6h4, h4f6"
+    },
+    {
+        "Game number": 269,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.33%",
+        "Black good moves": "51.67%",
+        "White penalties and awards": "-54.16",
+        "Black penalties and awards": "-85.35",
+        "White net history": "d2d3, a2a3, g2g4, g4g5, f2f4, a3a4, a4a5, b1a3, a3b1, a1a3, a3a2, a2a5, a5a7, b2b4, c1a3, g5h6, e1d2, a3b2, b1a3, a3b1, b1a3, b2a1, a3b1, a7a3, a3a6, a6a3, a3a7, a7a3, a3a7, a7a3, a3a7, d2e1, a7a6, f4e5, a6a3, a3a7, a7a3, a3a7, a7a6, a6a7, a7a3, a3a7, a7a3, a3a7, a7a2, a2a7, e2e4, e1f1, d1f3, f3g3, g3e1, e1h4, h4e1, e1h4, f1e1, e1f1, h4e1, e1h4, h4e1, e1h4",
+        "Black net history": "b8a6, a6b8, e7e6, b8a6, a6b8, f8e7, c7c5, e6e5, h7h6, h8h7, d8a5, h7h8, h8h7, h7h8, h8h7, e7h4, h4e7, e7d8, d8e7, e7d8, d8e7, e7g5, g5e7, e7h4, h4e7, e7h4, h4e7, e7h4, e8e7, h4g3, g3e1, e7e8, g8f6, f6g4, f7f6, g4h2, h2g4, e8f8, g4h2, h2g4, f8e8, g4h2, h2g4, g4h2, h2f1, a8a7, a7a6, a6a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a8, a8a3, a3a7, a7a3"
+    },
+    {
+        "Game number": 270,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.48%",
+        "Black good moves": "48.48%",
+        "White penalties and awards": "-70.86",
+        "Black penalties and awards": "-32.02",
+        "White net history": "a2a4, d2d3, g2g4, g1f3, g4g5, b1a3, e2e3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, b1a3, a3b1, h1g1, b1a3, a3b1, a1a3, g1h1, a3a2, b1a3, a3b1, b1a3, a3b1, a2a3, a3a2, a2a3, h1g1, a3a2, a2a3, a3a2, a2a3, a3a2, g1g3, g3h3, a2a3, a3a2, a2a3, c1d2, a3a2, a2a3, a3a2, a2a3, a3a2, d1f3, a2a3, a3a2, a2a1, b1a3, f3g4, g4g3, g3g4, g4g3, g3g4, g4g3, g3g4, g4h4, h4g4, g4g3, g3g4",
+        "Black net history": "f7f6, b8a6, a6b8, e7e6, f8e7, b8a6, a6b8, a7a5, c7c5, e6e5, h7h6, h8h7, f6g5, g5g4, g4f3, g8f6, b8a6, a8b8, b8a8, a8b8, e8f8, f8e8, e8f8, f8e8, b8a8, a8b8, e8f8, f8e8, d8c7, e8d8, d8e8, e7f8, e8f7, f7e8, e8d8, d8e8, e8d8, d8e8, e8f7, f6h5, f7e8, h5f6, f6h5, b8a8, c7b8, h5f6, e8f7, f7e8, e8f7, f7e8, f6h5, h5g3, g3h5, h5f6, e8f7, a8a7, f7e8, b8a8, a6b8, b8a6, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8"
+    },
+    {
+        "Game number": 271,
+        "Game result": "1/2-1/2",
+        "White good moves": "41.89%",
+        "Black good moves": "43.24%",
+        "White penalties and awards": "-65.18",
+        "Black penalties and awards": "-55.85",
+        "White net history": "a2a4, g2g3, a1a3, f2f4, d2d3, a3a2, a2a3, e1f2, g3g4, f2e1, a3a1, b1a3, a3b1, d1c2, b1a3, c2b1, b1a2, a3b1, e2e4, f1g2, g2h3, h3g4, g4h5, a2f7, f4e5, a1a3, a4a5, e1f1, h1h5, f1e1, e1f1, f1g2, g2g3, g3h2, a5a6, h2h1, a3a7, c1h6, h1h2, h2h1, h1g2, h6d2, b1a3, a3b1, g2f1, b1a3, d2a5, f1e2, e2f3, a5e1, f3f4, e1a5, f4f3, a5e1, e1a5, a5e1, e1a5, a5e1, e1h4, f3f4, f4g3, g3g4, g4g5, g5h5, h5g4, g4h3, h4e1, e1h4, h4e1, e1h4, h4e1, e1h4, h4e1, e1h4",
+        "Black net history": "c7c5, e7e5, f7f5, g8h6, h6g4, g4e3, e3c2, c2e1, h7h6, e8e7, e7f7, f7e8, e8f7, h6h5, h5g4, g4g3, f7f6, g3g2, f6g6, h8h2, h2b2, b2h2, h2h5, g6f7, h5h8, f7e8, h8h5, h5h8, h8h5, h5h2, h2h5, h5h2, b8a6, a6b8, b8a6, a6b8, a8a7, a7a6, a6a3, a3a7, a7a8, f5f4, b8a6, a8b8, d8a5, a5a3, a3a1, a1a3, a3a1, a1a3, a3a2, a2a3, a3a1, a1a3, a3a1, a1a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2f7, f7f4, f4e5, g7g6, f8g7, g7h8, h8g7, g7h8, h8g7, g7h8, h8g7, g7h8, h8g7"
+    },
+    {
+        "Game number": 272,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.39%",
+        "Black good moves": "49.46%",
+        "White penalties and awards": "-65.58",
+        "Black penalties and awards": "-29.21",
+        "White net history": "a2a4, g2g4, a1a3, g1f3, f3g5, e2e3, h1g1, h2g3, g5f7, f2f3, e1f2, f3f4, f4e5, d1f3, e5f6, f3h1, h1h2, f2e1, h2h4, h4g4, f6g7, d2d3, g4h4, h4g4, g4h4, h4g4, g4h4, h4g4, g4h4, h4h1, h1h5, h5h1, h1h7, h7h5, h5h2, h2h5, h5h4, h4g4, g4h4, g1g2, g3g4, h4h1, g2g1, g4g5, h1h8, h8h5, g1g4, g4g1, h5g4, g4h5, h5g4, g4h3, h3g4, g4h5, h5g4, g4h5, h5h8, g1g2, g2g1, g1g2, g2g1, g1g2, g2f2, h8h5, a3a2, c1a3, f2f8, f8h8, a2a1, h8e8, e8h8, h8e8, e8h8, h8e8, e8h8, h8e8, e8f8, f8h8, e1d2, d2e1, h8h1, h1g1, g1g3, g3g1, f1h3, h3g4, g4h3, h3g4, g4h3, h3g4, g4h3, h3g4, g4h3",
+        "Black net history": "c7c5, e7e5, f8e7, e7h4, h7h6, h8h7, h4g3, e8e7, g8f6, e7f7, d8h8, f7e8, e8f8, h6h5, g7g6, h5g4, f8g8, h7g7, h8h5, h5h8, g8g7, g7g8, h8h5, h5h6, h6h8, h8f6, f6b2, b2f6, f6a6, a6f6, f6g7, g7f6, g8f8, f6h8, h8h5, f8e8, a7a5, b8a6, a8b8, b8a8, e8f7, a8b8, f7f6, f6f5, f5e6, e6f5, b8a8, a8b8, f5e5, b8a8, a8b8, e5d6, d6c7, c7d6, b8a8, a8b8, b8a8, a8b8, b8a8, a6b8, b8a6, a8b8, d6e6, g6h5, e6d6, h5h4, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, h4h3, d6e6, h3h2, h2h1r, e6f7, f7g8, b8a8, a6b8, b8a6, a6b8, b8a6, a6b8, b8a6, a8b8, b8a8, a8b8, b8a8"
+    },
+    {
+        "Game number": 273,
+        "Game result": "1/2-1/2",
+        "White good moves": "49.11%",
+        "Black good moves": "49.55%",
+        "White penalties and awards": "-85.14",
+        "Black penalties and awards": "-44.24",
+        "White net history": "a2a4, g2g4, a1a3, a3g3, g4g5, g1f3, f3g1, g3a3, g1f3, f3h4, h4f3, f3g1, g1f3, f3g5, e2e4, c2c4, e1e2, e2e1, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, e1e2, a2a3, e2e1, a3a2, a2a3, a3a2, b1a3, a2a1, h1g1, d1a4, f2g3, a3b1, a4a2, b1a3, e1e2, g3g4, b2b3, a2b2, g1h1, h1g1, g1h1, h1g1, a1a2, a2a1, b2a2, a2c2, c2a2, a2b2, a1a2, a2a1, a1a2, e2d3, a2a1, g1g2, g2h2, h2h1, h1g1, a1a2, a2a1, a1a2, a2a1, a1a2, d3d2, d2c2, c1d2, a2a1, a1a2, a2a1, a1a2, d2a5, a5d2, g1g6, g6g2, d2g5, a2a1, c2b1, b1a2, a2b1, b1a2, g5h4, g2h2, h4e7, a2b1, b1a2, a2b1, b1a2, a2b1, b1a2, h2h1, h1h3, a2b1, b1a2, a2b1, b1a2, a2b1, b1a2, a1d1, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2",
+        "Black net history": "e7e6, c7c5, f8e7, h7h6, e7g5, g5e7, h8h7, d7d5, h7h8, h8h7, h7h8, h8h7, c8d7, e7g5, g5h4, d7a4, b8d7, h4g3, h7h8, h8h7, g3h2, h2g3, h7h8, h8h7, h7h8, g3h4, h4g3, g3h4, h8h7, h4g3, h7h8, h8h7, d8c8, d7b8, a4d7, d7a4, b8d7, a7a5, a8a6, a6a8, h7h8, e6e5, h8h7, g8e7, e8f8, e7f5, f8e8, e8f8, f8g8, c8f8, a8c8, c8a8, a8c8, c8a8, a8c8, c8a8, a8c8, g8h8, h8g8, g8h8, d7f6, f6g4, g4h2, h2g4, g4h2, h2g4, g4h2, h2f3, f3d2, h8g8, g7g6, g8g7, h7h8, h8h7, f8h8, h8f8, g7g8, g8h8, h6h5, f8h6, h8g8, c8b8, g8f8, h6e6, f8g8, h5h4, f5g7, e6g4, g4c8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, c8e8, e8c8"
+    },
+    {
+        "Game number": 274,
+        "Game result": "1/2-1/2",
+        "White good moves": "51.16%",
+        "Black good moves": "44.96%",
+        "White penalties and awards": "-130.19",
+        "Black penalties and awards": "-43.06",
+        "White net history": "d2d3, g2g3, c1e3, b1a3, d1b1, e3c5, f2f3, f3f4, c5e3, h2h3, b2b3, b1b2, a1b1, b2a1, a1b2, b2c1, b1b2, b2c2, c2b2, b2b1, b1a1, a3b1, a2a4, a1a3, a3a2, a2b2, b2a2, a2a1, b1a3, a3b1, a1a2, b1a3, a3b1, a2b2, b2a2, a2a3, a3a2, a2b2, b2c2, c1b2, b2a1, c2a2, b1a3, a2c2, a1a2, a2b2, b2a2, a2b2, b2a2, a2b2, b2a2, a2b2, a3b1, b2a2, c2c7, a2b2, b1a3, c7c6, b2a2, a3b1, a2a1, a1a2, a2a1, a1a2, a2a3, a3a2, a2a3, a3a2, b1a3, e1f1, a2a1, a1a2, a3c2, a2a3, a3b2, b2a2, a2a3, a3a2, a2a3, a3a2, a2a1, a1c1, c2a1, c1a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, f1e2, a3c1, e2f3, c1a3, a3b2, b2a3, a3a2, a2a3, a3b2, b2a2, a2a3, a3a2, a2b2, b2a3, c6b6, a3a2, a2a3, f3f2, f2g3, g3g4, g4g3, g3g4, g4g3, g3g4, g4g5, g5h5, a3b2, b2a3, h5h4, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3, a3a2, a2a3",
+        "Black net history": "e7e6, a7a5, f8e7, c7c5, h7h6, g8f6, h8h7, h6h5, f6g4, g4h2, h2f1, f1h2, h2g4, g4h2, h2g4, g4e3, e3c2, a8a7, a7a8, a8a7, a7a8, a8a7, a7a6, a6a8, a8a7, a7a8, a8a7, e7g5, g5f4, f4g5, a7a8, g5e7, a8a7, a7a8, h5h4, a8a7, a7a8, a8a7, a7a8, h4g3, a8a7, g3g2, a7a8, g2h1r, e7g5, g5e3, e3g5, g5e3, e3g5, g5e3, e3g5, g5e3, e3g5, a8a7, g5e3, e8f8, a7a8, f8e8, e3g5, g5e3, e3g5, h1h2, g5e3, e3g5, h2f2, f2h2, b8a6, a8b8, h2e2, g5d2, a6b4, b8a8, a8b8, b8a8, a8b8, b8a8, a8a6, a6a8, a8a7, a7a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, d8f6, d2e3, f6f3, e3a7, a7g1, b8a8, a8b8, g1a7, a7b6, e8f8, f8e8, e8f8, f8e8, e8f8, f8e7, h7h5, h5h8, h8h3, h3h2, h2h8, h8h2, h2h8, h8h2, h2h1, h1h2, h2h5, e7d8, d8e8, g7g6, e6e5, f7f6, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, e8f7, f7e8"
+    },
+    {
+        "Game number": 275,
+        "Game result": "1/2-1/2",
+        "White good moves": "90.91%",
+        "Black good moves": "54.55%",
+        "White penalties and awards": "3.25",
+        "Black penalties and awards": "-1.38",
+        "White net history": "g1h3, h1g1, a2a3, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h5, h8h7, g8h6, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 276,
+        "Game result": "1/2-1/2",
+        "White good moves": "58.33%",
+        "Black good moves": "45.83%",
+        "White penalties and awards": "4.93",
+        "Black penalties and awards": "0.60",
+        "White net history": "a2a3, g1h3, h1g1, g1h1, h1g1, g1h1, h1g1, a3a4, g1h1, h1g1, g1h1, h1g1, a1a2, g1h1, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h6, h8h7, h7h8, h8h7, a7a6, h7h8, h8h7, h7h8, a8a7, h8h7, h7h8, a7a8, h8h7, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a7a8, a8a7"
+    },
+    {
+        "Game number": 277,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.15%",
+        "Black good moves": "44.44%",
+        "White penalties and awards": "2.33",
+        "Black penalties and awards": "1.00",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, g2g3, h1g1, g1h1, h1g1, a2a3, g1h1, h1g1, a3a4, g1h1, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h5, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a7a6, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 278,
+        "Game result": "1/2-1/2",
+        "White good moves": "55.56%",
+        "Black good moves": "59.26%",
+        "White penalties and awards": "2.52",
+        "Black penalties and awards": "3.12",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, g1h1, a2a3, h1g1, g1h1, g2g3, h1g1, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a3a4, a1a3, a3a1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h5, g8h6, h8h7, h7h8, a7a6, h8h7, h7h8, h8h7, h5h4, a8a7, h7h8, h8h7, h4g3, h7h8, h8g8, g8h8, a7a8, h8g8, a6a5, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8"
+    },
+    {
+        "Game number": 279,
+        "Game result": "1/2-1/2",
+        "White good moves": "56.76%",
+        "Black good moves": "48.65%",
+        "White penalties and awards": "-0.31",
+        "Black penalties and awards": "-4.12",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, a2a3, g1h1, h1g1, g1h1, g2g3, h1g1, g1h1, h1g1, g1h1, h1g1, a3a4, a1a3, g1h1, a3a2, a2a1, h1g1, a1a3, a3a2, a2a1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h6, h8h7, h7h8, b8a6, a8b8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, b7b6, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, b8a8, h7h8, h8h7, h7h8, h8h7, a6b8, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 280,
+        "Game result": "1/2-1/2",
+        "White good moves": "50.00%",
+        "Black good moves": "58.70%",
+        "White penalties and awards": "-0.12",
+        "Black penalties and awards": "-2.98",
+        "White net history": "g1h3, h1g1, a2a3, a1a2, a2a1, g2g3, g1h1, h1g1, g1h1, a1a2, a2a1, a1a2, a2a1, h1g1, a3a4, g1h1, h1g1, a1a2, g1h1, a2a1, h1g1, a1a2, a2a1, a1a2, a2a1, g1h1, h1g1, a1a2, a2a1, g1h1, a1a2, a2a3, a3a1, a1a2, h1g1, a2a1, a1a2, a2a1, g1h1, a1a2, a2a1, a1a3, a3a1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a7a6, h7h8, h8h7, a6a5, a8a6, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a6a7, b8a6, h7h8, a7a8, a6b8, h8h7, h7h8, b8a6, h8h7, h7h8, h8h7, a6b8, h7h8, h8h7, a8a6, a6a8, h7h8, b8a6, a6b8, h8h7, h7h8, h8h7, h7h8, a8a6, h8h7"
+    },
+    {
+        "Game number": 281,
+        "Game result": "1/2-1/2",
+        "White good moves": "51.11%",
+        "Black good moves": "51.11%",
+        "White penalties and awards": "-11.49",
+        "Black penalties and awards": "-9.52",
+        "White net history": "g1h3, h1g1, g1h1, a2a3, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, a1a2, a2a1, a1a2, a2a1, h1g1, g1h1, a1a2, a2a1, g2g3, h1g1, a1a2, a3a4, a2a1, g1h1, a1a2, h1g1, a2a1, a1a3, a3a1, g1h1, h1g1, a1a3, a3a1, g1h1, a1a3, a3a2, a2a1, h1g1, a1a3, a3a1, g1h1, a1a3, a3a2, a2a1, h1g1",
+        "Black net history": "h7h5, h8h7, h7h8, g8h6, h8h7, h5h4, h7h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, b8a6, g8h8, a8b8, h8g8, g8h8, h8g8, g8h8, h8h7, h7h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, b8a8, g8h8, a8b8, h8g8, g8h8, b8a8, a8b8"
+    },
+    {
+        "Game number": 282,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.00%",
+        "Black good moves": "48.98%",
+        "White penalties and awards": "-2.74",
+        "Black penalties and awards": "-11.89",
+        "White net history": "g1h3, h1g1, a2a3, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, f1g2, g1h1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a3a4, a2a1, a1a3, a3a1, a1a3, a3a1, a1a3, a3a1, a1a3, a3a1",
+        "Black net history": "g8h6, b8a6, h8g8, a8b8, g8h8, h8g8, g8h8, b7b6, b8a8, h8g8, g8h8, a8b8, h8g8, c8b7, b7a8, g8h8, h8g8, a8b7, b8a8, g8h8, a8b8, b7a8, h8g8, g8h8, h8g8, g8h8, a8g2, h8g8, g8h8, b8a8, h8g8, d8c8, c8d8, g8h8, h8g8, a8b8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8"
+    },
+    {
+        "Game number": 283,
+        "Game result": "1/2-1/2",
+        "White good moves": "23.08%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "2.27",
+        "Black penalties and awards": "-2.64",
+        "White net history": "a2a3, g1h3, h1g1, a1a2, a2a1, g1h1, h1g1, a1a2, a2a1, a1a2, a2a1, g1h1, h1g1",
+        "Black net history": "a7a6, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7"
+    },
+    {
+        "Game number": 284,
+        "Game result": "1/2-1/2",
+        "White good moves": "53.33%",
+        "Black good moves": "53.33%",
+        "White penalties and awards": "2.58",
+        "Black penalties and awards": "1.87",
+        "White net history": "g1h3, h1g1, a2a3, g1h1, h3g1, g1h3, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "a7a6, h7h6, h8h7, h7h8, h8h7, h7h8, a6a5, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 285,
+        "Game result": "1/2-1/2",
+        "White good moves": "44.44%",
+        "Black good moves": "52.94%",
+        "White penalties and awards": "2.39",
+        "Black penalties and awards": "1.33",
+        "White net history": "g1h3, a2a3, h1g1, g1h1, a1a2, a2a1, h1g1, a1a2, a2a1, g1h1, h3g1, g1h3, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1",
+        "Black net history": "a7a6, a8a7, a6a5, a7a8, h7h6, h8h7, h7h8, h8h7, h7h8, a8a7, a7a8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 286,
+        "Game result": "1/2-1/2",
+        "White good moves": "57.14%",
+        "Black good moves": "52.38%",
+        "White penalties and awards": "4.67",
+        "Black penalties and awards": "1.35",
+        "White net history": "g1h3, a2a4, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, a1a3, g1h1, a3a1, h1g1, g1h1, h1g1",
+        "Black net history": "a7a6, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 287,
+        "Game result": "1/2-1/2",
+        "White good moves": "52.17%",
+        "Black good moves": "54.55%",
+        "White penalties and awards": "6.05",
+        "Black penalties and awards": "-2.30",
+        "White net history": "g1h3, h1g1, a2a4, g1h1, h1g1, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, a1a2, a2a1, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a1a2, a2a1",
+        "Black net history": "h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a5, a8a6, a6a7, a7a8, h8h7, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 288,
+        "Game result": "1/2-1/2",
+        "White good moves": "53.85%",
+        "Black good moves": "48.00%",
+        "White penalties and awards": "2.21",
+        "Black penalties and awards": "-0.74",
+        "White net history": "g1h3, h1g1, a2a3, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a1a2, a2a1, g1h1, h3g1, a1a2, a2a1, g1h3, h1g1, g1h1, h1g1, g1h1, a1a2, h1g1, a2a1, g1h1",
+        "Black net history": "a7a6, h7h6, h8h7, a6a5, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 289,
+        "Game result": "1/2-1/2",
+        "White good moves": "54.35%",
+        "Black good moves": "54.35%",
+        "White penalties and awards": "-10.70",
+        "Black penalties and awards": "10.28",
+        "White net history": "a2a3, g1h3, h1g1, e2e3, a1a2, a2a1, a1a2, a2a1, f1a6, e1f1, g1h1, h1g1, g1h1, h1g1, g1h1, h3g1, b2a3, h2h3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a3a4, a1a3, h1h2, a3a1, h2h1, a1a3, a3a1, c1a3, a1a2, a2a1, d1c1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2",
+        "Black net history": "h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a5, b7a6, h8h7, h7h8, h8h7, h7h8, h8h7, e7e6, f8a3, h7h8, a8a7, h8h7, h7h8, e8f8, f8e8, h8h7, h7h8, e8f8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, f8e8, h8h7, a7a8, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 290,
+        "Game result": "1/2-1/2",
+        "White good moves": "57.97%",
+        "Black good moves": "55.07%",
+        "White penalties and awards": "-4.61",
+        "Black penalties and awards": "-18.83",
+        "White net history": "h2h3, h1h2, a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, e2e3, a1a2, f1a6, a2a1, a1a2, a2a1, h2h1, a1a2, a2a1, h1h2, h2h1, e1f1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, h1h2, a2a1, d1h5, h5h4, h2h1, h4h5, h5h6, a1a2, a2a1, a1a2, a2a1, a3a4, a1a2, a2a1, a1a2, a2a1, a1a2, h1h2, h2h1, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, h1h2, a2a1, h2h1, a1a2, a2a1, a1a2, a2a1, a1a2",
+        "Black net history": "h7h5, h8h7, h7h8, h8h7, g8h6, h7h8, h8g8, g8h8, a7a6, h8h7, a6a5, h7h8, h8h7, b7a6, h5h4, a8a7, h7h8, h8g8, g8h8, h8h7, a7a8, h7h8, h8h7, h7h8, a8a7, h8h7, a7a8, h7h8, a8a7, h8g8, g8h8, h8h7, a7a8, h7h8, a8a7, h8g8, g8h8, h8h7, g7h6, h7h8, h8h7, h7h8, h8g8, g8h8, h8h7, h7h8, h8h7, h7h8, h8h7, h6h5, h7h8, h8g8, h5h4, a7a8, g8h8, a8a7, h8h7, f8h6, h6f8, h7h8, h8h7, h7h8, a7a8, a8a7, h8h7, a7a8, h7h8, a8a7, h8h7"
+    },
+    {
+        "Game number": 291,
+        "Game result": "1/2-1/2",
+        "White good moves": "47.37%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "-26.35",
+        "Black penalties and awards": "-4.03",
+        "White net history": "h2h3, a2a3, h1h2, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, h2h1, e2e3, f1a6, e1f1, a1a2, a2a1, a1a2, a2a1, a1a3, a3a2, a2a3, a3a2, a2a1, h1h2, h2h1, a1a2, a2a1, a1a5, a5a6, a6a7, f1e1, a7a8, a8b8, h1h2, h2h1, d1h5, h1h2, b8a8, a8d8, h5h4, h4h5, h2h1, h1h2, h2h1, h5h6, h6h7, h7g8, g8h8, h8g8, g8a8, h1h2, e1f1, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, f1e1, e1f1, f1e1, e1f1",
+        "Black net history": "a7a6, h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a8a7, a6a5, a7a6, a6a8, h8h7, h7h8, a8a6, h8h7, h7h8, h8h7, a6a7, h7h8, h8h7, h7h8, b7a6, h8h7, h7h8, e7e6, f8a3, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, c8a6, h7h8, e8f8, h8h7, h7h8, h8h7, f8e8, h7h8, h8h7, e8d8, g8e7, d8c8, h7h8, h8f8, f8d8, d8h8, c8b8, b8a7, e7g8, a6b7, a7a8, f7f6, a8b8, b8a8, a8b8, b7a8, b8a7, a7a6, a6a5, a5a6, a6a5, a5a6, a8b7, b7a8, a6a5, a5a6"
+    },
+    {
+        "Game number": 292,
+        "Game result": "1/2-1/2",
+        "White good moves": "46.67%",
+        "Black good moves": "42.86%",
+        "White penalties and awards": "2.23",
+        "Black penalties and awards": "0.95",
+        "White net history": "a2a3, a1a2, a2a1, g1h3, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a1a2, a2a1, g1h1, h1g1",
+        "Black net history": "h7h6, h8h7, h7h8, h8h7, h7h8, a7a6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 293,
+        "Game result": "1/2-1/2",
+        "White good moves": "52.17%",
+        "Black good moves": "54.55%",
+        "White penalties and awards": "3.51",
+        "Black penalties and awards": "-2.80",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, a2a4, h1g1, a1a2, a2a3, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h5, h8h7, g8h6, h7h8, a7a6, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a7a8, h7h8, a8a7"
+    },
+    {
+        "Game number": 294,
+        "Game result": "1/2-1/2",
+        "White good moves": "51.72%",
+        "Black good moves": "51.72%",
+        "White penalties and awards": "3.35",
+        "Black penalties and awards": "-5.21",
+        "White net history": "a2a3, h2h3, h1h2, h2h1, h1h2, a1a2, a2a1, h2h1, h1h2, a1a2, a2a1, a3a4, a1a2, a2a1, h2h1, h1h2, a1a3, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2",
+        "Black net history": "g8h6, h8g8, g8h8, h8g8, g8h8, h8g8, a7a5, g8h8, h8g8, a8a7, g8h8, a7a6, a6a8, h8g8, g8h8, h8g8, b7b6, g8h8, h8g8, g8h8, h8g8, a8a7, g8h8, h8g8, g8h8, h8g8, a7a8, g8h8, h8g8"
+    },
+    {
+        "Game number": 295,
+        "Game result": "1/2-1/2",
+        "White good moves": "54.05%",
+        "Black good moves": "47.22%",
+        "White penalties and awards": "1.26",
+        "Black penalties and awards": "-19.47",
+        "White net history": "h2h3, h1h2, h2h1, a2a3, h1h2, h2h1, a3a4, h1h2, h2h1, a1a2, h1h2, a2a3, h2h1, a3a2, a2a1, h1h2, a1a2, a2a1, a1a2, a2a3, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, a3a2, a2a1, h1h2, a1a2, a2a1, a1a2, h2h1, a2a1, h1h2, a1a2",
+        "Black net history": "g8h6, h8g8, a7a5, g8h8, h8g8, g8h8, h8g8, g8h8, a8a6, a6a8, h8g8, g8h8, a8a6, a6a8, h8g8, g8h8, a8a7, a7a6, a6a8, h8g8, g8h8, a8a7, h8g8, g8h8, h8g8, g8h8, h8g8, a7a6, g8h8, a6a8, a8a6, a6a8, h8g8, g8h8, h8g8, g8h8"
+    },
+    {
+        "Game number": 296,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.65%",
+        "Black good moves": "52.78%",
+        "White penalties and awards": "3.38",
+        "Black penalties and awards": "-1.59",
+        "White net history": "a2a3, a1a2, a2a1, a1a2, a2a1, g1h3, h1g1, g1h1, h1g1, a1a2, a2a1, a3a4, a1a3, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a3a1, g1h1, h1g1, g1h1, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1",
+        "Black net history": "h7h6, h8h7, a7a5, h7h8, h8h7, h7h8, a8a7, h8h7, h7h8, a7a6, a6a8, h8h7, h7h8, h8h7, a8a6, h7h8, h8h7, h7h8, h8h7, h7h8, a6a7, h8h7, h7h8, a7a8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 297,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.89%",
+        "Black good moves": "48.89%",
+        "White penalties and awards": "-1.81",
+        "Black penalties and awards": "-3.09",
+        "White net history": "h2h3, h1h2, h2h1, h1h2, h2h1, a2a3, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, a3a4, h2h1, h1h2, h2h1, h1h2, h2h1, a1a2, a2a1, a1a2, a2a3, h1h2, a3a1, a1a2, a2a1, a1a2, a2a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, h2h1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1",
+        "Black net history": "h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a5, a8a7, b8a6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a8, a8b8, b7b6, b8a8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a8b8, h7h8, h8h7, b8a8, a8a7, h7h8, h8h7, h7h8, h8h7, a6b8, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 298,
+        "Game result": "1/2-1/2",
+        "White good moves": "57.45%",
+        "Black good moves": "52.17%",
+        "White penalties and awards": "4.66",
+        "Black penalties and awards": "-9.76",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, a2a3, g1h1, h1g1, g1h1, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1, h3g1, g1h3, h1g1, g1h1, h1g1, g1h1, a1a2, a2a1, h1g1, g1h1, h1g1, a3a4, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, a1a3, a3a1",
+        "Black net history": "h7h5, h8h7, g8h6, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a6, a8a7, h8h7, h7h8, h8h7, a6a5, h7h8, h8h7, b8a6, h7h8, a7a8, a8b8, h8h7, h7h8, h8h7, b8a8, a8a7, h7h8, a7a8, a8b8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8g8, g8h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 299,
+        "Game result": "1/2-1/2",
+        "White good moves": "50.98%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "2.14",
+        "Black penalties and awards": "-10.33",
+        "White net history": "a2a3, g1h3, h1g1, g1h1, h3g1, g1h3, h1g1, g1h1, h1g1, g1h1, a1a2, h3g1, a2a1, g1h3, h1g1, g1h1, h1g1, g1h1, h1g1, a3a4, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, a1a2, a2a1, h1g1, a1a2, a2a1, a1a2, a2a1, g1h1, h1g1, g1h1, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1",
+        "Black net history": "g8h6, h8g8, g8h8, h8g8, a7a5, g8h8, h8g8, a8a6, a6a7, g8h8, a7a6, h8g8, g8h8, a6a8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, a8a7, g8h8, h8g8, g8h8, h8g8, g8h8, a7a8, a8a7, h8g8, a7a6, g8h8, a6a8, h8g8, g8h8, h8g8, g8h8, h8g8, a8a6, g8h8, h8g8, g8h8, a6a8, h8g8, g8h8, h8g8"
+    },
+    {
+        "Game number": 300,
+        "Game result": "1/2-1/2",
+        "White good moves": "54.17%",
+        "Black good moves": "54.17%",
+        "White penalties and awards": "5.85",
+        "Black penalties and awards": "-0.83",
+        "White net history": "a2a4, a1a2, g1h3, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a1a2, g1h1, a2a1, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1",
+        "Black net history": "h7h6, a7a5, h8h7, a8a7, h7h8, a7a8, a8a6, h8h7, h7h8, h8h7, a6a7, a7a8, h7h8, a8a6, h8h7, h7h8, a6a8, h8h7, h7h8, a8a6, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 301,
+        "Game result": "1/2-1/2",
+        "White good moves": "52.00%",
+        "Black good moves": "62.50%",
+        "White penalties and awards": "1.22",
+        "Black penalties and awards": "0.93",
+        "White net history": "g1h3, a2a3, a1a2, h1g1, a2a1, g2g3, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, g1h1, a1a2, h1g1, g1h1, a2a1, h3g1, g1h3, h1g1, a1a2, a2a1, g1h1, h1g1, g1h1",
+        "Black net history": "h7h5, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 302,
+        "Game result": "1/2-1/2",
+        "White good moves": "50.00%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "5.86",
+        "Black penalties and awards": "-0.56",
+        "White net history": "a2a4, a1a3, g1h3, a3a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, a1a3, a3a2, a2a1, a1a3, a3a1, h1g1, a1a3, g1h1, a3a1, h1g1, a1a2, a2a1, g1h1, h1g1",
+        "Black net history": "a7a5, h7h6, h8h7, a8a6, h7h8, a6a7, h8h7, h7h8, h8h7, a7a8, a8a7, h7h8, a7a6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a6a8, h7h8, h8h7, a8a7, h7h8, h8h7"
+    },
+    {
+        "Game number": 303,
+        "Game result": "1/2-1/2",
+        "White good moves": "53.12%",
+        "Black good moves": "53.12%",
+        "White penalties and awards": "4.21",
+        "Black penalties and awards": "-2.02",
+        "White net history": "a2a4, a1a2, a2a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, g1h3, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a1a3, a3a1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "a7a6, a8a7, a7a8, h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a6a5, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a8a7, h8h7, a7a8, a8a6, a6a8, a8a7, h7h8, a7a8, h8h7, h7h8, h8h7, a8a7, h7h8, a7a8, h8h7"
+    },
+    {
+        "Game number": 304,
+        "Game result": "1/2-1/2",
+        "White good moves": "59.38%",
+        "Black good moves": "53.12%",
+        "White penalties and awards": "3.56",
+        "Black penalties and awards": "-1.13",
+        "White net history": "g1h3, h1g1, g1h1, a2a3, h3g1, a1a2, a2a1, a1a2, a2a1, g1h3, h1g1, g1h1, h1g1, a3a4, g1h1, a1a2, a2a1, h1g1, g1h1, a1a3, a3a2, a2a3, h1g1, g1h1, h1g1, g1h1, a3a1, h1g1, a1a2, a2a1, a1a3, g1h1",
+        "Black net history": "h7h5, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a7a6, g8h6, a6a5, a8a7, h7h8, a7a8, a8a7, a7a8, h8g8, g8h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 305,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.89%",
+        "Black good moves": "52.27%",
+        "White penalties and awards": "3.08",
+        "Black penalties and awards": "-1.18",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a2a3, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, a1a2, a2a1, a1a2, a2a1, h1g1, a3a4, g1h1, h1g1, g1h1, a1a3, h1g1, g1h1, h1g1, a3a1, g1h1, h1g1, g1h1, h1g1, g1h1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, h1g1, g1h1",
+        "Black net history": "h7h5, a7a6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a8a7, h7h8, a7a8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, g8h6, h7h8, a8a7, h8h7, a6a5, h7h8, a7a8, a8a7, a7a8, h8h7, h7h8, a8a7, a7a8, h8h7, h7h8"
+    },
+    {
+        "Game number": 306,
+        "Game result": "1/2-1/2",
+        "White good moves": "54.29%",
+        "Black good moves": "50.72%",
+        "White penalties and awards": "7.90",
+        "Black penalties and awards": "-10.15",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, a2a3, g1h1, h1g1, g1h1, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a1a2, a2a1, g1h1, h3g1, a1a2, a2a1, a1a2, a2a1, h2h3, b2b3, h1h2, a1a2, h2h1, a2a1, b3a4, a1a2, a2a1, a1a2, a2a1, a1a2, h1h2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a4a5, a1a2, a2a1, a1a2, a2a1, h2h1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a3a4, a1a2, a2a1, a1a2, a2a1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1",
+        "Black net history": "a7a6, a8a7, a7a8, a6a5, a8a7, a7a6, a6a8, a5a4, a8a7, a7a6, a6a8, a8a7, b8a6, a7a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, h7h6, h8h7, h7h8, a8b8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, b8a8, h8h7, a8a7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a8, h8h7, a8b8, h7h8, b7b6, h8h7, h7h8, h8h7, h7h8, b8a8, h8h7, h7h8, b6a5, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 307,
+        "Game result": "1/2-1/2",
+        "White good moves": "50.85%",
+        "Black good moves": "49.57%",
+        "White penalties and awards": "-20.82",
+        "Black penalties and awards": "-65.76",
+        "White net history": "a2a3, a1a2, a2a1, a3a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, f1e2, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, b2b3, a2a3, g1h3, h1g1, a3a2, a2a1, a1a2, a2a1, e1f2, a1a2, a2a1, a1a2, a2a1, c1a3, a1a2, g1h1, a2a1, a1a2, a2a1, a1a2, f2g1, a2a1, a1a2, a2a1, a1a2, a2a1, e2a6, a1a2, a2a1, a1a2, a3e7, a2a3, a3a1, a1a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a2, d1c1, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, c1a3, a2a1, a3a2, a2a3, a3a2, g1f1, f1g1, a2a3, e7f8, a3a2, a2a3, g1f1, a3a2, a2a3, a3f8, b1a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1",
+        "Black net history": "a7a6, a8a7, a7a8, a8a7, a7a8, a8a7, a6a5, b7b6, a7a8, a8a7, a7a8, a8a7, c8a6, a6e2, a7a8, h7h6, h8h7, h7h8, a8a6, h8h7, a6a8, h7h8, h8h7, h7h8, h8h7, h7h8, a8a6, h8h7, h7h8, h8h7, a6a8, h7h8, a8a7, h8h7, h7h8, h8h7, b8a6, h7h8, d8a8, a8g2, h8h7, g2f2, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a6, a6a8, a8a7, a7a8, a8a7, h8h7, a7a6, h7h8, a6a8, a8a7, a7a8, a8a7, h8h7, a7a8, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a7a8, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, e8f8, f8e8, h8h7, e8f8, f8e8, e8f8, h7h8, h8h7, a7a8, a8c8, c8a8, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 308,
+        "Game result": "1/2-1/2",
+        "White good moves": "53.12%",
+        "Black good moves": "53.12%",
+        "White penalties and awards": "2.08",
+        "Black penalties and awards": "-8.42",
+        "White net history": "g1h3, h1g1, b1a3, g1h1, h1g1, g1h1, h3g1, a3b1, h2h3, a2a3, h1h2, h2h1, h1h2, a3a4, a1a2, a2a1, h2h1, a1a3, a3a1, h1h2, h2h1, h1h2, h2h1, h1h2, a1a2, h2h1, a2a1, a1a3, a3a1, h1h2, a1a2, a2a1",
+        "Black net history": "h7h5, h8h7, h7h8, g8h6, h8h7, h7h8, h8h7, h5h4, h7h8, h8h7, h7h8, a7a6, a6a5, h8h7, a8a7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a8, a8a7, h8h7, a7a8, a8a6, a6a8, h7h8, h8h7, a8a7, h7h8"
+    },
+    {
+        "Game number": 309,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.57%",
+        "Black good moves": "57.14%",
+        "White penalties and awards": "0.85",
+        "Black penalties and awards": "-4.88",
+        "White net history": "h2h3, h1h2, h2h1, h1h2, a2a3, h2h1, a3a4, h1h2, h2h1, a1a3, h1h2, h2h1, a3a1, h1h2, a1a3, h2h1, a3a1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, a1a3, h2h1, a3a1, a1a3, a3a1, h1h2, h2h1, h1h2, h2h1",
+        "Black net history": "g8h6, h6g8, h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a6, h8h7, a8a7, h7h8, a7a8, h8h7, h7h8, a6a5, h8h7, h7h8, a8a7, a7a6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a6a7, h8h7, h7h8, h8h7, h7h8, a7a6"
+    },
+    {
+        "Game number": 310,
+        "Game result": "1/2-1/2",
+        "White good moves": "52.17%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "-6.59",
+        "Black penalties and awards": "-12.13",
+        "White net history": "h2h3, h1h2, h2h1, h3h4, h1h2, h2h1, h1h2, h2h1, a2a3, a1a2, h1h2, h2h3, a2a1, h3h2, h2h1, h1h2, a1a2, a2a1, a1a2, a2a1, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, a1a2, a2a1, a1a2, a2a1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, a1a2, a2a1, h1h2, a1a2, a2a1",
+        "Black net history": "h7h5, g8h6, h8h7, h7h8, h8h7, a7a6, h7h8, h8h7, h7h8, h8g8, g8h8, h8h7, h7h8, h8h7, h7h8, h8g8, g8h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, a6a5, h7h8, h8h7, h7h8, h8h7, h7h8, a5a4, h8h7, h7h8, h8h7, h7h8, h8h7, a7a6, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 311,
+        "Game result": "1/2-1/2",
+        "White good moves": "62.75%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "4.66",
+        "Black penalties and awards": "-3.60",
+        "White net history": "g1h3, h1g1, g1h1, a2a3, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1, h1g1, a1a2, a2a1, g1h1, a1a2, a2a1, h1g1, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, g1h1, h3g1, g2h3, a1a2, a2a1, a1a2, a2a1, b2b3, a1a2, a2a1, b3a4, a1a2, a2a1, a1a2, a4a5, a5a6, a2a1, a1a2, a2a1, a3a4, a1a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1",
+        "Black net history": "h7h6, h8h7, h7h8, h8h7, h7h8, h6h5, h5h4, h8h7, g8h6, h7h8, h8h7, h6g8, g8h6, a7a6, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a6a5, h7h8, h4h3, h8h7, h7h8, a8a7, h8h7, a5a4, h7h8, a7a8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, b7a6, a8a7, h8h7, a6a5, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 312,
+        "Game result": "1/2-1/2",
+        "White good moves": "50.85%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "-1.55",
+        "Black penalties and awards": "-5.54",
+        "White net history": "a2a3, a3a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, g1h3, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h3g1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a3, a3a1, a1a2, a2a1, a1a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a2, g1h3, a2a1, h1g1, g1h1",
+        "Black net history": "a7a6, a8a7, a7a8, h7h6, a8a7, h8h7, h7h8, h8h7, h7h8, a6a5, h8h7, h7h8, h8h7, h7h8, h8h7, a7a6, h7h8, h8h7, h7h8, h8h7, h7h8, a6a8, h8h7, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a7a8, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a8a6, h7h8, a6a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a7a6, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 313,
+        "Game result": "1/2-1/2",
+        "White good moves": "45.90%",
+        "Black good moves": "53.33%",
+        "White penalties and awards": "-1.71",
+        "Black penalties and awards": "-7.40",
+        "White net history": "a2a3, a1a2, a2a1, a3a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, g1h3, h1g1, a1a3, g1h1, a3a1, h1g1, g1h1, h1g1, a1a2, a2a3, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, a3a2, a2a1, g1h1, h1g1, g1h1, h1g1, a1a3, g1h1, a3a2, a2a3, h1g1, g1h1, a3a2, a2a1, a1a2, a2a1, h1g1, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, g1h1",
+        "Black net history": "a7a6, a8a7, h7h6, a6a5, h8h7, a7a8, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a8a7, h7h8, h8h7, a7a8, h7h8, h8h7, h7h8, a8a6, a6a7, h8h7, h7h8, h8h7, h7h8, h8h7, a7a8, a8a6, h7h8, h8h7, h7h8, a6a8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, a8a6, h7h8, h8h7, h7h8, a6a7, h8h7, h7h8, a7a6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a6a7, h8h7, h7h8"
+    },
+    {
+        "Game number": 314,
+        "Game result": "1/2-1/2",
+        "White good moves": "47.54%",
+        "Black good moves": "50.82%",
+        "White penalties and awards": "-4.08",
+        "Black penalties and awards": "-18.04",
+        "White net history": "g1h3, h1g1, g1h1, h3g1, a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, g2h3, a1a2, f1g2, a2a1, a3a4, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a4, a4a1, a1a6, g2a8, b1a3, e1f1, d1e1, e1d1, a8h1, d1e1, e1d1, d1e1, e1d1, d1e1, e1d1, d1e1, e1d1, f1g1, g1h1, d1e1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h5, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, g8h6, h7h8, h5h4, h8h7, h7h8, h4h3, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h6g8, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h4, h4a4, g8h6, a7a6, b7a6, a6a5, a5a4, b8a6, c8b7, b7h1, d8a8, a8h1, h1a8, a8h1, h1a8, a8h1, h1a8, a8h1, h1g1, e8d8, d8c8, c8b7, b7a8, a8a7, a7a8, a8a7, a7a8, a8b8, b8a8, a8a7, a7a8"
+    },
+    {
+        "Game number": 315,
+        "Game result": "1/2-1/2",
+        "White good moves": "48.65%",
+        "Black good moves": "52.70%",
+        "White penalties and awards": "-8.42",
+        "Black penalties and awards": "-52.47",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, b1a3, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h3g1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, b1a1, a1b1, h2h3, b1a1, h1h2, a3b1, h2h1, b2a3, c1a3, a3c1, h1h2, h2h1, c1a3, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, a3c1, h1h2, h2h1, h1h2, a2a4, h2h1, a1a3, a3a2, a2a1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1",
+        "Black net history": "g8h6, h8g8, g8h8, h8g8, a7a6, a6a5, g8h8, a5a4, a8a7, a7a8, a8a7, a7a8, a8a7, a7a8, h8g8, g8h8, a8a7, a7a8, a8a7, a7a6, a6a8, a8a7, a7a8, a8a7, a7a8, a8a5, a5a8, h8g8, g8h8, a4a3, a8a7, a7a3, b8a6, a6b8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, b7b6, g8h8, h8g8, g8h8, h8g8, b8a6, g8h8, a6b8, h8g8, g8h8, h8g8, b8a6, g8h8, h6g8, a6b8, c8a6, h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, a6c8, c8a6, h7h8, a6c8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 316,
+        "Game result": "1/2-1/2",
+        "White good moves": "54.55%",
+        "Black good moves": "0.00%",
+        "White penalties and awards": "2.01",
+        "Black penalties and awards": "-0.51",
+        "White net history": "g1h3, a2a3, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h6, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7"
+    },
+    {
+        "Game number": 317,
+        "Game result": "1/2-1/2",
+        "White good moves": "58.33%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "2.52",
+        "Black penalties and awards": "-3.72",
+        "White net history": "g1h3, h3g1, a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2",
+        "Black net history": "g8h6, h8g8, g8h8, a7a6, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8"
+    },
+    {
+        "Game number": 318,
+        "Game result": "1/2-1/2",
+        "White good moves": "52.94%",
+        "Black good moves": "56.25%",
+        "White penalties and awards": "6.75",
+        "Black penalties and awards": "-2.25",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, a2a4, g1h1, h1g1, a1a2, a2a1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1, g1h1, h1g1",
+        "Black net history": "h7h5, h8h7, h7h8, h8h7, h7h8, g8h6, a7a6, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8"
+    },
+    {
+        "Game number": 319,
+        "Game result": "1/2-1/2",
+        "White good moves": "47.37%",
+        "Black good moves": "52.63%",
+        "White penalties and awards": "2.61",
+        "Black penalties and awards": "-10.22",
+        "White net history": "a2a3, a1a2, a2a1, a1a2, a2a1, a1a2, a3a4, a2a1, a1a2, a2a3, a3a1, a1a2, a2a1, a1a2, a2a1, a1a3, a3a1, a1a2, a2a1",
+        "Black net history": "a7a6, a8a7, a7a8, a8a7, a6a5, a7a8, a8a7, a7a8, a8a7, b8a6, a7a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8, a8b8, b8a8"
+    },
+    {
+        "Game number": 320,
+        "Game result": "1/2-1/2",
+        "White good moves": "36.00%",
+        "Black good moves": "50.00%",
+        "White penalties and awards": "2.31",
+        "Black penalties and awards": "-11.08",
+        "White net history": "g1h3, h1g1, g1h1, h1g1, a2a4, g1h1, a1a2, a2a1, h1g1, g1h1, h1g1, g1h1, h3g1, g1h3, a1a2, a2a1, h3g1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1, a1a2, a2a1",
+        "Black net history": "h7h5, g8h6, h8h7, h7h8, h8h7, h5h4, h7h8, h8h7, h7h8, h8h7, h6g8, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h5, h5h7, h7h5, h5h8"
+    },
+    {
+        "Game number": 321,
+        "Game result": "1/2-1/2",
+        "White good moves": "58.62%",
+        "Black good moves": "51.72%",
+        "White penalties and awards": "-1.18",
+        "Black penalties and awards": "-2.58",
+        "White net history": "h2h3, h1h2, a2a3, h2h1, h1h2, h3h4, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, a1a2, a2a1, h2h1, h1h2, h2h1, h1h2, h2h3, h3h2, h2h1, h1h2, h2h1, a1a2, a2a1, h1h2, h2h1",
+        "Black net history": "h7h5, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, g8h6, a7a6, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, a7a8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, h8g8, g8h8"
+    },
+    {
+        "Game number": 322,
+        "Game result": "1/2-1/2",
+        "White good moves": "50.00%",
+        "Black good moves": "51.43%",
+        "White penalties and awards": "-1.62",
+        "Black penalties and awards": "-11.01",
+        "White net history": "a2a3, a1a2, a2a1, a1a2, h2h3, h1h2, a2a1, h2h1, h1h2, a1a2, a2a1, h2h1, a1a2, a2a1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h3h4, h1h2, a1a2, a2a1, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h3, h3h2, a1a2, a2a1",
+        "Black net history": "g8h6, a7a6, a6a5, h8g8, g8h8, h8g8, g8h8, h8g8, a5a4, g8h8, h8g8, g8h8, h8g8, g8h8, a8a7, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, a7a6, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8, g8h8, h8g8"
+    },
+    {
+        "Game number": 323,
+        "Game result": "1/2-1/2",
+        "White good moves": "50.94%",
+        "Black good moves": "50.94%",
+        "White penalties and awards": "-2.73",
+        "Black penalties and awards": "-10.69",
+        "White net history": "h2h3, h1h2, h2h1, a2a3, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, a3a4, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, h1h2, a1a3, h2h1, a3a1, h1h2, h2h1, h1h2, a1a3, h2h1, a3a1, h1h2, h2h1, h1h2, h2h1, h1h2, a1a3, h2h1, a3a1, h1h2, h2h1, h1h2, h2h1, h1h2, h2h1, a1a2, a2a1, h1h2, a1a3, h2h1, a3a1, h1h2, a1a3, h2h1, a3a1, a1a3, a3a1",
+        "Black net history": "g8h6, h8g8, g8h8, h8g8, g8h8, h8g8, b8a6, g8h8, a8b8, h8g8, g8h8, h6g8, b8a8, a6b8, h7h6, a7a6, h8h7, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, h7h8, a7a8, h8h7, h7h8, a8a7, h8h7, h7h8, h8h7, h7h8, h8h7, a6a5, h7h8, a7a6, h8h7, h7h8, h8h7, h7h8, a6a8, h8h7, h7h8, h8h7, a8a6, a6a7, h7h8, h8h7, h7h8, a7a6, h8h7, h7h8"
     }
 ]

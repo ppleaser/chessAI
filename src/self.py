@@ -7,6 +7,7 @@ import threading
 
 import sys
 import json
+import time
 import glob
 import random
 import shutil
@@ -166,11 +167,18 @@ def learn_position():
     games = 1000
     accuracies = []
     average_accuracies = []  # Список для збереження середньої точності за останню гру
-    
+
+    with open('time.txt', 'r') as file:
+                lines = file.readlines()
+                second_line_parts = lines[2].strip().split(',')
+                self_positions_time = float(second_line_parts[0].split('-')[1].strip())
+                self_positions_games = int(second_line_parts[1].split('-')[1].strip())
+
     # Цикл по кожній грі
     for i in range(1, games + 1):
         board = chess.Board()  # Створюємо нову шахову дошку
         game_accuracies = []  # Список точностей для кожної гри
+        start_time = time.time()
         
         # Поки гра не завершена, граємо випадкові ходи і навчаємо нейронну мережу
         while not board.is_game_over():
@@ -198,6 +206,16 @@ def learn_position():
 
         # Зберігаємо нейронну мережу після кожної гри
         torch.save(neural_net, model_path)
+
+        # Розраховуємо час, витрачений на поточну гру
+        elapsed_time = time.time() - start_time
+        self_positions_time += elapsed_time
+        self_positions_games += 1
+
+        # Оновлюємо відповідну строку у файлі після кожної гри
+        lines[2] = f"self_positions: time - {self_positions_time}, games - {self_positions_games}\n"
+        with open('time.txt', 'w') as file:
+            file.writelines(lines)
 
     # Закриваємо двигун Stockfish після завершення навчання
     engine.quit()
@@ -420,7 +438,7 @@ def run_game_for_color(result_queue, display_queue, i, replay_buffer, event):
                     averaged_model.save(new_model_path)
                     print(f"Збережена модель: {new_model_number}")
 
-                        # Зчитуємо результати ігор з файлу
+                    """
                     with open(filename, "r", encoding="utf-8") as file:
                             game_results = json.load(file)
 
@@ -436,6 +454,7 @@ def run_game_for_color(result_queue, display_queue, i, replay_buffer, event):
                     plt.ylabel('Сума штрафів та нагород')
                     plt.grid(True)
                     plt.savefig('models/self_learning_model/plot.png')
+                    """
 
                     my_models = []
                     event.set()
@@ -481,6 +500,16 @@ def play_chess_learning(num_training_cycles):
                     model.save(new_model_path)
 
                 event = Event()
+
+                with open('time.txt', 'r') as file:
+                    lines = file.readlines()
+                    second_line_parts = lines[3].strip().split(',')
+                    model_time = float(second_line_parts[0].split('-')[1].strip())
+                    model_games = int(second_line_parts[1].split('-')[1].strip())
+
+                print(model_time)
+                print(model_games)
+                start_time = time.time()
             
                 for i in range(8):
                     process = Process(
@@ -497,10 +526,16 @@ def play_chess_learning(num_training_cycles):
                     display_thread.start()
                 except:
                      pass
-                      
+                
                 event.wait()
-
- 
+                elapsed_time = time.time() - start_time
+                model_time += elapsed_time
+                model_games += 8
+    
+                lines[3] = f"self_model: time - {model_time}, games - {model_games}\n"
+                with open('time.txt', 'w') as file:
+                        file.writelines(lines)               
+                
                 for process in processes:
                     process.terminate()
                 stop_flag.set()  

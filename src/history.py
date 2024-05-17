@@ -1,6 +1,7 @@
 import pandas as pd
 import chess
 import chess.engine
+import time
 from tensorflow.keras import models
 from utils.tensors import board_to_tensor, move_to_tensor
 from utils.train import train_neural_net
@@ -12,12 +13,21 @@ def process_historical_games_data(filename, model):
     df = pd.read_csv(filename)  # Завантажуємо дані з файлу CSV у DataFrame
     training_data = []  # Список для зберігання даних для навчання моделі
 
+    # Читаємо значення часу та кількість ігор з файлу time.txt
+    with open('time.txt', 'r') as file:
+        lines = file.readlines()
+        first_line_parts = lines[0].strip().split(',')
+        history_time = float(first_line_parts[0].split('-')[1].strip())
+        history_games = int(first_line_parts[1].split('-')[1].strip())
+
     # Проходимося по кожному рядку DataFrame
     for index, row in df.iterrows():
         moves_str = row["Moves"]  # Отримуємо рядок з ходами гри
         moves_list = moves_str.split()  # Розбиваємо рядок на список ходів
         board = chess.Board()  # Створюємо нову шахову дошку
         is_white_turn = True  # Змінна, що вказує на чергу ходу білих
+
+        start_time = time.time()
 
         # Проходимося по ходах у грі
         for i in range(1, len(moves_list), 3):  # Починаємо з 1 і збільшуємо на 3, щоб пропустити номери ходів
@@ -49,6 +59,17 @@ def process_historical_games_data(filename, model):
         print(len(training_data))  # Виводимо кількість зібраних даних для навчання
         model = train_neural_net(model, training_data, batch_size=128)  # Навчаємо модель на зібраних даних
         training_data = []  # Очищаємо список з даними після навчання
+
+        # Припиняємо таймер і додаємо час до початкового значення
+        elapsed_time = time.time() - start_time
+        history_time += elapsed_time
+        history_games += 1
+
+        # Оновлюємо перший рядок у файлі time.txt новими значеннями
+        lines[0] = f"history: time - {history_time}, games - {history_games}\n"
+        with open('time.txt', 'w') as file:
+            file.writelines(lines)
+
     return model  # Повертаємо оновлену модель
 
 if __name__ == "__main__":

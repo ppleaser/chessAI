@@ -1,4 +1,3 @@
-import pandas as pd
 import chess
 import chess.engine
 import numpy as np

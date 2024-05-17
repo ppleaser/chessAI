@@ -1,0 +1,4 @@
+history: time - 315.96013379096985, games - 2
+stockfish: time - 87.48841285705566, games - 8
+self_positions: time - 223.63630628585815, games - 4
+self_model: time - 389.7062256336212, games - 16
