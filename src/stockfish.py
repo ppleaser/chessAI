@@ -93,7 +93,7 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
         is_repeat_move = uci_move in neural_net_moves if uci_move else False
         is_back_move = get_neural_net_positions(board, neural_net_color) in last_positions
         if (is_repeat_move or is_back_move) and eval_score_after < eval_score_before and  eval_score_after < 0:
-            reward = (eval_score_after - eval_score_before) * 10
+            reward = (eval_score_after - eval_score_before) * 2
             print(is_repeat_move, is_back_move)
             print("Повтор ходу або хід назад: ", uci_move, "Штраф був змінений: ", reward)
         else:
@@ -105,16 +105,13 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
 
         # Додаємо епізод у буфер повторення для навчання
         replay_buffer.append((state, action, reward, next_state, done))
-
+        model = train_neural_net(model, replay_buffer, 128)
         if reward > 0:
             correct_moves += 1
 
         total_moves += 1
 
     print("Гра завершена")
-
-    # Тренуємо нейронну мережу
-    model = train_neural_net(model, replay_buffer, 128)
 
     # Перевіряємо наявність файлу результатів ігор
     if os.path.exists(filename):

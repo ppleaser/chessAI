@@ -21,7 +21,6 @@ def get_neural_net_positions(board, neural_net_color):
     return pieces
 
 def get_neural_net_move(model, board, exploration_factor=0.3):
-
     legal_moves = list(board.legal_moves)
     board_copy = board.copy()  
     move_predictions = []
@@ -35,10 +34,15 @@ def get_neural_net_move(model, board, exploration_factor=0.3):
         board_copy.pop() 
 
     sorted_moves = sorted(move_predictions, key=lambda x: x[1], reverse=True)
-    top_3_moves = [move[0] for move in sorted_moves[:3]]
+    top_3_moves = [move[0] for move in sorted_moves[:4]]
 
     if (np.random.rand() < exploration_factor or board.fullmove_number == 1):
-        return random.choice(top_3_moves)
+        move = random.choice(top_3_moves)
+        if sorted_moves[0][0] == move:
+            top_3_moves.remove(move)
+            return random.choice(top_3_moves) if top_3_moves else move
+        else:
+            return move
     else:
         return sorted_moves[0][0]
 
