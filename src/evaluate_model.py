@@ -97,7 +97,7 @@ def update_plot(move_counter, model_scores, stockfish_scores, model_path, test_n
     plt.figtext(0.15, 0.80, f"Середнє покращення Stockfish: {mean_stockfish_improvement:.2f}")
     plt.figtext(0.15, 0.75, f"Кореляція: {correlation:.2f}")
     plt.draw()
-    plt.pause(0.1)
+    plt.pause(0.01)
 
 def save_plot(model_path, test_num, save_dir):
     plt.savefig(os.path.join(save_dir, f"game_{test_num}_{os.path.basename(model_path)}.png"))

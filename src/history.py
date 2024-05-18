@@ -13,13 +13,6 @@ def process_historical_games_data(filename, model):
     df = pd.read_csv(filename)  # Завантажуємо дані з файлу CSV у DataFrame
     training_data = []  # Список для зберігання даних для навчання моделі
 
-    # Читаємо значення часу та кількість ігор з файлу time.txt
-    with open('time.txt', 'r') as file:
-        lines = file.readlines()
-        first_line_parts = lines[0].strip().split(',')
-        history_time = float(first_line_parts[0].split('-')[1].strip())
-        history_games = int(first_line_parts[1].split('-')[1].strip())
-
     # Проходимося по кожному рядку DataFrame
     for index, row in df.iterrows():
         moves_str = row["Moves"]  # Отримуємо рядок з ходами гри
@@ -61,6 +54,13 @@ def process_historical_games_data(filename, model):
         training_data = []  # Очищаємо список з даними після навчання
 
         # Припиняємо таймер і додаємо час до початкового значення
+
+        with open('time.txt', 'r') as file:
+            lines = file.readlines()
+            first_line_parts = lines[0].strip().split(',')
+            history_time = float(first_line_parts[0].split('-')[1].strip())
+            history_games = int(first_line_parts[1].split('-')[1].strip())
+
         elapsed_time = time.time() - start_time
         history_time += elapsed_time
         history_games += 1

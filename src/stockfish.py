@@ -213,12 +213,6 @@ if __name__ == "__main__":
                 new_model_path = f"models/reinforcement_learning_stockfish_model/model_1"
                 model.save(new_model_path)
 
-            with open('time.txt', 'r') as file:
-                lines = file.readlines()
-                second_line_parts = lines[1].strip().split(',')
-                stockfish_time = float(second_line_parts[0].split('-')[1].strip())
-                stockfish_games = int(second_line_parts[1].split('-')[1].strip())
-
             start_time = time.time()
             # Цикл навчання
             for _ in range(num_training_cycles):
@@ -282,6 +276,11 @@ if __name__ == "__main__":
                             averaged_model, replay_buffer, 128
                         )
 
+                        with open('time.txt', 'r') as file:
+                            lines = file.readlines()
+                            second_line_parts = lines[1].strip().split(',')
+                            stockfish_time = float(second_line_parts[0].split('-')[1].strip())
+                            stockfish_games = int(second_line_parts[1].split('-')[1].strip())
                         # Припиняємо таймер і додаємо час до початкового значення
                         elapsed_time = time.time() - start_time
                         stockfish_time += elapsed_time
