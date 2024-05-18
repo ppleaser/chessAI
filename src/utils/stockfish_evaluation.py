@@ -23,3 +23,4 @@ def get_stockfish_evaluation(board, neural_net_color):
         return eval_score
     else:
         return -eval_score
+    

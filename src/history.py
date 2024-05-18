@@ -38,10 +38,11 @@ def process_historical_games_data(filename, model):
                             board.push(move)  # Робимо хід
                             print(move)  # Виводимо хід
                             is_white_turn = not is_white_turn  # Змінюємо чергу ходу
-                            eval_score_after = get_stockfish_evaluation(board, is_white_turn)  # Оцінка після ходу
+                            eval_score_after = get_stockfish_evaluation(board, not is_white_turn)  # Оцінка після ходу
+                            print(f"BEFORE: {eval_score_before}, AFTER: {eval_score_after}")
                             reward = eval_score_after - eval_score_before  # Використовуємо різницю оцінок як винагороду
                             training_data.append((state, action, reward, next_state, done))  # Додаємо дані для навчання
-                            print(eval_score_before, eval_score_after, reward)
+                            print("REWARD:", reward)
                         else:
                             print(f"Пропускаємо недопустимий хід {san_move} у рядку {index}")
                     except Exception as e:

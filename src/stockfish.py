@@ -62,27 +62,27 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
         state = board_to_tensor(board)
         neural_net_move = None
         stockfish_move = None
-        eval_score_before = get_stockfish_evaluation(board, neural_net_color)
-
-        # Якщо черга нейронної мережі
+           
         if board.turn == neural_net_color:
-            # Отримуємо хід від нейронної мережі
+            eval_score_before = get_stockfish_evaluation(board, neural_net_color)
             neural_net_move = get_neural_net_move(model, board)
             neural_net_moves.append(neural_net_move.uci())
             board.push(neural_net_move)
             eval_score_after = get_stockfish_evaluation(board, neural_net_color)
             last_move = neural_net_move
-            changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
+            print("MODEL MOVE:", eval_score_before, eval_score_after)
+            changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_after)
             display_queue.put(changes_buffer)
             last_positions.append(get_neural_net_positions(board, neural_net_color))
         else:
-            # Отримуємо хід від Stockfish
+            eval_score_before = get_stockfish_evaluation(board, not neural_net_color)
             stockfish_move = get_stockfish_move(board, first_move)
             first_move = False
             board.push(stockfish_move)
             last_move = stockfish_move
-            eval_score_after = get_stockfish_evaluation(board, neural_net_color)
-            changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
+            eval_score_after = get_stockfish_evaluation(board, not neural_net_color)
+            print("STOCKFISH MOVE:", eval_score_before, eval_score_after)
+            changes_buffer = draw_board(board, last_move, i, neural_net_color, -eval_score_after)
             display_queue.put(changes_buffer)
             stockfish_moves.append(stockfish_move.uci())
             
@@ -92,14 +92,14 @@ def play_game(model, neural_net_color, display_queue, i, replay_buffer):
         uci_move = neural_net_move.uci() if neural_net_move else None
         is_repeat_move = uci_move in neural_net_moves if uci_move else False
         is_back_move = get_neural_net_positions(board, neural_net_color) in last_positions
-        if (is_repeat_move or is_back_move) and eval_score_after < eval_score_before:
-            reward = (eval_score_after - eval_score_before) * 2
+        if (is_repeat_move or is_back_move) and eval_score_after < eval_score_before and  eval_score_after < 0:
+            reward = (eval_score_after - eval_score_before) * 10
             print(is_repeat_move, is_back_move)
             print("Повтор ходу або хід назад: ", uci_move, "Штраф був змінений: ", reward)
         else:
             reward = eval_score_after - eval_score_before
         
-        print(reward)
+        rewards.append(reward)
         # Перетворюємо хід у тензор
         action = move_to_tensor(last_move)
 
@@ -218,7 +218,7 @@ if __name__ == "__main__":
             for _ in range(num_training_cycles):
                 # Запускаємо процеси для гри за обома кольорами
                 for i in range(8):
-                    color = chess.BLACK
+                    color = chess.WHITE if i < 4 else chess.BLACK
                     process = Process(
                         target=run_game_for_color,
                         args=(color, result_queue, display_queue, i, replay_buffer),

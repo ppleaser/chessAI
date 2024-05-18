@@ -76,7 +76,7 @@ def get_trained_model_evaluation(board, neural_net_color):
     # Використовуємо модель для оцінки позиції
     with torch.no_grad():
         neural_net_score = neural_net(board_state)
-    
+        
     # Перетворюємо результат у тип даних float і повертаємо його
     neural_net_score = neural_net_score.item()
     return neural_net_score
@@ -272,11 +272,12 @@ def play_game(model, display_queue, i, replay_buffer):
         # Оновлюємо дошку і робимо хід
         last_move = neural_net_move
         board.push(neural_net_move)
-        changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_before)
-        display_queue.put(changes_buffer)
-        
-        # Отримуємо оцінку позиції після ходу
+
         eval_score_after = get_trained_model_evaluation(board, neural_net_color)
+        changes_buffer = draw_board(board, last_move, i, neural_net_color, eval_score_after)
+        display_queue.put(changes_buffer)
+
+        print(f"BEFORE: {eval_score_before}, AFTER: {eval_score_after}")
         
         # Перетворюємо оновлену дошку в тензор
         next_state = board_to_tensor(board)
