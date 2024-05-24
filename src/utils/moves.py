@@ -20,7 +20,7 @@ def get_neural_net_positions(board, neural_net_color):
              board.pieces(chess.PAWN, neural_net_color)
     return pieces
 
-def get_neural_net_move(model, board, exploration_factor=0.3):
+def get_neural_net_move(model, board, exploration_factor=0.2):
     legal_moves = list(board.legal_moves)
     board_copy = board.copy()  
     move_predictions = []

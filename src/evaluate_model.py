@@ -28,28 +28,24 @@ def get_neural_net_move(model, board):
     sorted_moves = sorted(move_predictions, key=lambda x: x[1], reverse=True)
     return sorted_moves[0][0]
 
-def evaluate_model(model, model_path, test_num, save_dir, stop_event):
-    model_improvements = []
-    stockfish_improvements = []
-
+def evaluate_model(model, model_path, game_num, save_dir, stop_event, results, test_num):
     board = chess.Board()
     first_move = True
     print(f"Тест №{test_num}")
 
     move_counter = 0
-    model_scores = []
-    stockfish_scores = []
 
-    while not board.is_game_over() and not stop_event.is_set():
+    while not board.is_game_over() and move_counter < 50 and not stop_event.is_set():
         eval_score_before_stockfish = get_stockfish_evaluation(board, chess.WHITE)
+        eval_score_after_model = -100
         neural_net_move = get_neural_net_move(model, board)
         board.push(neural_net_move)
-      
         eval_score_after_model = get_stockfish_evaluation(board, chess.WHITE)
+        if (eval_score_after_model) < -10:
+            eval_score_after_model = -10
         board.pop()
-
         model_improvement = eval_score_after_model - eval_score_before_stockfish
-        model_improvements.append(model_improvement)
+        results['model_scores'].append((move_counter, model_improvement))
 
         stockfish_move = get_stockfish_move(board, first_move)
         first_move = False
@@ -58,7 +54,7 @@ def evaluate_model(model, model_path, test_num, save_dir, stop_event):
         eval_score_after_stockfish = get_stockfish_evaluation(board, chess.WHITE)
 
         stockfish_improvement = eval_score_after_stockfish - eval_score_before_stockfish
-        stockfish_improvements.append(stockfish_improvement)
+        results['stockfish_scores'].append((move_counter, stockfish_improvement))
 
         stockfish_move = get_stockfish_move(board, first_move)
         board.push(stockfish_move)
@@ -68,39 +64,61 @@ def evaluate_model(model, model_path, test_num, save_dir, stop_event):
         print(f"Оцінка Stockfish після свого ходу: {eval_score_after_stockfish}")
 
         move_counter += 1
-        model_scores.append(model_improvement)
-        stockfish_scores.append(stockfish_improvement)
+        update_plot(results, model_path, test_num)
 
-        mean_model_improvement = np.mean(model_improvements)
-        mean_stockfish_improvement = np.mean(stockfish_improvements)
-        correlation = np.corrcoef(model_improvements, stockfish_improvements)[0, 1] if len(model_improvements) > 1 else 0
-
-        update_plot(move_counter, model_scores, stockfish_scores, model_path, test_num, mean_model_improvement, mean_stockfish_improvement, correlation)
+    mean_model_improvement = np.mean([score for _, score in results['model_scores']])
+    mean_stockfish_improvement = np.mean([score for _, score in results['stockfish_scores']])
+    correlation = np.corrcoef(
+        [score for _, score in results['model_scores']],
+        [score for _, score in results['stockfish_scores']]
+    )[0, 1] if len(results['model_scores']) > 1 else 0
 
     print(f"Середнє покращення від ходів моделі: {mean_model_improvement}")
     print(f"Середнє покращення від ходів Stockfish: {mean_stockfish_improvement}")
     print(f"Кореляція між покращеннями моделі та Stockfish: {correlation}")
     print(f"Гра завершена. Результат: {board.result()}")
 
-    save_plot(model_path, test_num, save_dir)
+    save_plot(model_path, test_num, save_dir, game_num)
 
-def update_plot(move_counter, model_scores, stockfish_scores, model_path, test_num, mean_model_improvement, mean_stockfish_improvement, correlation):
+def update_plot(results, model_path, test_num):
     plt.clf()
-    plt.plot(range(move_counter), model_scores, label='Покращення моделі')
-    plt.plot(range(move_counter), stockfish_scores, label='Покращення Stockfish')
+    max_moves = max(results['model_scores'], key=lambda x: x[0])[0] + 1
+
+    average_model_scores = [0] * max_moves
+    average_stockfish_scores = [0] * max_moves
+
+    for i in range(max_moves):
+        model_scores_at_i = [score for move, score in results['model_scores'] if move == i]
+        stockfish_scores_at_i = [score for move, score in results['stockfish_scores'] if move == i]
+        if model_scores_at_i:
+            average_model_scores[i] = np.mean(model_scores_at_i)
+        if stockfish_scores_at_i:
+            average_stockfish_scores[i] = np.mean(stockfish_scores_at_i)
+
+    plt.plot(range(max_moves), average_model_scores, label='Середнє покращення моделі')
+    plt.plot(range(max_moves), average_stockfish_scores, label='Середнє покращення Stockfish')
     plt.xlabel('Ходи')
     plt.ylabel('Оцінки')
     plt.legend()
-    plt.ylim(-10, max(max(model_scores), max(stockfish_scores)) + 1)
+    plt.ylim(-10, max(max(average_model_scores), max(average_stockfish_scores)) + 1)
     plt.title(f"Тест №{test_num} - Модель: {os.path.basename(model_path)}")
+
+    mean_model_improvement = np.mean(average_model_scores)
+    mean_stockfish_improvement = np.mean(average_stockfish_scores)
+    correlation = np.corrcoef(
+        [score for _, score in results['model_scores']],
+        [score for _, score in results['stockfish_scores']]
+    )[0, 1] if len(results['model_scores']) > 1 else 0
+
     plt.figtext(0.15, 0.85, f"Середнє покращення моделі: {mean_model_improvement:.2f}")
     plt.figtext(0.15, 0.80, f"Середнє покращення Stockfish: {mean_stockfish_improvement:.2f}")
     plt.figtext(0.15, 0.75, f"Кореляція: {correlation:.2f}")
+
     plt.draw()
     plt.pause(0.01)
 
-def save_plot(model_path, test_num, save_dir):
-    plt.savefig(os.path.join(save_dir, f"game_{test_num}_{os.path.basename(model_path)}.png"))
+def save_plot(model_path, test_num, save_dir, game_num):
+    plt.savefig(os.path.join(save_dir, f"game_{test_num}_{game_num}_{os.path.basename(model_path)}.png"))
 
 def load_model():
     file_path = filedialog.askdirectory()
@@ -113,6 +131,13 @@ def load_model():
 
 def select_save_directory():
     return filedialog.askdirectory()
+
+def evaluate_multiple_games(model, model_path, save_dir, num_games, stop_event, test_num):
+    results = {'model_scores': [], 'stockfish_scores': []}
+    for game_number in range(1, num_games + 1):
+        if stop_event.is_set():
+            break
+        evaluate_model(model, model_path, game_number, save_dir, stop_event, results, test_num)
 
 def main():
     def set_model():
@@ -133,7 +158,7 @@ def main():
         stop_button.config(state=NORMAL)
         test_num = int(test_num_var.get())
         stop_event = threading.Event()
-        evaluating_thread = threading.Thread(target=evaluate_model, args=(model, model_path, test_num, save_dir, stop_event))
+        evaluating_thread = threading.Thread(target=evaluate_multiple_games, args=(model, model_path, save_dir, 5, stop_event, test_num))
         evaluating_thread.start()
 
     def stop_evaluation():

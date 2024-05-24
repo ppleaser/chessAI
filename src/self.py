@@ -187,13 +187,15 @@ def learn_position():
         print("\nГра була завершена. Середня точність: ", average_accuracy, "\n")
         
         print(game_accuracies)
-        if i % 2 == 0 or i == games:
-            plt.plot(average_accuracies)
-            plt.ylim([0, 100])
-            plt.xlabel('Game')
-            plt.ylabel('Average Accuracy (%)')
-            plt.savefig(f'models/learn_evaluate/average_accuracy_{i}.png')
-            plt.close()
+
+        overall_average_accuracy = sum(average_accuracies) / len(average_accuracies)
+        plt.plot(average_accuracies, label=f'Average Accuracy per Game (Overall Average: {overall_average_accuracy:.2f}%)')
+        plt.ylim([0, 100])
+        plt.xlabel('Game')
+        plt.ylabel('Average Accuracy (%)')
+        plt.legend(loc='best')  # Добавляем легенду
+        plt.savefig(f'models/learn_evaluate/average_accuracy_{i}.png')
+        plt.close()
         
         # Якщо це не остання гра, додаємо точності поточної гри в загальний список accuracies
         if i != games:
